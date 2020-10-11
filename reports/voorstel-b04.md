@@ -27,16 +27,30 @@ De app opent met een log in scherm. Je kan hier kiezen om in te loggen met vinge
 
 ### *Projectpagina*
 
-Hier kun je je project kiezen (api project). De datum wordt opgehaald van de gsm als werkdatum (api?). Er is een start en stop knop en een veld waar je beschrijvingen of opmerkingen kan plaatsen. 
-Eventueel nog een veld met een log van gedane werken. We kunnen dit eventueel ook achter een knop steken naar een andere pagina, wat misschien beter is.
+Hier kun je je project kiezen (api project). De datum wordt opgehaald van de gsm als werkdatum (api?). Er is een start en stop knop en een timer die loopt, 
+ook nog een veld met een log van gedane werken. 
+Je kan ook foto's toevoegen en meer info opvragen over het project. 
+We kunnen dit eventueel ook achter een knop steken naar een andere pagina, wat misschien beter is.
+
+### *Infopagina*
+
+Hier kun je meer info vinden over het project en vragen stellen.
 
 ### *Configuratiepagina*
 
-Hier kun je alle instellingen van je app wijzigen. Je kan kiezen of je met variabele tijden werkt of vaste tijden. Indien vaste tijden kun je ingeven welkde deze zijn (dagen niet vergeten) en aangeven wanneer de pauzes en einde van de dag is. Je kan ook kiezen of je de pauzes of einde van de dag wil aangeven door een alarm op de gsm, bvb 10 minuten voor tijd als je materiaal moet opruimen. Een IT'er kan misschien ook een link maken met de agenda, wanneer hij meeting heeft ofzo. Moet dit uitzoeken of dit mogelijk is en niet te uitgebreid is.
+Hier kun je alle instellingen van je app wijzigen. 
+Je kan kiezen of je met variabele tijden werkt of vaste tijden. 
+Indien vaste tijden kun je ingeven welkde deze zijn (dagen niet vergeten) en aangeven wanneer de pauzes en einde van de dag is. 
+Je kan ook kiezen of je de pauzes of einde van de dag wil aangeven door een alarm op de gsm, bvb 10 minuten voor tijd als je materiaal moet opruimen. 
+Een IT'er kan misschien ook een link maken met de agenda, wanneer hij meeting heeft ofzo. Moet dit uitzoeken of dit mogelijk is en niet te uitgebreid is.
+De taal kan gekozen worden ook.
 
 ### *Admin pagina*
 
-Hier kan de admin users aanmaken of verwijderen. De admin maakt ook de projecten/tickets aan. Zo kan de gebruiker kiezen welk project hij of zij aan werkt. Kan misschien ook een optie bedenken waar de admin de projecten kan toewijzen aan een gebruiker ook, maar dit is enkel een bedenking.
+Hier kan de admin users aanmaken of verwijderen. 
+De admin maakt ook de projecten/tickets aan. Zo kan de gebruiker kiezen welk project hij of zij aan werkt. 
+Kan misschien ook een optie bedenken waar de admin de projecten kan toewijzen aan een gebruiker ook, maar dit is enkel een bedenking.
+De admin kan ook dringende berichten sturen naar een gebruiker die dan opkomen als popup bericht.
 
 ## Native app functies
 Hier dacht ik aan een vingerafdrukherkenning bij het openen van de app zodat de identiteit van de gebruiker meteen is gekoppeld. 
