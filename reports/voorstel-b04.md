@@ -10,7 +10,7 @@ We werken een app uit die ervoor zorgt dat je je uren kan registreren wanneer je
 
 ## Uiterlijk en kleuren
 
-Hierover zal nog gebrainstormd worden, misschien hier de keuze geven om een nacht en dagthema te kiezen en hierop de kleuren af te stellen. Ik heb nu zwart grijs en bordeauxrood genomen, maar deze kunnen dus nog veranderen naarmate het project vordert.
+Hierover zal nog gebrainstormd worden, misschien hier de keuze geven om een nacht en dagthema te kiezen en hierop de kleuren af te stellen.
 
 ### Voorbeeld
 Bouwbedrijf gaat een lekkage gaan herstellen bij een klant en wil weten hoe lang de arbeider hieraan bezig was. De arbeider kan hier zijn app gebruiken en wanneer hij op de plaats komt, de plaats ingeven door 'locatievoorziening' aan te spreken of gewoon het project invoeren. Hij drukt op 'start', voert de werken uit en drukt op 'stop' wanneer de werken zijn uitgevoerd.
