@@ -5,12 +5,12 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -22,13 +22,15 @@
                     Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" />
             <Label x:Name="lblDate" HorizontalOptions="CenterAndExpand" TextColor="black" FontSize="24" 
                    Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Text="Maandag 19/10/20"/>
-            <Button x:Name="btnStart" Text="Start" Grid.Row="3" Grid.Column="0"/>
-            <Button x:Name="btnStop" Text="Stop" Grid.Row="3" Grid.Column="1"/>
+            <Button x:Name="btnPhoto" Text="Stuur foto" Grid.Row="3" Grid.Column="0"/>
+            <Button x:Name="btnPhoto" Text="Info project" Grid.Row="3" Grid.Column="1"/>
+            <Button x:Name="btnStart" Text="Start" Grid.Row="4" Grid.Column="0"/>
+            <Button x:Name="btnStop" Text="Stop" Grid.Row="4" Grid.Column="1"/>
             <Label x:Name="lblTime" Text="00:00:00" FontSize="24"
-                   Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" 
+                   Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" 
                    HorizontalOptions="Center" VerticalOptions="Center"/>
             <Editor Placeholder="Logger" TextColor="black" 
-                    Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2"/>
+                    Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
