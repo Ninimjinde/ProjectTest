@@ -9,10 +9,10 @@
                 HorizontalOptions="CenterAndExpand" />
             <Label Text="Login" Padding="40" HorizontalOptions="CenterAndExpand"
                    FontSize="32" TextColor="Black" ></Label>
-            <Button Text="Login with fingerprint"></Button>
-            <Button Text="Login with username and password"></Button>
-            <Editor Placeholder="Username"></Editor>
-            <Editor Placeholder="Password"></Editor>
+            <Button x:Name="btnFingerprintLogin" Text="Login with fingerprint"></Button>
+            <Button x:Name="btnUserLogin" Text="Login with username and password"></Button>
+            <Entry Placeholder="Username"></Entry>
+            <Entry Placeholder="Password" IsPassword="True"></Entry>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
