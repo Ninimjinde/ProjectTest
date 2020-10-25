@@ -11,7 +11,7 @@ namespace ALE.TimeRegistration.Core.Entities
         public string LastName { get; set; }
         public string Password { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public ICollection<Project> Projects { get; set; }
+        public ICollection<UserProject> UserProjects { get; set; }
         public ICollection<Message> Messages { get; set; }
     }
 }

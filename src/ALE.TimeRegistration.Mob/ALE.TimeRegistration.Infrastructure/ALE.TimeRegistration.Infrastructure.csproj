@@ -8,4 +8,13 @@
     <Folder Include="Data\Seeding\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ALE.TimeRegistration.Core\ALE.TimeRegistration.Core.csproj" />
+  </ItemGroup>
+
 </Project>

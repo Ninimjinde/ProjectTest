@@ -11,9 +11,9 @@ namespace ALE.TimeRegistration.Core.Entities
         public string Name { get; set; }
         public string Info { get; set; }
         public DateTime UploadDate { get; set; }
-        public User User { get; set; }
         public Picture Picture { get; set; }
         public TimeSpan WorkTime { get; set; }
+        public ICollection<UserProject> ProjectUsers { get; set; }
         public ICollection<Task> Tasks { get; set; }
         public ICollection<Message> Messages { get; set; }
 
