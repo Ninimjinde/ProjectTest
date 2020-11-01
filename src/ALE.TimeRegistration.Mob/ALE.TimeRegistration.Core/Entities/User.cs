@@ -12,7 +12,7 @@ namespace ALE.TimeRegistration.Core.Entities
         public string Password { get; set; }
         public string Email { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public ICollection<UserProject> UserProjects { get; set; }
         public ICollection<Message> Messages { get; set; }
+        public ICollection<UserTask> UserTasks { get; set; }
     }
 }

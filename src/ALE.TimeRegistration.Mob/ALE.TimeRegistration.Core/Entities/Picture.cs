@@ -8,6 +8,7 @@ namespace ALE.TimeRegistration.Core.Entities
     public class Picture : EntityBase
     {
         public Uri Image { get; set; }
-        public Project Project { get; set; }
+        public Guid TaskId { get; set; }
+        public Task Task { get; set; }
     }
 }

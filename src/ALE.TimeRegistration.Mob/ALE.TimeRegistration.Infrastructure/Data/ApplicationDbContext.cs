@@ -13,7 +13,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
         public DbSet<Message> Messages { get; set; }
         public DbSet<Picture> Pictures { get; set; }
         public DbSet<Task> Tasks { get; set; }
-        public DbSet<UserProject> UserProjects { get; set; }
+        public DbSet<UserTask> UserProjects { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -22,14 +22,14 @@ namespace ALE.TimeRegistration.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {
-            modelBuilder.Entity<UserProject>()
+            modelBuilder.Entity<UserTask>()
                 .ToTable("UserProject")
                 .HasKey(up => new { up.UserId, up.ProjectId });
-            modelBuilder.Entity<UserProject>()
+            modelBuilder.Entity<UserTask>()
                 .HasOne(up => up.User)
                 .WithMany(u => u.UserProjects)
                 .HasForeignKey(u => u.UserId);
-            modelBuilder.Entity<UserProject>()
+            modelBuilder.Entity<UserTask>()
                 .HasOne(up => up.Project)
                 .WithMany(p => p.ProjectUsers)
                 .HasForeignKey(p => p.ProjectId);
