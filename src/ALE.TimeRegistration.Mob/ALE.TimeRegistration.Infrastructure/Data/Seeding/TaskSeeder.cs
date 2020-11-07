@@ -45,5 +45,6 @@ namespace ALE.TimeRegistration.Infrastructure.Data.Seeding
                 new Task { Id = Guid.Parse("66bc3260-e00c-435d-aa5f-c36a43e315c2"), Info = "Create full working website", ProjectId = Guid.Parse("1ff6ecc8-faa6-4128-bfe2-28a44455fd73"), TaskName = "Website", UploadDate = DateTime.Parse("15/11/19 08:30:12"), WorkTime = TimeSpan.Parse("10:35:41") },
                 new Task { Id = Guid.Parse("ffd59629-c4a5-4c88-afd2-ece82607095c"), Info = "Create full working website", ProjectId = Guid.Parse("62600880-5959-40f1-902c-9d9f8accc795"), TaskName = "Website", UploadDate = DateTime.Parse("10/10/18 08:30:12"), WorkTime = TimeSpan.Parse("11:31:42") }
                 );
+        }
     }
 }

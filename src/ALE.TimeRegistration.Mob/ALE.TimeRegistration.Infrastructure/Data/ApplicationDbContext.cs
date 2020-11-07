@@ -1,4 +1,5 @@
 ﻿using ALE.TimeRegistration.Core.Entities;
+using ALE.TimeRegistration.Infrastructure.Data.Seeding;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -24,15 +25,36 @@ namespace ALE.TimeRegistration.Infrastructure.Data
         {
             modelBuilder.Entity<UserTask>()
                 .ToTable("UserProject")
-                .HasKey(up => new { up.UserId, up.ProjectId });
+                .HasKey(ut => new { ut.UserId, ut.TaskId });
             modelBuilder.Entity<UserTask>()
-                .HasOne(up => up.User)
-                .WithMany(u => u.UserProjects)
+                .HasOne(ut => ut.User)
+                .WithMany(u => u.UserTasks)
                 .HasForeignKey(u => u.UserId);
             modelBuilder.Entity<UserTask>()
-                .HasOne(up => up.Project)
-                .WithMany(p => p.ProjectUsers)
-                .HasForeignKey(p => p.ProjectId);
+                .HasOne(ut => ut.Task)
+                .WithMany(t => t.TaskUsers)
+                .HasForeignKey(t => t.TaskId);
+
+            modelBuilder.Entity<Message>()
+                .HasKey(m => new { m.SenderId, m.ReceiverId });
+            modelBuilder.Entity<Message>()
+                .HasOne(m => m.Sender)
+                .WithMany(u => u.Messages)
+                .HasForeignKey(m => m.SenderId);
+            //modelBuilder.Entity<Message>()
+            //    .HasOne(m => m.Receiver)
+            //    .WithMany(u => u.Messages)
+            //    .HasForeignKey(m => m.ReceiverId);
+
+            modelBuilder.Entity<User>()
+                .Ignore(u => u.DateOfBirth);
+
+            UserSeeder.Seed(modelBuilder);
+            ProjectSeeder.Seed(modelBuilder);
+            TaskSeeder.Seed(modelBuilder);
+            MessageSeeder.Seed(modelBuilder);
+            PictureSeeder.Seed(modelBuilder);
+            UserTaskSeeder.Seed(modelBuilder);
         }
     }
 }
