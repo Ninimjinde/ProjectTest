@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ALE.TimeRegistration.Core.Entities;
+using ALE.TimeRegistration.Core.Interfaces.Repositories;
 using ALE.TimeRegistration.Infrastructure.Data;
+using ALE.TimeRegistration.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Task = ALE.TimeRegistration.Core.Entities.Task;
 
 namespace ALE.TimeRegistration.Api
 {
@@ -29,7 +33,13 @@ namespace ALE.TimeRegistration.Api
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")).EnableSensitiveDataLogging());
 
-           services.AddControllers();
+            services.AddScoped<IRepository<User>, EfRepository<User>>();
+            services.AddScoped<IRepository<Project>, EfRepository<Project>>();
+            services.AddScoped<IRepository<Task>, EfRepository<Task>>();
+            services.AddScoped<IRepository<Message>, EfRepository<Message>>();
+            services.AddScoped<IRepository<Picture>, EfRepository<Picture>>();
+
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
