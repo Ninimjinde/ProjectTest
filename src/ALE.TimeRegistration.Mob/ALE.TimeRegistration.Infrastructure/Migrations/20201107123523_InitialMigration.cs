@@ -73,14 +73,12 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         name: "FK_Messages_Users_ReceiverId",
                         column: x => x.ReceiverId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Messages_Users_SenderId",
                         column: x => x.SenderId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Messages_Tasks_TaskId",
                         column: x => x.TaskId,
@@ -94,7 +92,6 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    Image = table.Column<string>(nullable: true),
                     TaskId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
@@ -134,14 +131,14 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
 
             migrationBuilder.InsertData(
                 table: "Pictures",
-                columns: new[] { "Id", "Image", "TaskId" },
+                columns: new[] { "Id", "TaskId" },
                 values: new object[,]
                 {
-                    { new Guid("856b1fd5-44f6-4dd5-96b8-4e6c72b1c0df"), null, new Guid("84985336-8b0f-4fcc-883f-affa41175ef2") },
-                    { new Guid("981bb07b-ffb9-4901-ab4d-bf84fa279297"), null, new Guid("84985336-8b0f-4fcc-883f-affa41175ef2") },
-                    { new Guid("a6a8c0ef-66ae-4b0a-8dcf-c323db0bab32"), null, new Guid("bdf71f7a-24e4-4332-8f56-650b089fa1f0") },
-                    { new Guid("bb7413e9-f087-4550-bc5b-9594f79281c8"), null, new Guid("b5edeb11-3a16-4f1e-8820-94aeb21ba0d7") },
-                    { new Guid("70da31cc-8b9e-44fe-9722-c03aa91dee9f"), null, new Guid("3e3a9323-2f38-4e69-80fe-053f5d2f8c35") }
+                    { new Guid("856b1fd5-44f6-4dd5-96b8-4e6c72b1c0df"), new Guid("84985336-8b0f-4fcc-883f-affa41175ef2") },
+                    { new Guid("981bb07b-ffb9-4901-ab4d-bf84fa279297"), new Guid("84985336-8b0f-4fcc-883f-affa41175ef2") },
+                    { new Guid("a6a8c0ef-66ae-4b0a-8dcf-c323db0bab32"), new Guid("1fd57179-6a38-43ee-ace3-edbce12f7bb0") },
+                    { new Guid("bb7413e9-f087-4550-bc5b-9594f79281c8"), new Guid("1fd57179-6a38-43ee-ace3-edbce12f7bb0") },
+                    { new Guid("70da31cc-8b9e-44fe-9722-c03aa91dee9f"), new Guid("97ea799b-2366-4896-b334-cde128c11934") }
                 });
 
             migrationBuilder.InsertData(

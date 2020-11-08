@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ALE.TimeRegistration.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201107100244_InitialMigration")]
+    [Migration("20201107123523_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -87,9 +87,6 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("TaskId")
                         .HasColumnType("uniqueidentifier");
 
@@ -113,17 +110,17 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("a6a8c0ef-66ae-4b0a-8dcf-c323db0bab32"),
-                            TaskId = new Guid("bdf71f7a-24e4-4332-8f56-650b089fa1f0")
+                            TaskId = new Guid("1fd57179-6a38-43ee-ace3-edbce12f7bb0")
                         },
                         new
                         {
                             Id = new Guid("bb7413e9-f087-4550-bc5b-9594f79281c8"),
-                            TaskId = new Guid("b5edeb11-3a16-4f1e-8820-94aeb21ba0d7")
+                            TaskId = new Guid("1fd57179-6a38-43ee-ace3-edbce12f7bb0")
                         },
                         new
                         {
                             Id = new Guid("70da31cc-8b9e-44fe-9722-c03aa91dee9f"),
-                            TaskId = new Guid("3e3a9323-2f38-4e69-80fe-053f5d2f8c35")
+                            TaskId = new Guid("97ea799b-2366-4896-b334-cde128c11934")
                         });
                 });
 
@@ -828,15 +825,15 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Message", b =>
                 {
                     b.HasOne("ALE.TimeRegistration.Core.Entities.User", "Receiver")
-                        .WithMany()
+                        .WithMany("ReceivedMessages")
                         .HasForeignKey("ReceiverId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("ALE.TimeRegistration.Core.Entities.User", "Sender")
-                        .WithMany("Messages")
+                        .WithMany("SendMessages")
                         .HasForeignKey("SenderId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("ALE.TimeRegistration.Core.Entities.Task", "Task")
