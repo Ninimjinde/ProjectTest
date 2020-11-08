@@ -6,6 +6,7 @@ using ALE.TimeRegistration.Core.Entities;
 using ALE.TimeRegistration.Core.Interfaces.Repositories;
 using ALE.TimeRegistration.Infrastructure.Data;
 using ALE.TimeRegistration.Infrastructure.Repositories;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -40,6 +41,8 @@ namespace ALE.TimeRegistration.Api
             services.AddScoped<IRepository<Picture>, EfRepository<Picture>>();
 
             services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
