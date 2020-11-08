@@ -5,8 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Mapping\" />
     <Folder Include="Services\" />
   </ItemGroup>

@@ -13,10 +13,8 @@ namespace ALE.TimeRegistration.Core.Entities
         public string Password { get; set; }
         public string Email { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime DateOfBirth { get; set; }
-        public ICollection<Message> Messages { get; set; }
+        public ICollection<Message> ReceivedMessages { get; set; }
+        public ICollection<Message> SendMessages { get; set; }
         public ICollection<UserTask> UserTasks { get; set; }
     }
 }
