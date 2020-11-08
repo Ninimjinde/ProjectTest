@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ALE.TimeRegistration.Core.Dtos
 {
-    public class UserResponsDto
+    public class UserResponsDto : DtoBase
     {
         public string Name { get; set; }
         public string LastName { get; set; }
