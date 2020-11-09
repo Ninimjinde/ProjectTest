@@ -27,13 +27,13 @@ namespace ALE.TimeRegistration.Infrastructure.Data
                 .ToTable("UserProject")
                 .HasKey(ut => new { ut.UserId, ut.TaskId });
             modelBuilder.Entity<UserTask>()
-                .HasOne(ut => ut.User)
-                .WithMany(u => u.UserTasks)
-                .HasForeignKey(u => u.UserId);
+             .HasOne(ut => ut.User)
+             .WithMany(u => u.UserTasks)
+             .HasForeignKey(ut => ut.UserId);
             modelBuilder.Entity<UserTask>()
                 .HasOne(ut => ut.Task)
                 .WithMany(t => t.TaskUsers)
-                .HasForeignKey(t => t.TaskId);
+                .HasForeignKey(ut => ut.TaskId);
 
             modelBuilder.Entity<Message>()
                 .HasKey(m => new { m.SenderId, m.ReceiverId });
