@@ -134,11 +134,11 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                 columns: new[] { "Id", "TaskId" },
                 values: new object[,]
                 {
-                    { new Guid("856b1fd5-44f6-4dd5-96b8-4e6c72b1c0df"), new Guid("84985336-8b0f-4fcc-883f-affa41175ef2") },
-                    { new Guid("981bb07b-ffb9-4901-ab4d-bf84fa279297"), new Guid("84985336-8b0f-4fcc-883f-affa41175ef2") },
-                    { new Guid("a6a8c0ef-66ae-4b0a-8dcf-c323db0bab32"), new Guid("1fd57179-6a38-43ee-ace3-edbce12f7bb0") },
-                    { new Guid("bb7413e9-f087-4550-bc5b-9594f79281c8"), new Guid("1fd57179-6a38-43ee-ace3-edbce12f7bb0") },
-                    { new Guid("70da31cc-8b9e-44fe-9722-c03aa91dee9f"), new Guid("97ea799b-2366-4896-b334-cde128c11934") }
+                    { new Guid("00000000-0000-0000-0000-000000000050"), new Guid("84985336-8b0f-4fcc-883f-affa41175ef2") },
+                    { new Guid("00000000-0000-0000-0000-000000000051"), new Guid("84985336-8b0f-4fcc-883f-affa41175ef2") },
+                    { new Guid("00000000-0000-0000-0000-000000000052"), new Guid("1fd57179-6a38-43ee-ace3-edbce12f7bb0") },
+                    { new Guid("00000000-0000-0000-0000-000000000053"), new Guid("1fd57179-6a38-43ee-ace3-edbce12f7bb0") },
+                    { new Guid("00000000-0000-0000-0000-000000000054"), new Guid("97ea799b-2366-4896-b334-cde128c11934") }
                 });
 
             migrationBuilder.InsertData(
@@ -238,10 +238,10 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                 columns: new[] { "SenderId", "ReceiverId", "Id", "TaskId", "Text" },
                 values: new object[,]
                 {
-                    { new Guid("e0146a2e-cbec-42cf-8a3c-cfe63b4743e4"), new Guid("8bc19dd0-6829-49b6-b084-e742cc6403c0"), new Guid("a3a43583-c25f-4ca1-9314-aefca950369f"), new Guid("12e02aac-6a7a-49a9-bf18-6e41ecf4075c"), "Please do this asap." },
-                    { new Guid("30a49cd6-9144-40f0-816c-4b1d7a0a766a"), new Guid("b92e79e5-bde7-4c85-9d85-cbe405b599a9"), new Guid("17cf3d08-f7fc-414b-97e2-3068f22572d9"), new Guid("08f00eea-d345-4574-be4e-73f86c56726b"), "Can I get more info about the task please?" },
-                    { new Guid("c3120458-e925-4701-a1c2-f96cd89e8780"), new Guid("12ba3def-f041-45dd-bb6c-492749f49d89"), new Guid("032fc49c-e8ca-40c4-9940-58bfdeb3712e"), new Guid("49745c24-227e-4385-bcba-ed491b62f922"), "What should I do when I finish?" },
-                    { new Guid("66d7e6a2-404e-4919-b032-abf64cfe691d"), new Guid("12ba3def-f041-45dd-bb6c-492749f49d89"), new Guid("2be15cc7-817d-4f64-914d-1b0e87be70db"), new Guid("83ce5bec-f859-4425-bb53-56de4502c2a9"), "Please update your work asap." }
+                    { new Guid("e0146a2e-cbec-42cf-8a3c-cfe63b4743e4"), new Guid("8bc19dd0-6829-49b6-b084-e742cc6403c0"), new Guid("00000000-0000-0000-0000-000000000062"), new Guid("12e02aac-6a7a-49a9-bf18-6e41ecf4075c"), "Please do this asap." },
+                    { new Guid("30a49cd6-9144-40f0-816c-4b1d7a0a766a"), new Guid("b92e79e5-bde7-4c85-9d85-cbe405b599a9"), new Guid("00000000-0000-0000-0000-000000000061"), new Guid("08f00eea-d345-4574-be4e-73f86c56726b"), "Can I get more info about the task please?" },
+                    { new Guid("c3120458-e925-4701-a1c2-f96cd89e8780"), new Guid("12ba3def-f041-45dd-bb6c-492749f49d89"), new Guid("00000000-0000-0000-0000-000000000063"), new Guid("49745c24-227e-4385-bcba-ed491b62f922"), "What should I do when I finish?" },
+                    { new Guid("66d7e6a2-404e-4919-b032-abf64cfe691d"), new Guid("12ba3def-f041-45dd-bb6c-492749f49d89"), new Guid("00000000-0000-0000-0000-000000000060"), new Guid("83ce5bec-f859-4425-bb53-56de4502c2a9"), "Please update your work asap." }
                 });
 
             migrationBuilder.InsertData(
