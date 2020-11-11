@@ -20,7 +20,7 @@ namespace ALE.TimeRegistration.Mob
         {
             base.OnAppearing();
         }
-        private async void btnProject_Clicked_Clicked(object sender, EventArgs e)
+        private async void btnProject_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ProjectPage());
         }
