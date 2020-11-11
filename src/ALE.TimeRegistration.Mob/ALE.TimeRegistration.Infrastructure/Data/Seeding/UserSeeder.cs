@@ -13,12 +13,12 @@ namespace ALE.TimeRegistration.Infrastructure.Data.Seeding
         {
             modelBuilder.Entity<User>().HasData(
                 new User { LastName = "Cash", Name = "Johnny", Email = "aboynamedsue@JCash.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000001") },
-                new User { LastName = "Kant", Name = "Elke", Email = "EchtElkeKant@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000002") },
+                /*new User { LastName = "Kant", Name = "Elke", Email = "EchtElkeKant@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000002") },
                 new User { LastName = "Pot", Name = "Jack", Email = "Ialwayswin@gmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000003") },
                 new User { LastName = "Vanvoren", Name = "Erna", Email = "ErnaVanvoren@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000004") },
-                new User { LastName = "Vangenechte", Name = "Roger", Email = "RogerDoeniemee@telenet.be", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000005") },
-                new User { LastName = "Verstraete", Name = "Karel", Email = "CharlesDurue@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000006") },
-                new User { LastName = "Vanbelleghem", Name = "Katleen", Email = "Katringring@skynet.be", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000007") },
+                new User { LastName = "Vangenechte", Name = "Roger", Email = "RogerDoeniemee@telenet.be", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000005") },*/
+                new User { LastName = "Verstraete", Name = "Karel", Email = "CharlesDurue@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000006") }
+                /*new User { LastName = "Vanbelleghem", Name = "Katleen", Email = "Katringring@skynet.be", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000007") },
                 new User { LastName = "Guapo", Name = "Edwardo", Email = "SnelnEddy@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000008") },
                 new User { LastName = "Degught", Name = "Andy", Email = "Andy123@gmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000009") },
                 new User { LastName = "Demain", Name = "Annie", Email = "IloveyouTomorrow@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000010") },
@@ -41,7 +41,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data.Seeding
                 new User { LastName = "Thuys", Name = "Benny", Email = "Bennernie@skynet.be", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000027") },
                 new User { LastName = "Cole", Name = "Cam", Email = "Thebestbusker@london.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000028") },
                 new User { LastName = "Root", Name = "Claude", Email = "CoronaTopper@gmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000029") },
-                new User { LastName = "Wenne", Name = "Eve", Email = "rapgewoon@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000030") }
+                new User { LastName = "Wenne", Name = "Eve", Email = "rapgewoon@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000030") }*/
                 );
         }
     }

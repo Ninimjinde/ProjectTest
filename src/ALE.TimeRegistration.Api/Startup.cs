@@ -32,7 +32,10 @@ namespace ALE.TimeRegistration.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")).EnableSensitiveDataLogging());
+            services.AddDbContext<ApplicationDbContext>(options => 
+            options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")).EnableSensitiveDataLogging());
+
+            services.AddControllers();
 
             services.AddScoped<IRepository<User>, EfRepository<User>>();
             services.AddScoped<IRepository<Project>, EfRepository<Project>>();
@@ -40,7 +43,8 @@ namespace ALE.TimeRegistration.Api
             services.AddScoped<IRepository<Message>, EfRepository<Message>>();
             services.AddScoped<IRepository<Picture>, EfRepository<Picture>>();
 
-            services.AddControllers();
+            services.AddCors();
+            
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
         }
@@ -58,6 +62,10 @@ namespace ALE.TimeRegistration.Api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(builder => builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 
             app.UseEndpoints(endpoints =>
             {

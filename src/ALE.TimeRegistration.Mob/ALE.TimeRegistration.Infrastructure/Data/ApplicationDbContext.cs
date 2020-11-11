@@ -24,15 +24,17 @@ namespace ALE.TimeRegistration.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {
             modelBuilder.Entity<UserTask>()
-                .ToTable("UserProject")
+                .ToTable("UserTasks")
                 .HasKey(ut => new { ut.UserId, ut.TaskId });
             modelBuilder.Entity<UserTask>()
-             .HasOne(ut => ut.User)
-             .WithMany(u => u.UserTasks)
-             .HasForeignKey(ut => ut.UserId);
+                 .HasOne(ut => ut.User)
+                 .WithMany(u => u.UserTasks)
+                 .OnDelete(DeleteBehavior.NoAction)
+                 .HasForeignKey(ut => ut.UserId);
             modelBuilder.Entity<UserTask>()
                 .HasOne(ut => ut.Task)
                 .WithMany(t => t.TaskUsers)
+                .OnDelete(DeleteBehavior.NoAction)
                 .HasForeignKey(ut => ut.TaskId);
 
             modelBuilder.Entity<Message>()
@@ -62,6 +64,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
             modelBuilder.Entity<Task>()
                 .HasOne(t => t.Project)
                 .WithMany(p => p.Tasks)
+                .OnDelete(DeleteBehavior.NoAction)
                 .HasForeignKey(t => t.ProjectId);
 
                 
@@ -70,8 +73,8 @@ namespace ALE.TimeRegistration.Infrastructure.Data
             ProjectSeeder.Seed(modelBuilder);
             TaskSeeder.Seed(modelBuilder);
             UserTaskSeeder.Seed(modelBuilder);
-            MessageSeeder.Seed(modelBuilder);
-            PictureSeeder.Seed(modelBuilder);
+            /*MessageSeeder.Seed(modelBuilder);
+            PictureSeeder.Seed(modelBuilder);*/
 
         }
     }

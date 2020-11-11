@@ -4,14 +4,16 @@ using ALE.TimeRegistration.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ALE.TimeRegistration.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201111101428_AddTaskSeeder")]
+    partial class AddTaskSeeder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -167,14 +169,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
 
                     b.HasIndex("TaskId");
 
-                    b.ToTable("UserTasks");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = new Guid("00000000-0000-0000-0000-000000000006"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200")
-                        });
+                    b.ToTable("UserProject");
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Message", b =>
@@ -212,7 +207,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasOne("ALE.TimeRegistration.Core.Entities.Project", "Project")
                         .WithMany("Tasks")
                         .HasForeignKey("ProjectId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
@@ -221,13 +216,13 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasOne("ALE.TimeRegistration.Core.Entities.Task", "Task")
                         .WithMany("TaskUsers")
                         .HasForeignKey("TaskId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ALE.TimeRegistration.Core.Entities.User", "User")
                         .WithMany("UserTasks")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 #pragma warning restore 612, 618
