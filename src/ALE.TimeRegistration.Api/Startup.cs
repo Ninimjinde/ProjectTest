@@ -33,7 +33,7 @@ namespace ALE.TimeRegistration.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => 
-            options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")).EnableSensitiveDataLogging());
+            options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
 
             services.AddControllers();
 

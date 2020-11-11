@@ -60,15 +60,15 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                 name: "Messages",
                 columns: table => new
                 {
-                    SenderId = table.Column<Guid>(nullable: false),
-                    ReceiverId = table.Column<Guid>(nullable: false),
                     Id = table.Column<Guid>(nullable: false),
                     Text = table.Column<string>(nullable: true),
-                    TaskId = table.Column<Guid>(nullable: false)
+                    TaskId = table.Column<Guid>(nullable: false),
+                    SenderId = table.Column<Guid>(nullable: false),
+                    ReceiverId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Messages", x => new { x.SenderId, x.ReceiverId });
+                    table.PrimaryKey("PK_Messages", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Messages_Users_ReceiverId",
                         column: x => x.ReceiverId,
@@ -106,7 +106,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserProject",
+                name: "UserTasks",
                 columns: table => new
                 {
                     UserId = table.Column<Guid>(nullable: false),
@@ -114,15 +114,15 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserProject", x => new { x.UserId, x.TaskId });
+                    table.PrimaryKey("PK_UserTasks", x => new { x.UserId, x.TaskId });
                     table.ForeignKey(
-                        name: "FK_UserProject_Tasks_TaskId",
+                        name: "FK_UserTasks_Tasks_TaskId",
                         column: x => x.TaskId,
                         principalTable: "Tasks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_UserProject_Users_UserId",
+                        name: "FK_UserTasks_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -132,17 +132,49 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Email", "LastName", "Name", "Password" },
-                values: new object[] { new Guid("00000000-0000-0000-0000-000000000001"), "aboynamedsue@JCash.com", "Cash", "Johnny", "TimeReg2020" });
-
-            migrationBuilder.InsertData(
-                table: "Users",
-                columns: new[] { "Id", "Email", "LastName", "Name", "Password" },
-                values: new object[] { new Guid("00000000-0000-0000-0000-000000000006"), "CharlesDurue@hotmail.com", "Verstraete", "Karel", "TimeReg2020" });
+                values: new object[,]
+                {
+                    { new Guid("00000000-0000-0000-0000-000000000001"), "aboynamedsue@JCash.com", "Cash", "Johnny", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000028"), "Thebestbusker@london.com", "Cole", "Cam", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000027"), "Bennernie@skynet.be", "Thuys", "Benny", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000026"), "GezondePeter@telenet.be", "Celie", "Peter", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000025"), "ConnieBeter@gmail.com", "Moeleker", "Connie", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000024"), "Giezijtem@skynet.be", "Emnie", "Ben", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000023"), "Loewiloewie@hotmail.com", "Decruy", "Louis", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000022"), "TomVanmarcke@gmail.com", "Vantomme", "Marc", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000021"), "PescadoLover@skynet.be", "Vervis", "Kelly", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000020"), "willywilly@thescabs.be", "Lambregt", "Willy", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000019"), "RietjeGessof@hotmail.com", "Gessof", "Rita", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000018"), "SterkeJan33@pandora.be", "Lefort", "Jan", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000017"), "Zwaffelaere@gmail.com", "Uytebroeck", "Piet", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000016"), "Thebestginger@qotsa.com", "Homme", "Josh", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000015"), "CalmingCamille@telenet.be", "Thee", "Camille", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000014"), "DeYoeri@gmail.com", "Declerk", "Yoeri", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000013"), "EdwardLeCanard@hotmail.com", "Vaneende", "Edward", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000012"), "DePijpVanMaarten@gmail.com", "Pijpers", "Maarten", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000011"), "Satchel@steelpanther.com", "Parrish", "Russ", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000010"), "IloveyouTomorrow@hotmail.com", "Demain", "Annie", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000009"), "Andy123@gmail.com", "Degught", "Andy", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000008"), "SnelnEddy@hotmail.com", "Guapo", "Edwardo", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000007"), "Katringring@skynet.be", "Vanbelleghem", "Katleen", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000006"), "CharlesDurue@hotmail.com", "Verstraete", "Karel", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000005"), "RogerDoeniemee@telenet.be", "Vangenechte", "Roger", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000004"), "ErnaVanvoren@hotmail.com", "Vanvoren", "Erna", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000003"), "Ialwayswin@gmail.com", "Pot", "Jack", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000002"), "EchtElkeKant@hotmail.com", "Kant", "Elke", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000029"), "CoronaTopper@gmail.com", "Root", "Claude", "TimeReg2020" },
+                    { new Guid("00000000-0000-0000-0000-000000000030"), "rapgewoon@hotmail.com", "Wenne", "Eve", "TimeReg2020" }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Messages_ReceiverId",
                 table: "Messages",
                 column: "ReceiverId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Messages_SenderId",
+                table: "Messages",
+                column: "SenderId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Messages_TaskId",
@@ -160,8 +192,8 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                 column: "ProjectId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserProject_TaskId",
-                table: "UserProject",
+                name: "IX_UserTasks_TaskId",
+                table: "UserTasks",
                 column: "TaskId");
         }
 
@@ -174,7 +206,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                 name: "Pictures");
 
             migrationBuilder.DropTable(
-                name: "UserProject");
+                name: "UserTasks");
 
             migrationBuilder.DropTable(
                 name: "Tasks");
