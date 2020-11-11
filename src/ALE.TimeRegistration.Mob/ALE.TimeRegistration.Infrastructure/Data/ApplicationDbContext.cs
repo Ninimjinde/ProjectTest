@@ -29,20 +29,18 @@ namespace ALE.TimeRegistration.Infrastructure.Data
             modelBuilder.Entity<UserTask>()
                  .HasOne(ut => ut.User)
                  .WithMany(u => u.UserTasks)
-                 .OnDelete(DeleteBehavior.NoAction)
                  .HasForeignKey(ut => ut.UserId);
             modelBuilder.Entity<UserTask>()
                 .HasOne(ut => ut.Task)
                 .WithMany(t => t.TaskUsers)
-                .OnDelete(DeleteBehavior.NoAction)
                 .HasForeignKey(ut => ut.TaskId);
 
             modelBuilder.Entity<Message>()
-                .HasKey(m => new { m.SenderId, m.ReceiverId });
+                .HasKey(m => m.Id);
             modelBuilder.Entity<Message>()
                 .HasOne(m => m.Sender)
                 .WithMany(u => u.SendMessages)
-                .OnDelete(DeleteBehavior.NoAction)
+                .OnDelete(DeleteBehavior.NoAction )
                 .HasForeignKey(m => m.SenderId);
             modelBuilder.Entity<Message>()
                  .HasOne(m => m.Receiver)
@@ -64,7 +62,6 @@ namespace ALE.TimeRegistration.Infrastructure.Data
             modelBuilder.Entity<Task>()
                 .HasOne(t => t.Project)
                 .WithMany(p => p.Tasks)
-                .OnDelete(DeleteBehavior.NoAction)
                 .HasForeignKey(t => t.ProjectId);
 
                 
@@ -73,8 +70,8 @@ namespace ALE.TimeRegistration.Infrastructure.Data
             ProjectSeeder.Seed(modelBuilder);
             TaskSeeder.Seed(modelBuilder);
             UserTaskSeeder.Seed(modelBuilder);
-            /*MessageSeeder.Seed(modelBuilder);
-            PictureSeeder.Seed(modelBuilder);*/
+            //MessageSeeder.Seed(modelBuilder);
+            //PictureSeeder.Seed(modelBuilder);
 
         }
     }
