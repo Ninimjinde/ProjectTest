@@ -2,8 +2,10 @@
 using ALE.TimeRegistration.Core.Entities;
 using ALE.TimeRegistration.Core.Interfaces.Repositories;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -19,14 +21,27 @@ namespace ALE.TimeRegistration.Core.Services
             _mapper = mapper;
             _userRepo = userRepo;
         }
-        public Task<UserResponsDto> GetByIdAsync(Guid id)
+        public async Task<UserResponsDto> GetByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var result = await _userRepo.GetAllAsync()
+                .Include(u => u.UserTasks)
+                    .ThenInclude(ut => ut.Task)
+                .Include(u => u.ReceivedMessages)
+                .Include(u => u.SendMessages)
+                .SingleOrDefaultAsync(t => t.Id.Equals(id));
+            var dto = _mapper.Map<UserResponsDto>(result);
+            return dto;
         }
 
-        public Task<IEnumerable<TaskResponseDto>> ListAllTasksAsync()
+        public async Task<IEnumerable<TaskResponseDto>> ListAllTasksAsync(Guid userId)
         {
-            throw new NotImplementedException();
+            var result = await _userRepo.GetAllAsync()
+                .Where(u => u.Id.Equals(userId))
+                .Include(u => u.UserTasks)
+                    .ThenInclude(ut => ut.Task)
+                    .ToListAsync();
+            var dto = _mapper.Map<IEnumerable<TaskResponseDto>>(result);
+            return dto;
         }
     }
 }

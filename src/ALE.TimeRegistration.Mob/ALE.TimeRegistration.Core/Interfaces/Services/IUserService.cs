@@ -8,7 +8,7 @@ namespace ALE.TimeRegistration.Core.Services
 {
     public interface IUserService
     {
-        Task<IEnumerable<TaskResponseDto>> ListAllTasksAsync();
+        Task<IEnumerable<TaskResponseDto>> ListAllTasksAsync(Guid userId);
         Task<UserResponsDto> GetByIdAsync(Guid id);
     }
 }

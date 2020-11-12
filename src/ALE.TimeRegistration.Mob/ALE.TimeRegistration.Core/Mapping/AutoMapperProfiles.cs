@@ -17,8 +17,7 @@ namespace ALE.TimeRegistration.Core.Mapping
                 .ForMember(dest => dest.Tasks,
                             opt => opt.MapFrom(src => src.UserTasks
                                                     .Select(ag => new TaskResponseDto
-                                                            {
-                                                                Id = ag.TaskId,
+                                                            {   Id = ag.TaskId,
                                                                 TaskName = ag.Task.TaskName
                                                             })));
         }
