@@ -10,16 +10,16 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ALE.TimeRegistration.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201111193143_AddProjectSeeder")]
-    partial class AddProjectSeeder
+    [Migration("20201112115001_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.9")
+                .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "5.0.0");
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Message", b =>
                 {
@@ -47,7 +47,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
 
                     b.HasIndex("TaskId");
 
-                    b.ToTable("Messages");
+                    b.ToTable("Message");
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Picture", b =>
@@ -63,7 +63,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
 
                     b.HasIndex("TaskId");
 
-                    b.ToTable("Pictures");
+                    b.ToTable("Picture");
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Project", b =>
@@ -183,6 +183,305 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasIndex("ProjectId");
 
                     b.ToTable("Tasks");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000200"),
+                            Info = "Create API Items",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
+                            TaskName = "Create API",
+                            UploadDate = new DateTime(2018, 10, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 1, 18, 20, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000201"),
+                            Info = "Fix issues Items API",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
+                            TaskName = "API issues",
+                            UploadDate = new DateTime(2018, 10, 15, 11, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 19, 28, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000202"),
+                            Info = "Create new properties Item object",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
+                            TaskName = "Create properties",
+                            UploadDate = new DateTime(2018, 10, 18, 9, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 28, 30, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000203"),
+                            Info = "Link Item to new API vendor",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
+                            TaskName = "API vendor link",
+                            UploadDate = new DateTime(2018, 10, 19, 8, 35, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 8, 40, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000204"),
+                            Info = "Migrate objects to database",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
+                            TaskName = "migrate objects",
+                            UploadDate = new DateTime(2019, 8, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 35, 50, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000205"),
+                            Info = "Create all API's for website",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
+                            TaskName = "create API's",
+                            UploadDate = new DateTime(2019, 8, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 4, 30, 20, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000206"),
+                            Info = "Create full working website",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
+                            TaskName = "Website",
+                            UploadDate = new DateTime(2019, 9, 20, 10, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 21, 44, 30, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000207"),
+                            Info = "Finish website",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
+                            TaskName = "finish website",
+                            UploadDate = new DateTime(2019, 9, 23, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 3, 18, 10, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000208"),
+                            Info = "Automate pricing and promo",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
+                            TaskName = "automate",
+                            UploadDate = new DateTime(2019, 10, 2, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 5, 5, 0, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000209"),
+                            Info = "Upload data for demo",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000102"),
+                            TaskName = "demodata",
+                            UploadDate = new DateTime(2020, 2, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 31, 50, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000210"),
+                            Info = "Migrate data Electrabel to database",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000102"),
+                            TaskName = "migrate data",
+                            UploadDate = new DateTime(2020, 2, 21, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 8, 41, 30, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000211"),
+                            Info = "Fix issues website selling page",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
+                            TaskName = "fix website issues",
+                            UploadDate = new DateTime(2020, 5, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 15, 30, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000212"),
+                            Info = "Rebuild itempage website and link new products",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
+                            TaskName = "itempage",
+                            UploadDate = new DateTime(2020, 5, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 5, 7, 40, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000213"),
+                            Info = "Automate selling process and work with new API's",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
+                            TaskName = "automation",
+                            UploadDate = new DateTime(2020, 5, 17, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 6, 39, 50, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000214"),
+                            Info = "Finish all processes and link to website",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
+                            TaskName = "finish automation",
+                            UploadDate = new DateTime(2020, 5, 18, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 4, 55, 10, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000215"),
+                            Info = "Create new website and link to database",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
+                            TaskName = "create website",
+                            UploadDate = new DateTime(2018, 3, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 22, 10, 25, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000216"),
+                            Info = "Update al items in database",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
+                            TaskName = "update items",
+                            UploadDate = new DateTime(2018, 3, 25, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 1, 8, 41, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000217"),
+                            Info = "Automate promo's and guid for admin",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
+                            TaskName = "promo's",
+                            UploadDate = new DateTime(2018, 3, 26, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 1, 35, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000218"),
+                            Info = "Upload data and create database",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000105"),
+                            TaskName = "upload data",
+                            UploadDate = new DateTime(2018, 8, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 3, 0, 12, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000219"),
+                            Info = "Upload data and create database",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000106"),
+                            TaskName = "upload data",
+                            UploadDate = new DateTime(2020, 7, 12, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 4, 47, 8, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000220"),
+                            Info = "Link API's to new database",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000106"),
+                            TaskName = "link API's",
+                            UploadDate = new DateTime(2020, 7, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 35, 38, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000221"),
+                            Info = "Fix issues with order page on website",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
+                            TaskName = "order page",
+                            UploadDate = new DateTime(2020, 10, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 1, 26, 45, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000222"),
+                            Info = "Create link order page and new billing page customer and automate proces",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
+                            TaskName = "link order page",
+                            UploadDate = new DateTime(2020, 10, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 45, 10, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000223"),
+                            Info = "Fix issue billing page",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
+                            TaskName = "issue billing",
+                            UploadDate = new DateTime(2020, 10, 16, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 51, 42, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000224"),
+                            Info = "Create new order page for customers Europe",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000108"),
+                            TaskName = "order page",
+                            UploadDate = new DateTime(2019, 11, 5, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 1, 8, 42, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000225"),
+                            Info = "Create API for database to link with order page",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000108"),
+                            TaskName = "API orderpage",
+                            UploadDate = new DateTime(2019, 11, 6, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 3, 6, 5, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000226"),
+                            Info = "Create new page for customer portal",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000109"),
+                            TaskName = "customer portal",
+                            UploadDate = new DateTime(2019, 11, 8, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 19, 8, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000227"),
+                            Info = "Fix issues customer portal",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000109"),
+                            TaskName = "issues customer portal",
+                            UploadDate = new DateTime(2019, 11, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 20, 45, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000228"),
+                            Info = "Create API Items and link to database",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000110"),
+                            TaskName = "API items",
+                            UploadDate = new DateTime(2020, 2, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 3, 24, 6, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000229"),
+                            Info = "Fix app issues for customer login page",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000110"),
+                            TaskName = "app issues",
+                            UploadDate = new DateTime(2019, 4, 8, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 35, 41, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000230"),
+                            Info = "Create full working website",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000111"),
+                            TaskName = "Website",
+                            UploadDate = new DateTime(2020, 6, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 7, 41, 20, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000231"),
+                            Info = "Create full working website",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000112"),
+                            TaskName = "Website",
+                            UploadDate = new DateTime(2019, 11, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 10, 35, 41, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000232"),
+                            Info = "Create full working website",
+                            ProjectId = new Guid("00000000-0000-0000-0000-000000000113"),
+                            TaskName = "Website",
+                            UploadDate = new DateTime(2018, 10, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 11, 31, 50, 0)
+                        });
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.User", b =>
@@ -484,6 +783,12 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         .HasForeignKey("TaskId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Receiver");
+
+                    b.Navigation("Sender");
+
+                    b.Navigation("Task");
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Picture", b =>
@@ -493,6 +798,8 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         .HasForeignKey("TaskId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Task");
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Task", b =>
@@ -502,6 +809,8 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Project");
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.UserTask", b =>
@@ -517,6 +826,33 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Task");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Project", b =>
+                {
+                    b.Navigation("Tasks");
+                });
+
+            modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Task", b =>
+                {
+                    b.Navigation("Messages");
+
+                    b.Navigation("Pictures");
+
+                    b.Navigation("TaskUsers");
+                });
+
+            modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.User", b =>
+                {
+                    b.Navigation("ReceivedMessages");
+
+                    b.Navigation("SendMessages");
+
+                    b.Navigation("UserTasks");
                 });
 #pragma warning restore 612, 618
         }

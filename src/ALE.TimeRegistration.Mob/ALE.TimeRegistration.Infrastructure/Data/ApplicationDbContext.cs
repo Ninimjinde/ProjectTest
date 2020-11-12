@@ -36,7 +36,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
                 .HasForeignKey(ut => ut.TaskId);
 
             modelBuilder.Entity<Message>()
-                .ToTable("Message")
+                .ToTable("Messages")
                 .HasKey(m => m.Id);
             modelBuilder.Entity<Message>()
                 .HasOne(m => m.Sender)
@@ -54,7 +54,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
                 .HasForeignKey(m => m.TaskId);
 
             modelBuilder.Entity<Picture>()
-                .ToTable("Picture")
+                .ToTable("Pictures")
                 .Ignore(p => p.Image);
             modelBuilder.Entity<Picture>()
                 .HasOne(p => p.Task)
@@ -62,19 +62,18 @@ namespace ALE.TimeRegistration.Infrastructure.Data
                 .HasForeignKey(p => p.TaskId);
 
             modelBuilder.Entity<Task>()
-                .ToTable("Task")
+                .ToTable("Tasks")
                 .HasOne(t => t.Project)
                 .WithMany(p => p.Tasks)
                 .HasForeignKey(t => t.ProjectId);
-
-                
+     
            
             UserSeeder.Seed(modelBuilder);
             ProjectSeeder.Seed(modelBuilder);
             TaskSeeder.Seed(modelBuilder);
-            //UserTaskSeeder.Seed(modelBuilder);
-            //MessageSeeder.Seed(modelBuilder);
-            //PictureSeeder.Seed(modelBuilder);
+            UserTaskSeeder.Seed(modelBuilder);
+            MessageSeeder.Seed(modelBuilder);
+            PictureSeeder.Seed(modelBuilder);
 
         }
     }

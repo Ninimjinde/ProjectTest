@@ -42,8 +42,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data.Seeding
                 new UserTask { UserId = Guid.Parse("00000000-0000-0000-0000-000000000029"), TaskId = Guid.Parse("00000000-0000-0000-0000-000000000229") },
                 new UserTask { UserId = Guid.Parse("00000000-0000-0000-0000-000000000030"), TaskId = Guid.Parse("00000000-0000-0000-0000-000000000230") },
                 new UserTask { UserId = Guid.Parse("00000000-0000-0000-0000-000000000015"), TaskId = Guid.Parse("00000000-0000-0000-0000-000000000231") },
-                new UserTask { UserId = Guid.Parse("00000000-0000-0000-0000-000000000030"), TaskId = Guid.Parse("00000000-0000-0000-0000-000000000232") },
-                new UserTask { UserId = Guid.Parse("00000000-0000-0000-0000-000000000030"), TaskId = Guid.Parse("00000000-0000-0000-0000-000000000233") }
+                new UserTask { UserId = Guid.Parse("00000000-0000-0000-0000-000000000030"), TaskId = Guid.Parse("00000000-0000-0000-0000-000000000232") }
                 );
         }
     }

@@ -45,10 +45,10 @@ namespace ALE.TimeRegistration.Mob
             throw new NotImplementedException(); //open native function camera
         }
 
-        private async Task LvProjectLists_ItemTapped()
+/*        private async Task LvProjectLists_ItemTapped()
         {
             throw new NotImplementedException();
-        }
+        }*/
         
         private async Task RefreshProjectLists()
         {

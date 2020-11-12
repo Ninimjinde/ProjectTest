@@ -4,14 +4,16 @@ using ALE.TimeRegistration.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ALE.TimeRegistration.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201112115526_AddMessages")]
+    partial class AddMessages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -96,33 +98,6 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasIndex("TaskId");
 
                     b.ToTable("Pictures");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000300"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000301"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000302"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000303"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000202")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000304"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000203")
-                        });
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Project", b =>
