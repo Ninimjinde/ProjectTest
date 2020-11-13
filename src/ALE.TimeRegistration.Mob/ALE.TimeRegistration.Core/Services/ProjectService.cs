@@ -30,7 +30,7 @@ namespace ALE.TimeRegistration.Core.Services
 
         }
 
-        public async Task<IEnumerable<ProjectResponseDto>> ListAllTasksAsync()
+        public async Task<IEnumerable<ProjectResponseDto>> ListAllAsync()
         {
             var result = await _projectRepo.GetAllAsync()
                 .Include(p => p.Tasks)

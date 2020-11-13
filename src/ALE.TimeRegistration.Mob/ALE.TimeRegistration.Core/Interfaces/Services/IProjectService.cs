@@ -8,7 +8,7 @@ namespace ALE.TimeRegistration.Core.Interfaces.Services
 {
     public interface IProjectService
     {
-        Task<IEnumerable<ProjectResponseDto>> ListAllTasksAsync();
+        Task<IEnumerable<ProjectResponseDto>> ListAllAsync();
         Task<ProjectResponseDto> GetByIdAsync(Guid id);
     }
 }
