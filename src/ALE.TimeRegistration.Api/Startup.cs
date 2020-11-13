@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using ALE.TimeRegistration.Core.Entities;
 using ALE.TimeRegistration.Core.Interfaces.Repositories;
+using ALE.TimeRegistration.Core.Interfaces.Services;
+using ALE.TimeRegistration.Core.Services;
 using ALE.TimeRegistration.Infrastructure.Data;
 using ALE.TimeRegistration.Infrastructure.Repositories;
 using AutoMapper;
@@ -42,6 +44,9 @@ namespace ALE.TimeRegistration.Api
             services.AddScoped<IRepository<Task>, EfRepository<Task>>();
             services.AddScoped<IRepository<Message>, EfRepository<Message>>();
             services.AddScoped<IRepository<Picture>, EfRepository<Picture>>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IProjectService, ProjectService>();
+            services.AddScoped<ITaskService, TaskService>();
 
             services.AddCors();
             
