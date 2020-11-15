@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ALE.TimeRegistration.Core.Dtos;
 using ALE.TimeRegistration.Core.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -36,6 +37,17 @@ namespace ALE.TimeRegistration.Api.Controllers
             }
 
             return Ok(project);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(ProjectRequestDto projectRequestDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var projectResponseDto = await _projectService.AddAsync(projectRequestDto);
+            return CreatedAtAction(nameof(GetProject), new { id = projectResponseDto.Id }, projectResponseDto);
         }
     }
 }

@@ -10,5 +10,6 @@ namespace ALE.TimeRegistration.Core.Interfaces.Services
     {
         Task<IEnumerable<TaskResponseDto>> ListAllTasksAsync();
         Task<TaskResponseDto> GetByIdAsync(Guid id);
+        Task<TaskResponseDto> AddAsync(TaskRequestDto taskRequestDto);
     }
 }

@@ -44,5 +44,14 @@ namespace ALE.TimeRegistration.Core.Services
             var dto = _mapper.Map<IEnumerable<TaskResponseDto>>(result);
             return dto;
         }
+
+        public async Task<TaskResponseDto> AddAsync(TaskRequestDto taskRequestDto)
+        {
+            var task = _mapper.Map<Task>(taskRequestDto);
+            var result = await _taskRepo.AddAsync(task);
+            var dto = _mapper.Map<TaskResponseDto>(result);
+            return dto;
+
+        }
     }
 }
