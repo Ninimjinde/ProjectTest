@@ -40,8 +40,8 @@ namespace ALE.TimeRegistration.Api
             services.AddControllers();
 
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IRepository<Project>, EfRepository<Project>>();
-            services.AddScoped<IRepository<Task>, EfRepository<Task>>();
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<ITaskRepository, TaskRepository>();
             services.AddScoped<IRepository<Message>, EfRepository<Message>>();
             services.AddScoped<IRepository<Picture>, EfRepository<Picture>>();
             services.AddScoped<IUserService, UserService>();

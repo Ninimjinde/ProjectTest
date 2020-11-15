@@ -15,32 +15,22 @@ namespace ALE.TimeRegistration.Core.Services
     public class TaskService : ITaskService
     {
         private readonly IMapper _mapper;
-        private readonly IRepository<Task> _taskRepo;
-        public TaskService(IMapper mapper, IRepository<Task> taskRepo)
+        private readonly ITaskRepository _taskRepo;
+        public TaskService(IMapper mapper, ITaskRepository taskRepo)
         {
             _mapper = mapper;
             _taskRepo = taskRepo;
         }
         public async Task<TaskResponseDto> GetByIdAsync(Guid id)
         {
-            var result = await _taskRepo.GetAllAsync()
-                .Include(t => t.TaskUsers)
-                    .ThenInclude(tu => tu.User)
-                .Include(t => t.Project)
-                .Include(t => t.Pictures)
-                .SingleOrDefaultAsync(t => t.Id.Equals(id));
+            var result = await _taskRepo.GetByIdAsync(id);
             var dto = _mapper.Map<TaskResponseDto>(result);
             return dto;
         }
 
         public async Task<IEnumerable<TaskResponseDto>> ListAllTasksAsync()
         {
-            var result = await _taskRepo.GetAllAsync()
-                .Include(t => t.TaskUsers)
-                    .ThenInclude(tu => tu.User)
-                .Include(t => t.Project)
-                .Include(t => t.Pictures)
-                .ToListAsync();
+            var result = await _taskRepo.ListAllAsync();
             var dto = _mapper.Map<IEnumerable<TaskResponseDto>>(result);
             return dto;
         }
