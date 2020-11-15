@@ -15,9 +15,10 @@ namespace ALE.TimeRegistration.Core.Mapping
             CreateMap<Task, UserTaskResponseDto>()
                 .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name));
             CreateMap<Task, TaskResponseDto>()
-               .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name));
-            CreateMap<Task, TaskRequestDto>()
-                .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name));
+               .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name))
+               .ForMember(dest => dest.TaskUsers, opt => opt.MapFrom(src => src.TaskUsers.Select(tu => tu.User.Name)));
+            CreateMap<TaskRequestDto, Task>()
+                .ForPath(dest => dest.Project.Name, opt => opt.MapFrom(src => src.ProjectName));
 
             /*CreateMap<User, UserResponsDto>()
                 .ForMember(dest => dest.Tasks,
@@ -33,12 +34,10 @@ namespace ALE.TimeRegistration.Core.Mapping
                 .ForMember(dest => dest.Tasks,
                             opt => opt.MapFrom(src => src.UserTasks
                                                     .Select(ut => ut.Task.TaskName)));
-            CreateMap<User, UserRequestDto>();
-
-
+            CreateMap<UserRequestDto, User>();
 
             CreateMap<Project, ProjectResponseDto>();
-            CreateMap<Project, ProjectRequestDto>();
+            CreateMap<ProjectRequestDto, Project>();
         }
     }
 }

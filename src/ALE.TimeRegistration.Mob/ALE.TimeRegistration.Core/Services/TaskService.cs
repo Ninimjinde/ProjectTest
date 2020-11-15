@@ -48,6 +48,7 @@ namespace ALE.TimeRegistration.Core.Services
         public async Task<TaskResponseDto> AddAsync(TaskRequestDto taskRequestDto)
         {
             var task = _mapper.Map<Task>(taskRequestDto);
+            task.UploadDate = DateTime.UtcNow;
             var result = await _taskRepo.AddAsync(task);
             var dto = _mapper.Map<TaskResponseDto>(result);
             return dto;
