@@ -12,5 +12,7 @@ namespace ALE.TimeRegistration.Core.Services
         Task<IEnumerable<TaskResponseDto>> ListAllTasksAsync(Guid userId);
         Task<UserResponsDto> GetByIdAsync(Guid id);
         Task<UserResponsDto> AddAsync(UserRequestDto userRequestDto);
+        Task<UserResponsDto> UpdateAsync(UserRequestDto userRequestDto);
+
     }
 }

@@ -64,5 +64,14 @@ namespace ALE.TimeRegistration.Core.Services
             return dto;
 
         }
+
+        public async Task<UserResponsDto> UpdateAsync(UserRequestDto userRequestDto)
+        {
+            var user = _mapper.Map<User>(userRequestDto);
+            var result = await _userRepo.UpdateAsync(user);
+            var dto = _mapper.Map<UserResponsDto>(result);
+            return dto;
+
+        }
     }
 }

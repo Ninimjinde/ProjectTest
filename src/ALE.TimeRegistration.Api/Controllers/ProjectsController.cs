@@ -40,7 +40,7 @@ namespace ALE.TimeRegistration.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(ProjectRequestDto projectRequestDto)
+        public async Task<IActionResult> PostProject(ProjectRequestDto projectRequestDto)
         {
             if (!ModelState.IsValid)
             {
@@ -49,5 +49,18 @@ namespace ALE.TimeRegistration.Api.Controllers
             var projectResponseDto = await _projectService.AddAsync(projectRequestDto);
             return CreatedAtAction(nameof(GetProject), new { id = projectResponseDto.Id }, projectResponseDto);
         }
+
+        [HttpPut]
+        public async Task<IActionResult> PutProject(ProjectRequestDto projectRequestDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var projectResponseDto = await _projectService.UpdateAsync(projectRequestDto)
+           ;
+            return Ok(projectResponseDto);
+        }
+
     }
 }

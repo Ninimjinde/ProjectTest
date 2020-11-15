@@ -40,7 +40,7 @@ namespace ALE.TimeRegistration.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(TaskRequestDto taskRequestDto)
+        public async Task<IActionResult> PostTask(TaskRequestDto taskRequestDto)
         {
             if (!ModelState.IsValid)
             {
@@ -49,5 +49,18 @@ namespace ALE.TimeRegistration.Api.Controllers
             var taskResponseDto = await _taskService.AddAsync(taskRequestDto);
             return CreatedAtAction(nameof(GetTask), new { id = taskResponseDto.Id }, taskResponseDto);
         }
+
+        [HttpPut]
+        public async Task<IActionResult> PutTask(TaskRequestDto taskRequestDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var taskResponseDto = await _taskService.UpdateAsync(taskRequestDto)
+           ;
+            return Ok(taskResponseDto);
+        }
+
     }
 }
