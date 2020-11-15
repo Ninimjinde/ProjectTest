@@ -12,5 +12,7 @@ namespace ALE.TimeRegistration.Core.Interfaces.Services
         Task<ProjectResponseDto> GetByIdAsync(Guid id);
         Task<ProjectResponseDto> AddAsync(ProjectRequestDto projectRequestDto);
         Task<ProjectResponseDto> UpdateAsync(ProjectRequestDto projectRequestDto);
+        Task DeleteAsync(Guid id);
+
     }
 }

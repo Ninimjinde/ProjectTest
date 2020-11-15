@@ -13,6 +13,8 @@ namespace ALE.TimeRegistration.Core.Services
         Task<UserResponsDto> GetByIdAsync(Guid id);
         Task<UserResponsDto> AddAsync(UserRequestDto userRequestDto);
         Task<UserResponsDto> UpdateAsync(UserRequestDto userRequestDto);
+        Task DeleteAsync(Guid id);
+
 
     }
 }

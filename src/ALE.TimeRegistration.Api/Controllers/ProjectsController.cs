@@ -62,5 +62,16 @@ namespace ALE.TimeRegistration.Api.Controllers
             return Ok(projectResponseDto);
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            await _projectService.DeleteAsync(id);
+            return Ok();
+        }
+
     }
 }

@@ -35,7 +35,7 @@ namespace ALE.TimeRegistration.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => 
-            options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
+                                                        options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
 
             services.AddControllers();
 

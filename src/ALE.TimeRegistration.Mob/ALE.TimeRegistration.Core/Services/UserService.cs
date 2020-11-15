@@ -73,5 +73,11 @@ namespace ALE.TimeRegistration.Core.Services
             return dto;
 
         }
+
+        public async System.Threading.Tasks.Task DeleteAsync(Guid id)
+        {
+            await _userRepo.DeleteAsync(id);
+
+        }
     }
 }

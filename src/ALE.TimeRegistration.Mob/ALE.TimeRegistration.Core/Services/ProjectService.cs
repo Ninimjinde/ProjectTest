@@ -54,5 +54,11 @@ namespace ALE.TimeRegistration.Core.Services
             var dto = _mapper.Map<ProjectResponseDto>(result);
             return dto;
         }
+
+        public async System.Threading.Tasks.Task DeleteAsync(Guid id)
+        {
+            await _projectRepo.DeleteAsync(id);
+
+        }
     }
 }
