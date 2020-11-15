@@ -14,27 +14,22 @@ namespace ALE.TimeRegistration.Core.Services
     public class ProjectService : IProjectService
     {
         private readonly IMapper _mapper;
-        private readonly IRepository<Project> _projectRepo;
-        public ProjectService(IMapper mapper, IRepository<Project> projectRepo)
+        private readonly IProjectRepository _projectRepo;
+        public ProjectService(IMapper mapper, IProjectRepository projectRepo)
         {
             _mapper = mapper;
             _projectRepo = projectRepo;
         }
         public async Task<ProjectResponseDto> GetByIdAsync(Guid id)
         {
-            var result = await _projectRepo.GetAllAsync()
-                 .Include(p => p.Tasks)
-                 .SingleOrDefaultAsync(p => p.Id.Equals(id));
+            var result = await _projectRepo.GetByIdAsync(id);
             var dto = _mapper.Map<ProjectResponseDto>(result);
             return dto;
-
         }
 
         public async Task<IEnumerable<ProjectResponseDto>> ListAllAsync()
         {
-            var result = await _projectRepo.GetAllAsync()
-                .Include(p => p.Tasks)
-                .ToListAsync();
+            var result = await _projectRepo.ListAllAsync();
             var dto = _mapper.Map<IEnumerable<ProjectResponseDto>>(result);
             return dto;
         }
