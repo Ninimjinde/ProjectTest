@@ -9,7 +9,8 @@ namespace ALE.TimeRegistration.Core.Dtos
     {
         public string TaskName { get; set; }
         public string Info { get; set; }
-        public Project Project { get; set; }
+        public TimeSpan WorkTime { get; set; }
+        public string ProjectName { get; set; }
         public ICollection<PictureResponseDto> Pictures { get; set; }
         public ICollection<User> TaskUsers { get; set; }
     }

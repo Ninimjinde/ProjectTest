@@ -8,8 +8,11 @@ namespace ALE.TimeRegistration.Core.Entities
 {
     public class User : EntityBase
     {
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string LastName { get; set; }
+        [Required]
         public string Password { get; set; }
         public string Email { get; set; }
 

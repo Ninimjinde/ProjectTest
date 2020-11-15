@@ -27,7 +27,7 @@ namespace ALE.TimeRegistration.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetUser(Guid id)
+        public async Task<IActionResult> GetProject(Guid id)
         {
             var project = await _projectService.GetByIdAsync(id);
             if (project == null)

@@ -12,14 +12,33 @@ namespace ALE.TimeRegistration.Core.Mapping
             CreateMap<Task, UserResponsDto>()
                 .ForMember(dest => dest.TimeWorked,
                             opt => opt.MapFrom(src => src.WorkTime.TotalMinutes));
+            CreateMap<Task, UserTaskResponseDto>()
+                .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name));
+            CreateMap<Task, TaskResponseDto>()
+               .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name));
+            CreateMap<Task, TaskRequestDto>()
+                .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name));
+
+            /*CreateMap<User, UserResponsDto>()
+                .ForMember(dest => dest.Tasks,
+                            opt => opt.MapFrom(src => src.UserTasks
+                                                    .Select(ut => new UserTaskResponseDto
+                                                    {
+                                                        ProjectName = ut.Task.Project.Name,
+                                                        TaskName = ut.Task.TaskName,
+                                                        WorkTime = ut.Task.WorkTime
+                                                    })));*/
 
             CreateMap<User, UserResponsDto>()
                 .ForMember(dest => dest.Tasks,
                             opt => opt.MapFrom(src => src.UserTasks
-                                                    .Select(ag => new TaskResponseDto
-                                                            {   Id = ag.TaskId,
-                                                                TaskName = ag.Task.TaskName
-                                                            })));
+                                                    .Select(ut => ut.Task.TaskName)));
+            CreateMap<User, UserRequestDto>();
+
+
+
+            CreateMap<Project, ProjectResponseDto>();
+            CreateMap<Project, ProjectRequestDto>();
         }
     }
 }

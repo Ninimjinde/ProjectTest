@@ -4,12 +4,12 @@ using System.Text;
 
 namespace ALE.TimeRegistration.Core.Dtos
 {
-    public class UserResponsDto : DtoBase
+    public class UserRequestDto : DtoBase
     {
+
         public string Name { get; set; }
         public string LastName { get; set; }
+        public string Password { get; set; }
         public string Email { get; set; }
-        public IEnumerable<string> Tasks { get; set; }
-        public TimeSpan TimeWorked { get; set; }
     }
 }
