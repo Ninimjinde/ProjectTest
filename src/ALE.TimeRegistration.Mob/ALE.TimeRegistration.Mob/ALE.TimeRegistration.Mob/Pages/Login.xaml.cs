@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ALE.TimeRegistration.Mob
+namespace ALE.TimeRegistration.Mob.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class Login : ContentPage
     {
-        public LoginPage()
+        public Login()
         {
             InitializeComponent();
         }

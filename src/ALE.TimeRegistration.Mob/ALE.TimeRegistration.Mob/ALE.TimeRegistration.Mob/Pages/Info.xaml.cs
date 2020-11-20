@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ALE.TimeRegistration.Mob
+namespace ALE.TimeRegistration.Mob.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ConfigPage : ContentPage
+    public partial class Info : ContentPage
     {
-        public ConfigPage()
+        public Info()
         {
             InitializeComponent();
         }
@@ -23,6 +23,10 @@ namespace ALE.TimeRegistration.Mob
         private async void btnProject_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ProjectPage());
+        }
+        private async void btnQuestion_Clicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException(); // send question 
         }
     }
 }

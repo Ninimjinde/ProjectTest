@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ALE.TimeRegistration.Mob.ProjectPage"
-             BackgroundColor="#bcd4e6">
+             x:Class="ALE.TimeRegistration.Mob.Pages.Project">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Settings" IconImageSource="settings.png" Priority="2" Order="Primary" 
                      Clicked="BtnSettings_Clicked"></ToolbarItem>
@@ -23,7 +22,8 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <ListView x:Name="lstProject" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
-                      HasUnevenRows="False" RowHeight="60" /> <!--ItemTapped="LvProjectLists_ItemTapped"-->
+                      HasUnevenRows="False" RowHeight="60" />
+            <!--ItemTapped="LvProjectLists_ItemTapped"-->
             <Entry Placeholder="Task" TextColor="Black" FontSize="16" HorizontalOptions="StartAndExpand"
                     Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" />
             <Label x:Name="lblDate" HorizontalOptions="CenterAndExpand" TextColor="black" FontSize="24" 

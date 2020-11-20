@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ALE.TimeRegistration.Mob
+namespace ALE.TimeRegistration.Mob.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProjectPage : ContentPage
+    public partial class Project : ContentPage
     {
-        public ProjectPage()
+        public Project()
         {
             InitializeComponent();
         }
-
         protected async override void OnAppearing()
         {
             await RefreshProjectLists();
@@ -45,11 +44,11 @@ namespace ALE.TimeRegistration.Mob
             throw new NotImplementedException(); //open native function camera
         }
 
-/*        private async Task LvProjectLists_ItemTapped()
-        {
-            throw new NotImplementedException();
-        }*/
-        
+        /*        private async Task LvProjectLists_ItemTapped()
+                {
+                    throw new NotImplementedException();
+                }*/
+
         private async Task RefreshProjectLists()
         {
             throw new NotImplementedException();
