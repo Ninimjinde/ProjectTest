@@ -10,7 +10,7 @@ namespace ALE.TimeRegistration.Mob
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new Login());
         }
 
         protected override void OnStart()

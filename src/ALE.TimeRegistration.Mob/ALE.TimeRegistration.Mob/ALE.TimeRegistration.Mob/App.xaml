@@ -3,5 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ALE.TimeRegistration.Mob.App">
     <Application.Resources>
+        <StyleSheet Source="/Styles/appstyles.css"></StyleSheet>
+        <ResourceDictionary>
+            <!-- Common Colors -->
+            <Color x:Key="BackgroundColor">#bcd4e6</Color>
+            <Color x:Key="ButtonColor">#73a9c2</Color>
+            <Color x:Key="TextColor">black</Color>
+
+            <!-- On Platform Resources -->
+            <OnPlatform x:Key="DefaultThickness" x:TypeArguments="Thickness">
+                <On Platform="Android" Value="0"></On>
+                <On Platform="UWP" Value="20"></On>
+            </OnPlatform>
+
+            <!-- Explicit Styles -->
+            <Style x:Key="MainLayout" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+            </Style>
+            <Style x:Key="Button" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonColor}" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

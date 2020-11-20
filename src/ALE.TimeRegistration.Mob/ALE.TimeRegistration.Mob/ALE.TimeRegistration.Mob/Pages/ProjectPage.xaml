@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ALE.TimeRegistration.Mob.Pages.ProjectPage">
+             x:Class="ALE.TimeRegistration.Mob.Pages.ProjectPage"
+             Style="{StaticResource MainLayout}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Settings" IconImageSource="settings.png" Priority="2" Order="Primary" 
                      Clicked="BtnSettings_Clicked"></ToolbarItem>
@@ -24,18 +25,18 @@
             <ListView x:Name="lstProject" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
                       HasUnevenRows="False" RowHeight="60" />
             <!--ItemTapped="LvProjectLists_ItemTapped"-->
-            <Entry Placeholder="Task" TextColor="Black" FontSize="16" HorizontalOptions="StartAndExpand"
+            <Entry Placeholder="Task" TextColor="{StaticResource TextColor}" FontSize="16" HorizontalOptions="StartAndExpand"
                     Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" />
-            <Label x:Name="lblDate" HorizontalOptions="CenterAndExpand" TextColor="black" FontSize="24" 
+            <Label x:Name="lblDate" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource TextColor}" FontSize="24" 
                    Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Text="Maandag 19/10/20"/>
-            <Button x:Name="btnPhoto" Text="Stuur foto" Grid.Row="3" Grid.Column="0"/>
-            <Button x:Name="btnInfo" Text="Info project" Grid.Row="3" Grid.Column="1"/>
-            <Button x:Name="btnStart" Text="Start" Grid.Row="4" Grid.Column="0"/>
-            <Button x:Name="btnStop" Text="Stop" Grid.Row="4" Grid.Column="1"/>
+            <Button x:Name="btnPhoto" Text="Stuur foto" Grid.Row="3" Grid.Column="0" Style="{StaticResource Button}"/>
+            <Button x:Name="btnInfo" Text="Info project" Grid.Row="3" Grid.Column="1" Style="{StaticResource Button}"/>
+            <Button x:Name="btnStart" Text="Start" Grid.Row="4" Grid.Column="0" Style="{StaticResource Button}"/>
+            <Button x:Name="btnStop" Text="Stop" Grid.Row="4" Grid.Column="1" Style="{StaticResource Button}"/>
             <Label x:Name="lblTime" Text="00:00:00" FontSize="24"
                    Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" 
                    HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Editor Placeholder="Logger" TextColor="black" 
+            <Editor Placeholder="Logger" TextColor="{StaticResource TextColor}"
                     Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2"/>
         </Grid>
     </ContentPage.Content>

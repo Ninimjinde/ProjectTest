@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ALE.TimeRegistration.Mob.Pages.LoginPage">
+             x:Class="ALE.TimeRegistration.Mob.Pages.LoginPage"
+             Style="{StaticResource MainLayout}">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="TimeRegistration app"
-                Padding="20" TextColor="Black" FontSize="32"
+                Padding="20" TextColor="{StaticResource TextColor}" FontSize="32"
                 HorizontalOptions="CenterAndExpand" />
             <Label Text="Login" Padding="40" HorizontalOptions="CenterAndExpand"
-                   FontSize="32" TextColor="Black" ></Label>
-            <Button BackgroundColor="#73a9c2" x:Name="btnFingerprintLogin" Text="Login with fingerprint"></Button>
-            <Button BackgroundColor="#73a9c2" x:Name="btnUserLogin" Text="Login with username and password"></Button>
+                   FontSize="32" TextColor="{StaticResource TextColor}" ></Label>
+            <Button Style="{StaticResource Button}" x:Name="btnFingerprintLogin" Text="Login with fingerprint"></Button>
+            <Button Style="{StaticResource Button}" x:Name="btnUserLogin" Text="Login with username and password"></Button>
             <Entry Placeholder="Username"></Entry>
             <Entry Placeholder="Password" IsPassword="True"></Entry>
         </StackLayout>
