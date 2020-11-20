@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace ALE.TimeRegistration.Mob.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Project : ContentPage
+    public partial class ProjectPage : ContentPage
     {
-        public Project()
+        public ProjectPage()
         {
             InitializeComponent();
         }

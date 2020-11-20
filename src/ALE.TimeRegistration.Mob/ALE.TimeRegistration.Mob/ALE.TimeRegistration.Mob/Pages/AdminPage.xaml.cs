@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace ALE.TimeRegistration.Mob.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class admin : ContentPage
+    public partial class AdminPage : ContentPage
     {
-        public admin()
+        public AdminPage()
         {
             InitializeComponent();
         }
