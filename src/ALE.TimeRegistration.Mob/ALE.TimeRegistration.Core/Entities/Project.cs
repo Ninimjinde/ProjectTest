@@ -11,7 +11,7 @@ namespace ALE.TimeRegistration.Core.Entities
     {
         [Required]
         public string Name { get; set; }
-        public ICollection<Task> Tasks { get; set; }
+        public ICollection<AppTask> Tasks { get; set; }
       
     }
 }

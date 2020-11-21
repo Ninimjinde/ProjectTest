@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ALE.TimeRegistration.Core.Entities
 {
-     public class Task : EntityBase
+     public class AppTask : EntityBase
     {
         [Required]
         public string TaskName { get; set; }

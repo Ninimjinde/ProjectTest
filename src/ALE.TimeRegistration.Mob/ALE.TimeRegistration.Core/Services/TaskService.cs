@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Task = ALE.TimeRegistration.Core.Entities.Task;
+using AppTask = ALE.TimeRegistration.Core.Entities.AppTask;
 using Microsoft.EntityFrameworkCore;
 
 namespace ALE.TimeRegistration.Core.Services
@@ -37,7 +37,7 @@ namespace ALE.TimeRegistration.Core.Services
 
         public async Task<TaskResponseDto> AddAsync(TaskRequestDto taskRequestDto)
         {
-            var task = _mapper.Map<Task>(taskRequestDto);
+            var task = _mapper.Map<AppTask>(taskRequestDto);
             task.UploadDate = DateTime.UtcNow;
             var result = await _taskRepo.AddAsync(task);
             var dto = _mapper.Map<TaskResponseDto>(result);
@@ -47,7 +47,7 @@ namespace ALE.TimeRegistration.Core.Services
 
         public async Task<TaskResponseDto> UpdateAsync(TaskRequestDto taskRequestDto)
         {
-            var task = _mapper.Map<Task>(taskRequestDto);
+            var task = _mapper.Map<AppTask>(taskRequestDto);
             var result = await _taskRepo.UpdateAsync(task);
             var dto = _mapper.Map<TaskResponseDto>(result);
             return dto;

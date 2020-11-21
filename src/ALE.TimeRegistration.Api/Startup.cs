@@ -18,7 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Task = ALE.TimeRegistration.Core.Entities.Task;
+using Task = ALE.TimeRegistration.Core.Entities.AppTask;
 
 namespace ALE.TimeRegistration.Api
 {

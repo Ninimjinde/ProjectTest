@@ -12,7 +12,7 @@ namespace ALE.TimeRegistration.Core.Entities
         public string Text { get; set; }
         [Required]
         public Guid TaskId { get; set; }
-        public Task Task { get; set; }
+        public AppTask Task { get; set; }
         [Required]
         public Guid SenderId { get; set; }
         public User Sender { get; set; }

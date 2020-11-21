@@ -10,18 +10,18 @@ using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Infrastructure.Repositories
 {
-    public class TaskRepository : EfRepository<Core.Entities.Task>, ITaskRepository
+    public class TaskRepository : EfRepository<Core.Entities.AppTask>, ITaskRepository
     {
         public TaskRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
 
         }
 
-        public override async Task<Core.Entities.Task> GetByIdAsync(Guid id)
+        public override async Task<Core.Entities.AppTask> GetByIdAsync(Guid id)
         {
             return await GetAllAsync().SingleOrDefaultAsync(a => a.Id.Equals(id));
         }
-        public override IQueryable<Core.Entities.Task> GetAllAsync()
+        public override IQueryable<Core.Entities.AppTask> GetAllAsync()
         {
             return _dbContext.Tasks.AsNoTracking()
                 .Include(t => t.TaskUsers)

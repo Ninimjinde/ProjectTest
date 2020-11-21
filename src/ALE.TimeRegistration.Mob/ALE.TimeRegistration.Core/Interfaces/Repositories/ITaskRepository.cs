@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ALE.TimeRegistration.Core.Interfaces.Repositories
 {
-    public interface ITaskRepository : IRepository<Task>
+    public interface ITaskRepository : IRepository<AppTask>
     {
     }
 }

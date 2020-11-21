@@ -8,6 +8,6 @@ namespace ALE.TimeRegistration.Core.Dtos
     public class PictureResponseDto : DtoBase
     {
         public Uri Image { get; set; }
-        public Task Task { get; set; }
+        public AppTask Task { get; set; }
     }
 }

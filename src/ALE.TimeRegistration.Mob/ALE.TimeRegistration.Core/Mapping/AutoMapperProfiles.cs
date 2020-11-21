@@ -9,16 +9,16 @@ namespace ALE.TimeRegistration.Core.Mapping
     {
         public AutoMapperProfiles()
         {
-            CreateMap<Task, UserResponsDto>()
+            CreateMap<AppTask, UserResponsDto>()
                 .ForMember(dest => dest.TimeWorked,
                             opt => opt.MapFrom(src => src.WorkTime.TotalMinutes));
 /*            CreateMap<Task, UserTaskResponseDto>()
                 .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name));*/
-            CreateMap<Task, TaskResponseDto>()
+            CreateMap<AppTask, TaskResponseDto>()
                .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name))
                //.ForMember(dest => dest.ProjectId, opt => opt.MapFrom(src => src.ProjectId))
                .ForMember(dest => dest.TaskUsers, opt => opt.MapFrom(src => src.TaskUsers.Select(tu => tu.User.Name)));
-            CreateMap<TaskRequestDto, Task>()
+            CreateMap<TaskRequestDto, AppTask>()
                 .ForPath(dest => dest.Project.Name, opt => opt.MapFrom(src => src.ProjectName));
                 //.ForMember(dest => dest.ProjectId, opt => opt.MapFrom(src => src.ProjectId));
 

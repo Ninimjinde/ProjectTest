@@ -13,7 +13,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
         public DbSet<Project> Projects { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Picture> Pictures { get; set; }
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<AppTask> Tasks { get; set; }
         public DbSet<UserTask> UserProjects { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
@@ -61,7 +61,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
                 .WithMany(t => t.Pictures)
                 .HasForeignKey(p => p.TaskId);
 
-            modelBuilder.Entity<Task>()
+            modelBuilder.Entity<AppTask>()
                 .ToTable("Tasks")
                 .HasOne(t => t.Project)
                 .WithMany(p => p.Tasks)

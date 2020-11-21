@@ -12,6 +12,6 @@ namespace ALE.TimeRegistration.Core.Entities
         public Uri Image { get; set; }
         [Required]
         public Guid TaskId { get; set; }
-        public Task Task { get; set; }
+        public AppTask Task { get; set; }
     }
 }
