@@ -1,13 +1,16 @@
 ﻿using ALE.TimeRegistration.Core.Entities;
+using ALE.TimeRegistration.Mob.Domain.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace ALE.TimeRegistration.Mob.Domain.Mocking
 {
-    public class MockUsersService
+    public class MockUsersService : IUserService
     {
-        private static List<User> userLists = new List<User>
+        private static List<User> userList = new List<User>
         {
                 new User { LastName = "Cash", Name = "Johnny", Email = "aboynamedsue@JCash.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000001") },
                 new User { LastName = "Kant", Name = "Elke", Email = "EchtElkeKant@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000002") },
@@ -40,6 +43,14 @@ namespace ALE.TimeRegistration.Mob.Domain.Mocking
                 new User { LastName = "Root", Name = "Claude", Email = "CoronaTopper@gmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000029") },
                 new User { LastName = "Wenne", Name = "Eve", Email = "rapgewoon@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000030") }
         };
+
+        public async Task<bool> Login(Guid id, string password)
+        {
+            bool isValidUser;
+            var user = userList.FirstOrDefault(u => u.Id == id);
+            if (user.Password == password) { isValidUser = true; } else { isValidUser = false; };
+            return await Task.FromResult(isValidUser);
+        }
     }
 }
 
