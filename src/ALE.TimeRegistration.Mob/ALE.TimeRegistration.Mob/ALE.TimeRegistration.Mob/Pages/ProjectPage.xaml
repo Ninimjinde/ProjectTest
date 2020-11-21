@@ -5,7 +5,7 @@
              Style="{StaticResource MainLayout}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Settings" IconImageSource="settings.png" Priority="2" Order="Primary" 
-                     Clicked="BtnSettings_Clicked"></ToolbarItem>
+                     Clicked="ToolbarItem_Clicked"  ></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Grid>
@@ -23,11 +23,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <ListView x:Name="lstProject" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
-                      HasUnevenRows="False" RowHeight="60" ItemTapped="lstProject_ItemTapped" />
+                      HasUnevenRows="False" RowHeight="60" ItemTapped="lstProject_ItemTapped" ItemsSource="{Binding Projects}" />
             <Entry Placeholder="Task" TextColor="{StaticResource TextColor}" FontSize="16" HorizontalOptions="StartAndExpand"
                     Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" />
             <Label x:Name="lblDate" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource TextColor}" FontSize="24" 
-                   Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Text="Maandag 19/10/20"/>
+                   Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding DateToday}"/>
             <Button x:Name="btnPhoto" Text="Stuur foto" Grid.Row="3" Grid.Column="0" Style="{StaticResource Button}"/>
             <Button x:Name="btnInfo" Text="Info project" Grid.Row="3" Grid.Column="1" Style="{StaticResource Button}"/>
             <Button x:Name="btnStart" Text="Start" Grid.Row="4" Grid.Column="0" Style="{StaticResource Button}"/>

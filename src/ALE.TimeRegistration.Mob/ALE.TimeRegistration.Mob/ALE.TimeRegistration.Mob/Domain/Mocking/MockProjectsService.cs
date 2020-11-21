@@ -1,13 +1,16 @@
 ﻿using ALE.TimeRegistration.Core.Entities;
+using ALE.TimeRegistration.Mob.Domain.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Mob.Domain.Mocking
 {
-    public class MockProjectsService
+    public class MockProjectsService : IProjectService
     {
-        private static List<Project> taskList = new List<Project>
+        private static List<Project> projectList = new List<Project>
         {
                 new Project { Name = "Toyota Motor", Id = Guid.Parse("00000000-0000-0000-0000-000000000100") },
                 new Project { Name = "Colruyt", Id = Guid.Parse("00000000-0000-0000-0000-000000000101") },
@@ -25,5 +28,17 @@ namespace ALE.TimeRegistration.Mob.Domain.Mocking
                 new Project { Name = "Daikin Europe", Id = Guid.Parse("00000000-0000-0000-0000-000000000113") },
                 new Project { Name = "bpost", Id = Guid.Parse("00000000-0000-0000-0000-000000000114") }
         };
+
+        public async Task<Project> GetById(Guid id)
+        {
+            var project = projectList.FirstOrDefault(p => p.Id == id );
+            return await System.Threading.Tasks.Task.FromResult(project);
+        }
+
+        public async Task<IQueryable<Project>> ListAll()
+        {
+            var projects = projectList.AsQueryable();
+            return await System.Threading.Tasks.Task.FromResult(projects);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ALE.TimeRegistration.Mob.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace ALE.TimeRegistration.Mob.Pages
         {
             InitializeComponent();
         }
-        protected async override void OnAppearing()
+/*        protected async override void OnAppearing()
         {
             await RefreshProjectLists();
             base.OnAppearing();
@@ -55,11 +56,17 @@ namespace ALE.TimeRegistration.Mob.Pages
         private async Task StopTimer()
         {
             throw new NotImplementedException();
-        }
+        }*/
 
         private void lstProject_ItemTapped(object sender, ItemTappedEventArgs e)
         {
+            var projectViewModel = BindingContext as ProjectViewModel;
+            projectViewModel.OpenProjectCommand.Execute(e.Item);
+        }
 
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            var configViewModel = BindingContext as ConfigViewModel;
         }
     }
 }
