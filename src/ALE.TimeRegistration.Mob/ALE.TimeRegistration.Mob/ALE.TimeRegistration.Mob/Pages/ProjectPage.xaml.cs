@@ -44,11 +44,6 @@ namespace ALE.TimeRegistration.Mob.Pages
             throw new NotImplementedException(); //open native function camera
         }
 
-        /*        private async Task LvProjectLists_ItemTapped()
-                {
-                    throw new NotImplementedException();
-                }*/
-
         private async Task RefreshProjectLists()
         {
             throw new NotImplementedException();
@@ -60,6 +55,11 @@ namespace ALE.TimeRegistration.Mob.Pages
         private async Task StopTimer()
         {
             throw new NotImplementedException();
+        }
+
+        private void lstProject_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+
         }
     }
 }

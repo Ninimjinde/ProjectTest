@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ALE.TimeRegistration.Mob.ViewModels;
+using FreshMvvm;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,6 +13,7 @@ namespace ALE.TimeRegistration.Mob
             InitializeComponent();
 
             MainPage = new NavigationPage(new Login());
+            MainPage = new FreshNavigationContainer(FreshPageModelResolver.ResolvePageModel<LoginViewModel>());
         }
 
         protected override void OnStart()

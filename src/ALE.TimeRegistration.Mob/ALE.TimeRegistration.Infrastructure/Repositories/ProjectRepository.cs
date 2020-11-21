@@ -26,7 +26,5 @@ namespace ALE.TimeRegistration.Infrastructure.Repositories
             return _dbContext.Projects.AsNoTracking()
                 .Include(p => p.Tasks);
         }
-
-    }
     }
 }

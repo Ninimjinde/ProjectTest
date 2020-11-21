@@ -23,8 +23,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <ListView x:Name="lstProject" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
-                      HasUnevenRows="False" RowHeight="60" />
-            <!--ItemTapped="LvProjectLists_ItemTapped"-->
+                      HasUnevenRows="False" RowHeight="60" ItemTapped="lstProject_ItemTapped" />
             <Entry Placeholder="Task" TextColor="{StaticResource TextColor}" FontSize="16" HorizontalOptions="StartAndExpand"
                     Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" />
             <Label x:Name="lblDate" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource TextColor}" FontSize="24" 

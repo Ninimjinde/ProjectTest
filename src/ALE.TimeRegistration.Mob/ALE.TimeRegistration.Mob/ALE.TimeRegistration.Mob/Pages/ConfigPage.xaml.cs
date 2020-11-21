@@ -16,13 +16,10 @@ namespace ALE.TimeRegistration.Mob.Pages
         {
             InitializeComponent();
         }
-        protected async override void OnAppearing()
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            base.OnAppearing();
-        }
-        private async void btnProject_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ProjectPage());
+
         }
     }
 }

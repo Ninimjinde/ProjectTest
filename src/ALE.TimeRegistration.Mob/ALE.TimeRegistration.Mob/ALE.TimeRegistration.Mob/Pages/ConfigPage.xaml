@@ -5,7 +5,7 @@
              Style="{StaticResource MainLayout}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Project" IconImageSource="project.png" Priority="1" Order="Primary" 
-                     Clicked="btnProject_Clicked"></ToolbarItem>
+                     Command="{Binding }"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Grid>
@@ -37,7 +37,7 @@
             <Label Text="Language: " TextColor="{StaticResource TextColor}" FontSize="24"
                    Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5"/>
             <Picker TextColor="{StaticResource TextColor}" FontSize="24"
-                    Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6"/>
+                    Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" ItemsSource="{Binding ConfigLanguages}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
