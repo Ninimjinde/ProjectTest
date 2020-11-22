@@ -16,10 +16,6 @@ namespace ALE.TimeRegistration.Mob.Pages
         {
             InitializeComponent();
         }
-        protected async override void OnAppearing()
-        {
-            base.OnAppearing();
-        }
         private async void btnFingerprintLogin_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ConfigPage()); // native app fingerprint then navigate to Projectpage if ok

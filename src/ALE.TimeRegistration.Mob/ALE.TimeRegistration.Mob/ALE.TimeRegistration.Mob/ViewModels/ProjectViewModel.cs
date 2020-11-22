@@ -11,11 +11,17 @@ namespace ALE.TimeRegistration.Mob.ViewModels
     {
         public ProjectViewModel()
         {
-            
-        }
 
-        public ICommand OpenProjectCommand {
-            get {
+        }
+        public ICommand OpenConfigPageCommand => new Command(
+            async () =>
+            {
+                await CoreMethods.PushPageModel<ConfigViewModel>();
+            });
+        public ICommand OpenProjectCommand
+        {
+            get
+            {
                 return new Command<Project>(ExecuteOpenProjectCommand);
             }
         }
@@ -30,11 +36,14 @@ namespace ALE.TimeRegistration.Mob.ViewModels
         public DateTime DateToday
         {
             get { return dateToday; }
-            set { dateToday = DateTime.Today;
-                RaisePropertyChanged(nameof(DateToday)); }
+            set
+            {
+                dateToday = DateTime.Today;
+                RaisePropertyChanged(nameof(DateToday));
+            }
         }
-
-
-        //If taskListviewObject = null => button info = disabled
     }
+
+    //If taskListviewObject = null => button info = disabled
 }
+

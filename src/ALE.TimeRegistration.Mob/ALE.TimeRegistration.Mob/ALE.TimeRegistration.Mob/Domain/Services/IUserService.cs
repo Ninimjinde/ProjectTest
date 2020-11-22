@@ -7,6 +7,7 @@ namespace ALE.TimeRegistration.Mob.Domain.Services
 {
     public interface IUserService
     {
-        Task<bool> Login(Guid id, string password);
+        Task<bool> Login(string email, string password);
+        Task<bool> IsAdmin(string email, string password);
     }
 }

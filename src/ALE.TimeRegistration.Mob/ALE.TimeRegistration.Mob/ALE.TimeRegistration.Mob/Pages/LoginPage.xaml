@@ -11,9 +11,10 @@
             <Label Text="Login" Padding="40" HorizontalOptions="CenterAndExpand"
                    FontSize="32" TextColor="{StaticResource TextColor}" ></Label>
             <Button Style="{StaticResource Button}" x:Name="btnFingerprintLogin" Text="Login with fingerprint"></Button>
-            <Button Style="{StaticResource Button}" x:Name="btnUserLogin" Text="Login with username and password"></Button>
-            <Entry Placeholder="Username"></Entry>
-            <Entry Placeholder="Password" IsPassword="True"></Entry>
+            <Button Style="{StaticResource Button}" x:Name="btnUserLogin" Text="Login with email and password" 
+                    Command="{Binding LoginPasswordCommand}"></Button>
+            <Entry Placeholder="Email" Text="{Binding Email}"></Entry>
+            <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True"></Entry>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

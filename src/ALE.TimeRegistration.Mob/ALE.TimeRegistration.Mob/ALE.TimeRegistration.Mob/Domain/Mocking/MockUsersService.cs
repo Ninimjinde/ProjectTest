@@ -44,13 +44,23 @@ namespace ALE.TimeRegistration.Mob.Domain.Mocking
                 new User { LastName = "Wenne", Name = "Eve", Email = "rapgewoon@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000030") }
         };
 
-        public async Task<bool> Login(Guid id, string password)
+
+        public async Task<bool> Login(string email, string password)
         {
             bool isValidUser;
-            var user = userList.FirstOrDefault(u => u.Id == id);
+            var user = userList.FirstOrDefault(u => u.Email == email);
             if (user.Password == password) { isValidUser = true; } else { isValidUser = false; };
             return await Task.FromResult(isValidUser);
         }
+        public async Task<bool> IsAdmin(string email, string password)
+        {
+            bool isAdmin;
+            var user = userList.FirstOrDefault(u => u.Email == email);
+            if (user.Password == password & user.Email == "aboynamedsue@JCash.com"){ isAdmin = true;} else { isAdmin = false;};
+            return await Task.FromResult(isAdmin);
+        }
+
+
     }
 }
 

@@ -5,7 +5,7 @@
              Style="{StaticResource MainLayout}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Settings" IconImageSource="settings.png" Priority="2" Order="Primary" 
-                     Clicked="ToolbarItem_Clicked"  ></ToolbarItem>
+                     Command="{Binding OpenConfigPageCommand}"  ></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Grid>
