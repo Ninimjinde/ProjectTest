@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Mob.Domain.Mocking
 {
-    public class MockProjectsService : IProjectService
+    public class MockProjectsService : IMobProjectService
     {
         private static List<Project> projectList = new List<Project>
         {
@@ -35,9 +35,9 @@ namespace ALE.TimeRegistration.Mob.Domain.Mocking
             return await System.Threading.Tasks.Task.FromResult(project);
         }
 
-        public async Task<IQueryable<Project>> ListAll()
+        public async Task<ICollection<Project>> ListAll()
         {
-            var projects = projectList.AsQueryable();
+            ICollection<Project> projects = projectList.ToList();
             return await System.Threading.Tasks.Task.FromResult(projects);
         }
     }

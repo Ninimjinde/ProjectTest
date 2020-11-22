@@ -8,12 +8,12 @@ using System.Linq;
 
 namespace ALE.TimeRegistration.Mob.Domain.Mocking
 {
-    public class MockUsersService : IUserService
+    public class MockUsersService : IMobUserService
     {
         private static List<User> userList = new List<User>
         {
-                new User { LastName = "Cash", Name = "Johnny", Email = "aboynamedsue@JCash.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000001") },
-                new User { LastName = "Kant", Name = "Elke", Email = "EchtElkeKant@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000002") },
+                new User { LastName = "Cash", Name = "Johnny", Email = "admin@test.com", Password = "admin123", Id = Guid.Parse("00000000-0000-0000-0000-000000000001") },
+                new User { LastName = "Kant", Name = "Elke", Email = "user@test.com", Password = "user123", Id = Guid.Parse("00000000-0000-0000-0000-000000000002") },
                 new User { LastName = "Pot", Name = "Jack", Email = "Ialwayswin@gmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000003") },
                 new User { LastName = "Vanvoren", Name = "Erna", Email = "ErnaVanvoren@hotmail.com", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000004") },
                 new User { LastName = "Vangenechte", Name = "Roger", Email = "RogerDoeniemee@telenet.be", Password = "TimeReg2020", Id = Guid.Parse("00000000-0000-0000-0000-000000000005") },
@@ -56,7 +56,7 @@ namespace ALE.TimeRegistration.Mob.Domain.Mocking
         {
             bool isAdmin;
             var user = userList.FirstOrDefault(u => u.Email == email);
-            if (user.Password == password & user.Email == "aboynamedsue@JCash.com"){ isAdmin = true;} else { isAdmin = false;};
+            if (user.Password == password & user.Email == "admin@test.com"){ isAdmin = true;} else { isAdmin = false;};
             return await Task.FromResult(isAdmin);
         }
 

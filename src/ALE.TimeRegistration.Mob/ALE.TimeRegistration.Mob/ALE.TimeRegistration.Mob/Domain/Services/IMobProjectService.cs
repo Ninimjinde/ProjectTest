@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Mob.Domain.Services
 {
-    public interface IProjectService
+    public interface IMobProjectService
     {
         Task<Project> GetById(Guid id);
-        Task<IQueryable<Project>> ListAll();
+        Task<ICollection<Project>> ListAll();
     }
 }

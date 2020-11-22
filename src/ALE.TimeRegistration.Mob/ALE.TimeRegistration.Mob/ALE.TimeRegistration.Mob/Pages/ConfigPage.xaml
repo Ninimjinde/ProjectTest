@@ -4,8 +4,7 @@
              x:Class="ALE.TimeRegistration.Mob.Pages.ConfigPage"
              Style="{StaticResource MainLayout}">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Project" IconImageSource="project.png" Priority="1" Order="Primary" 
-                     Command="{Binding }"></ToolbarItem>
+        <ToolbarItem Text="{Binding UserName}" Priority="1" Order="Primary"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Grid>

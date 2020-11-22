@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Mob.Domain.Services
 {
-    public interface ITaskService
+    public interface IMobTaskService
     {
         Task<AppTask> GetById(Guid id);
 
-        Task<IQueryable<AppTask>> ListAllTasks();
+        Task<ICollection<AppTask>> ListAllTasksFromProject(Project project);
 
     }
 }

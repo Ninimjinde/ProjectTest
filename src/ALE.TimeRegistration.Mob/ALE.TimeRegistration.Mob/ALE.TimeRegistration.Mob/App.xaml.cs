@@ -11,8 +11,6 @@ namespace ALE.TimeRegistration.Mob
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new Login());
             MainPage = new FreshNavigationContainer(FreshPageModelResolver.ResolvePageModel<LoginViewModel>());
         }
 

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Mob.Domain.Services
 {
-    public interface IUserService
+    public interface IMobUserService
     {
         Task<bool> Login(string email, string password);
         Task<bool> IsAdmin(string email, string password);

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Mob.Domain.Mocking
 {
-    public class MockTasksService : ITaskService
+    public class MockTasksService : IMobTaskService
     {
-        private static List<AppTask> taskList = new List<AppTask>
+        private static ICollection<AppTask> taskList = new List<AppTask>
         {
             new AppTask { Id = Guid.Parse("00000000-0000-0000-0000-000000000200"), Info = "Create API Items", ProjectId = Guid.Parse("00000000-0000-0000-0000-000000000100"), TaskName = "Create API", UploadDate = DateTime.Parse("14/10/2018 08:30:12"), WorkTime = new TimeSpan(1, 18, 20) },
             new AppTask { Id = Guid.Parse("00000000-0000-0000-0000-000000000201"), Info = "Fix issues Items API", ProjectId = Guid.Parse("00000000-0000-0000-0000-000000000100"), TaskName = "API issues", UploadDate = DateTime.Parse("15/10/2018 11:30:12"), WorkTime = new TimeSpan(2, 19, 28) },
@@ -53,9 +53,10 @@ namespace ALE.TimeRegistration.Mob.Domain.Mocking
             return await Task.FromResult(task);
         }
 
-        public async Task<IQueryable<AppTask>> ListAllTasks()
+
+        public async Task<ICollection<AppTask>> ListAllTasksFromProject(Project project)
         {
-            var tasks = taskList.AsQueryable();
+            var tasks = taskList.Where(t => t.ProjectId == project.Id).ToList();
             return await Task.FromResult(tasks);
         }
     }

@@ -1,4 +1,5 @@
-﻿using ALE.TimeRegistration.Mob.Domain.Services;
+﻿using ALE.TimeRegistration.Mob.Domain.Mocking;
+using ALE.TimeRegistration.Mob.Domain.Services;
 using FreshMvvm;
 using System;
 using System.Collections.Generic;
@@ -10,10 +11,10 @@ namespace ALE.TimeRegistration.Mob.ViewModels
 {
     public class LoginViewModel : FreshBasePageModel
     {
-        private readonly IUserService _userService;
-        public LoginViewModel(IUserService userService)
+        private readonly IMobUserService userService;
+        public LoginViewModel()
         {
-            _userService = userService;
+            userService = new MockUsersService();
         }
 
         private string email;
@@ -21,8 +22,8 @@ namespace ALE.TimeRegistration.Mob.ViewModels
         public string Email
         {
             get { return email; }
-            set 
-            { 
+            set
+            {
                 email = value;
                 RaisePropertyChanged(nameof(Email));
             }
@@ -33,17 +34,31 @@ namespace ALE.TimeRegistration.Mob.ViewModels
         public string Password
         {
             get { return password; }
-            set 
-            { 
+            set
+            {
                 password = value;
                 RaisePropertyChanged(nameof(Password));
             }
         }
 
+        private bool userIsNotOK;
+
+        public bool UserIsNotOk
+        {
+            get { return userIsNotOK; }
+            set
+            {
+                userIsNotOK = value;
+                RaisePropertyChanged(nameof(UserIsNotOk));
+            }
+        }
+
+
 
         public ICommand LoginPasswordCommand
         {
-            get {
+            get
+            {
                 var command = new Command(ExecuteLoginPasswordCommand);
                 return command;
             }
@@ -51,14 +66,29 @@ namespace ALE.TimeRegistration.Mob.ViewModels
 
         private async void ExecuteLoginPasswordCommand()
         {
-            if (await _userService.Login(Email, Password))
+            try
             {
-                 await CoreMethods.PushPageModel<ProjectViewModel>();
+                if (await userService.Login(Email, Password))
+                {
+                    if (await userService.IsAdmin(Email, Password))
+                    {
+                        await CoreMethods.PushPageModel<AdminViewModel>();
+                        userIsNotOK = false;
+                    }
+                    else
+                    {
+                        await CoreMethods.PushPageModel<ProjectViewModel>();
+                        userIsNotOK = false;
+                    }
+                }
+
             }
-            else
+            catch (Exception)
             {
-                // Send message or show label that email or password is wrong
+                UserIsNotOk = true;
             }
+            
+
         }
 
     }

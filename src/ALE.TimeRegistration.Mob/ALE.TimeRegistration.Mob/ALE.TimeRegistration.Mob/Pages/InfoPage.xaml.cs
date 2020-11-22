@@ -16,17 +16,5 @@ namespace ALE.TimeRegistration.Mob.Pages
         {
             InitializeComponent();
         }
-        protected async override void OnAppearing()
-        {
-            base.OnAppearing();
-        }
-        private async void btnProject_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ProjectPage());
-        }
-        private async void btnQuestion_Clicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException(); // send question 
-        }
     }
 }
