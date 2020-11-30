@@ -53,15 +53,11 @@ namespace ALE.TimeRegistration.Mob.Domain.Mocking
         }
 
 
-        public async Task<ICollection<AppTaskResponseDto>> ListAllTasksFromProject(ProjectRequestDto project)
+        public async Task<ICollection<AppTaskResponseDto>> ListAllTasksFromProject(ProjectResponseDto project)
         {
             var tasks = taskList.Where(t => t.ProjectId == project.Id).ToList();
             return await Task.FromResult(tasks);
         }
 
-        public Task<ICollection<AppTaskResponseDto>> ListAllTasksFromProject(ProjectResponseDto project)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
