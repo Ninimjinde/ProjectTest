@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{E36467D2-A64F-4647-B00A-A0279CB57491}</ProjectGuid>
+    <ProjectGuid>{E5296751-207B-4D38-BD0C-79982FCA18CA}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ALE.TimeRegistration.Mob.UWP</RootNamespace>
