@@ -24,7 +24,7 @@ namespace XrnCourse.BucketList.Domain.Services.Api
             throw new NotImplementedException();
         }
 
-        public async Task<ICollection<AppTaskResponseDto>> ListAllTasksFromProject(ProjectRequestDto project)
+        public async Task<ICollection<AppTaskResponseDto>> ListAllTasksFromProject(ProjectResponseDto project)
         {
             throw new NotImplementedException();
             /*return await WebApiClient
