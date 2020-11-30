@@ -1,4 +1,4 @@
-﻿using ALE.TimeRegistration.Core.Entities;
+﻿using ALE.TimeRegistration.Mob.Domain;
 using FreshMvvm;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace ALE.TimeRegistration.Mob.ViewModels
     public class InfoViewModel : FreshBasePageModel
     {
 
-        private AppTask currentTask;
+        private AppTaskResponseDto currentTask;
         public InfoViewModel()
         {
             this.TaskName = currentTask.TaskName;
@@ -50,7 +50,7 @@ namespace ALE.TimeRegistration.Mob.ViewModels
         {
             base.Init(initData);
 
-            currentTask = initData as AppTask;
+            currentTask = initData as AppTaskResponseDto;
         }
 
         public ICommand BackToProjectPage => new Command(

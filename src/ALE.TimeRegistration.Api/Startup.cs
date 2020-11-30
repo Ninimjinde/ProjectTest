@@ -18,7 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Task = ALE.TimeRegistration.Core.Entities.AppTask;
+using Microsoft.OpenApi.Models;
 
 namespace ALE.TimeRegistration.Api
 {
@@ -48,6 +48,11 @@ namespace ALE.TimeRegistration.Api
             services.AddScoped<IProjectService, ProjectService>();
             services.AddScoped<ITaskService, TaskService>();
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TimeRegistration API", Version = "v1" });
+            });
+
             services.AddCors();
             
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -71,6 +76,17 @@ namespace ALE.TimeRegistration.Api
             app.UseCors(builder => builder.AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod());
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TimeRegistration API");
+                c.RoutePrefix = string.Empty;
+            });
+
 
             app.UseEndpoints(endpoints =>
             {

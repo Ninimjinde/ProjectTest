@@ -1,5 +1,4 @@
-﻿using ALE.TimeRegistration.Core.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +8,9 @@ namespace ALE.TimeRegistration.Mob.Domain.Services
 {
     public interface IMobTaskService
     {
-        Task<AppTask> GetById(Guid id);
+        Task<AppTaskResponseDto> GetById(Guid id);
 
-        Task<ICollection<AppTask>> ListAllTasksFromProject(Project project);
+        Task<ICollection<AppTaskResponseDto>> ListAllTasksFromProject(ProjectResponseDto project);
 
     }
 }

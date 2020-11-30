@@ -60,7 +60,7 @@ namespace ALE.TimeRegistration.Core.Services
 
         }
 
-        public async System.Threading.Tasks.Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(Guid id)
         {
             await _userRepo.DeleteAsync(id);
 

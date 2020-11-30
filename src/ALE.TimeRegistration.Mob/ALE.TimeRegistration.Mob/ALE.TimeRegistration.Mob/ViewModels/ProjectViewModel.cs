@@ -1,5 +1,4 @@
 ﻿
-using ALE.TimeRegistration.Core.Entities;
 using ALE.TimeRegistration.Mob.Domain.Mocking;
 using ALE.TimeRegistration.Mob.Domain.Services;
 using FreshMvvm;
@@ -10,6 +9,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Linq;
 using System.Reactive.Threading.Tasks;
+using ALE.TimeRegistration.Mob.Domain;
 
 namespace ALE.TimeRegistration.Mob.ViewModels
 {
@@ -40,9 +40,9 @@ namespace ALE.TimeRegistration.Mob.ViewModels
             }
         }
 
-        private Project selectedProject;
+        private ProjectResponseDto selectedProject;
 
-        public Project SelectedProject
+        public ProjectResponseDto SelectedProject
         {
             get { return selectedProject; }
             set
@@ -52,9 +52,9 @@ namespace ALE.TimeRegistration.Mob.ViewModels
             }
         }
 
-        private AppTask selectedTask;
+        private AppTaskResponseDto selectedTask;
 
-        public AppTask SelectedTask
+        public AppTaskResponseDto SelectedTask
         {
             get { return selectedTask; }
             set
@@ -64,9 +64,9 @@ namespace ALE.TimeRegistration.Mob.ViewModels
             }
         }
 
-        private ObservableCollection<Project> projects;
+        private ObservableCollection<ProjectResponseDto> projects;
 
-        public ObservableCollection<Project> Projects
+        public ObservableCollection<ProjectResponseDto> Projects
         {
             get { return projects; }
             set
@@ -76,9 +76,9 @@ namespace ALE.TimeRegistration.Mob.ViewModels
             }
         }
 
-        private ObservableCollection<AppTask> tasks;
+        private ObservableCollection<AppTaskResponseDto> tasks;
 
-        public ObservableCollection<AppTask> Tasks
+        public ObservableCollection<AppTaskResponseDto> Tasks
         {
             get { return tasks; }
             set
@@ -116,7 +116,7 @@ namespace ALE.TimeRegistration.Mob.ViewModels
             {
                 try
                 {
-                    Tasks = new ObservableCollection<AppTask>(await taskService.ListAllTasksFromProject(SelectedProject));
+                    Tasks = new ObservableCollection<AppTaskResponseDto>(await taskService.ListAllTasksFromProject(SelectedProject));
                 }
                 catch (Exception)
                 {
@@ -127,7 +127,7 @@ namespace ALE.TimeRegistration.Mob.ViewModels
 
         private async void LoadProjectList()
         {
-            Projects = new ObservableCollection<Project>(await projectService.ListAll());
+            Projects = new ObservableCollection<ProjectResponseDto>(await projectService.ListAll());
         }
 
         //If taskListviewObject = null => button info = disabled

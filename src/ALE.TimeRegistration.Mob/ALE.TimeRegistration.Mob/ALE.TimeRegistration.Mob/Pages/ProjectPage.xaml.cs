@@ -1,5 +1,4 @@
-﻿using ALE.TimeRegistration.Core.Entities;
-using ALE.TimeRegistration.Mob.ViewModels;
+﻿using ALE.TimeRegistration.Mob.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
