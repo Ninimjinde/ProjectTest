@@ -49,6 +49,7 @@ namespace ALE.TimeRegistration.Mob.ViewModels
             {
                 selectedProject = value;
                 RaisePropertyChanged(nameof(SelectedProject));
+                //refresh list of tasks
             }
         }
 
@@ -73,6 +74,7 @@ namespace ALE.TimeRegistration.Mob.ViewModels
             {
                 projects = value;
                 RaisePropertyChanged(nameof(Projects));
+                
             }
         }
 

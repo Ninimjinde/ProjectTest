@@ -26,7 +26,7 @@ namespace ALE.TimeRegistration.Mob.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new ALE.TimeRegistration.Mob.App());
+            LoadApplication(new Mob.App());
         }
     }
 }

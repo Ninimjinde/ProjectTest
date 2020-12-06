@@ -23,9 +23,9 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Picker Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" ItemsSource="{Binding Projects}" 
-                    ItemDisplayBinding="{Binding Name}" SelectedIndex="{Binding SelectedProject, Mode=TwoWay}" SelectedIndexChanged="Picker_SelectedIndexChanged"/>
+                    ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedProject, Mode=TwoWay}" />
             <Picker Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" ItemsSource="{Binding Tasks}" 
-                    ItemDisplayBinding="{Binding TaskName}" SelectedIndex="{Binding SelectedTask}"/>
+                    ItemDisplayBinding="{Binding TaskName}" SelectedItem="{Binding SelectedTask}"/>
             <Label x:Name="lblDate" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource TextColor}" FontSize="24" 
                    Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding DateToday}"/>
             <Button x:Name="btnPhoto" Text="Stuur foto" Grid.Row="3" Grid.Column="0" Style="{StaticResource Button}" />
