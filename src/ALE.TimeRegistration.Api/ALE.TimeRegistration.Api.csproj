@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ALE.TimeRegistration.Mob\ALE.TimeRegistration.Infrastructure\ALE.TimeRegistration.Infrastructure.csproj" />
+    <ProjectReference Include="..\ALE.TimeRegistration.Infrastructure\ALE.TimeRegistration.Infrastructure.csproj" />
   </ItemGroup>
 
 

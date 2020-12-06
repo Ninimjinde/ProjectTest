@@ -1,9 +1,6 @@
 ﻿using ALE.TimeRegistration.Core.Entities;
 using ALE.TimeRegistration.Infrastructure.Data.Seeding;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ALE.TimeRegistration.Infrastructure.Data
 {
