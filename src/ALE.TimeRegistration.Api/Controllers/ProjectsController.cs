@@ -39,6 +39,18 @@ namespace ALE.TimeRegistration.Api.Controllers
             return Ok(project);
         }
 
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetProjectsByUser(Guid id)
+        {
+            var project = await _projectService.GetProjectsByUserAsync(id);
+            if (project == null)
+            {
+                return NotFound($"User doesn't have any projects.");
+            }
+
+            return Ok(project);
+        }
+
         [HttpPost]
         public async Task<IActionResult> PostProject(ProjectRequestDto projectRequestDto)
         {

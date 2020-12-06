@@ -1,0 +1,64 @@
+﻿<h1>ProjectPage</h1>
+<h2>Hello CurrentUser</h2>
+
+<div class="text-center">
+    <h1 class="display-4">Projects</h1>
+</div>
+
+<div id="app" class="row">
+    <div class="col-md-6">
+        <ul class="list-group">
+            <li class="list-group-item" v-for="project in projects" v-on:click="getProjectTasks(project)">
+                <a>{{project.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <div v-if="currentProject">
+            <ul class="list-group">
+                <li class="list-group-item" v-for="task in tasks">
+                    <a>{{task.taskName}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>
+        var apiURL = 'https://localhost:5001/api/projects';
+        var app = new Vue({
+            el: '#app',
+            data: {
+                projects: null,
+                currentProject: null,
+                tasks: null
+            },
+            created: function () {
+                var self = this;
+                self.getProjects();
+            },
+            methods: {
+                getProjects: function () {
+                    var self = this;
+                    axios.get(`${apiURL}`)
+                        .then(function (response) {
+                            self.projects = response.data;
+                        })
+                        .catch(function (error) {
+                            console.error(error);
+                        });
+                },
+
+                getProjectTasks: function (project) {
+                    var self = this;
+                    self.currentProject = project;
+                    self.tasks = currentProject.tasks;
+                }
+
+            }
+
+        });
+    </script>
+}

@@ -11,7 +11,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
         public DbSet<Message> Messages { get; set; }
         public DbSet<Picture> Pictures { get; set; }
         public DbSet<AppTask> Tasks { get; set; }
-        public DbSet<UserTask> UserProjects { get; set; }
+        public DbSet<UserTask> UserTasks { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {

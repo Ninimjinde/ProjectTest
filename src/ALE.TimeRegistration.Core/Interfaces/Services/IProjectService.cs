@@ -10,6 +10,7 @@ namespace ALE.TimeRegistration.Core.Interfaces.Services
     {
         Task<IEnumerable<ProjectResponseDto>> ListAllAsync();
         Task<ProjectResponseDto> GetByIdAsync(Guid id);
+        Task<List<ProjectResponseDto>> GetProjectsByUserAsync(Guid id);
         Task<ProjectResponseDto> AddAsync(ProjectRequestDto projectRequestDto);
         Task<ProjectResponseDto> UpdateAsync(ProjectRequestDto projectRequestDto);
         Task DeleteAsync(Guid id);

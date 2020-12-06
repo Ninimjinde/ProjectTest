@@ -33,6 +33,12 @@ namespace ALE.TimeRegistration.Core.Services
             var dto = _mapper.Map<IEnumerable<ProjectResponseDto>>(result);
             return dto;
         }
+        public async Task<List<ProjectResponseDto>> GetProjectsByUserAsync(Guid id)
+        {
+            var result = await _projectRepo.GetProjectsByUserAsync(id);
+            var dto = _mapper.Map<IEnumerable<ProjectResponseDto>>(result);
+            return (List<ProjectResponseDto>)dto;
+        }
 
         public async Task<ProjectResponseDto> AddAsync(ProjectRequestDto projectRequestDto)
         {
@@ -50,10 +56,11 @@ namespace ALE.TimeRegistration.Core.Services
             return dto;
         }
 
-        public async System.Threading.Tasks.Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(Guid id)
         {
             await _projectRepo.DeleteAsync(id);
 
         }
+
     }
 }

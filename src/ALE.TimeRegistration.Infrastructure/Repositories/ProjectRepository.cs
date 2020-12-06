@@ -26,5 +26,17 @@ namespace ALE.TimeRegistration.Infrastructure.Repositories
             return _dbContext.Projects.AsNoTracking()
                 .Include(p => p.Tasks);
         }
+
+/*        public IQueryable<Project> GetProjectsByUserAsync(Guid userId)
+        {
+            //var userTasks = _dbContext.UserTasks.Where(ut => ut.UserId.Equals(userId)).Select(ut => ut.Task);
+            return _dbContext.UserTasks.Where(ut => ut.UserId.Equals(userId)).Select(ut => ut.Task).Select(t => t.Project);
+        }*/
+
+
+        public async Task<List<Project>> GetProjectsByUserAsync(Guid userId)
+        {
+            return await _dbContext.UserTasks.Where(ut => ut.UserId.Equals(userId)).Select(ut => ut.Task).Select(t => t.Project).ToListAsync();
+        }
     }
 }
