@@ -1,28 +1,32 @@
-﻿<h1>ProjectPage</h1>
-<h2>Hello CurrentUser</h2>
-
-<div class="text-center">
-    <h1 class="display-4">Projects</h1>
-</div>
+﻿<h1 class="m-5">ProjectPage</h1>
 
 <div id="app" class="row">
-    <div class="col-md-6">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Projects
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" v-for="project in projects" v-on:click="getProjectTasks(project)">{{project.name}}</a>
+        </div>
+    </div>
+@*    <div class="col-md-6">
+        <h2>Projects</h2>
         <ul class="list-group">
-            <li class="list-group-item" v-for="project in projects" v-on:click="getProjectTasks(project)">
+            <li class="list-group-item" v-for="project in projects" v-on:click="getProjectTasks(project)" v-bind:class="getProjectCssClass(project)">
                 <a>{{project.name}}</a>
             </li>
         </ul>
-    </div>
-    <div class="col-md-6">
-        <div v-if="currentProject">
-            <ul class="list-group">
-                <li class="list-group-item" v-for="task in tasks">
-                    <a>{{task.taskName}}</a>
-                </li>
-            </ul>
-        </div>
+    </div>*@
+    <div v-if="currentProject" class="col-md-6">
+        <h2>{{currentProject.name}} : Tasks</h2>
+        <ul class="list-group">
+            <li class="list-group-item" v-for="task in tasks" v-on:click="getTask(task)" v-bind:class="getTaskCssClass(task)">
+                <a>{{task.taskName}}</a>
+            </li>
+        </ul>
     </div>
 </div>
+
 
 
 @section scripts{
@@ -33,7 +37,8 @@
             data: {
                 projects: null,
                 currentProject: null,
-                tasks: null
+                tasks: null,
+                currentTask: null
             },
             created: function () {
                 var self = this;
@@ -54,9 +59,20 @@
                 getProjectTasks: function (project) {
                     var self = this;
                     self.currentProject = project;
-                    self.tasks = currentProject.tasks;
-                }
+                    self.tasks = project.tasks;
+                },
 
+                getTask: function (task) {
+                    var self = this;
+                    self.currentTask = task;
+                },
+
+                getTaskCssClass: function (task) {
+                    var self = this;
+                    if (task == self.currentTask) {
+                        return "list-group-item-success";
+                    }
+                }
             }
 
         });

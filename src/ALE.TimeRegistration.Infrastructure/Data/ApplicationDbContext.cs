@@ -18,7 +18,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
 
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder) 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserTask>()
                 .ToTable("UserTasks")
@@ -38,7 +38,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
             modelBuilder.Entity<Message>()
                 .HasOne(m => m.Sender)
                 .WithMany(u => u.SendMessages)
-                .OnDelete(DeleteBehavior.NoAction )
+                .OnDelete(DeleteBehavior.NoAction)
                 .HasForeignKey(m => m.SenderId);
             modelBuilder.Entity<Message>()
                  .HasOne(m => m.Receiver)
@@ -63,8 +63,8 @@ namespace ALE.TimeRegistration.Infrastructure.Data
                 .HasOne(t => t.Project)
                 .WithMany(p => p.Tasks)
                 .HasForeignKey(t => t.ProjectId);
-     
-           
+
+
             UserSeeder.Seed(modelBuilder);
             ProjectSeeder.Seed(modelBuilder);
             TaskSeeder.Seed(modelBuilder);

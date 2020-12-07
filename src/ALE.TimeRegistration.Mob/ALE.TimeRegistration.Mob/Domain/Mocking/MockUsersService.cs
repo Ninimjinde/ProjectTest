@@ -1,9 +1,8 @@
 ﻿using ALE.TimeRegistration.Mob.Domain.Services;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Mob.Domain.Mocking
 {
@@ -55,7 +54,7 @@ namespace ALE.TimeRegistration.Mob.Domain.Mocking
         {
             bool isAdmin;
             var user = userList.FirstOrDefault(u => u.Email == email);
-            if (user.Password == password & user.Email == "admin@test.com"){ isAdmin = true;} else { isAdmin = false;};
+            if (user.Password == password & user.Email == "admin@test.com") { isAdmin = true; } else { isAdmin = false; };
             return await Task.FromResult(isAdmin);
         }
 

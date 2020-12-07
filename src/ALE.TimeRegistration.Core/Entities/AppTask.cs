@@ -2,11 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace ALE.TimeRegistration.Core.Entities
 {
-     public class AppTask : EntityBase
+    public class AppTask : EntityBase
     {
         [Required]
         public string TaskName { get; set; }

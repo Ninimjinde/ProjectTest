@@ -1,8 +1,6 @@
 ﻿using ALE.TimeRegistration.Mob.ViewModels;
 using FreshMvvm;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace ALE.TimeRegistration.Mob
 {

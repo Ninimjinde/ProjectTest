@@ -1,12 +1,8 @@
 ﻿using ALE.TimeRegistration.Mob.Domain;
 using ALE.TimeRegistration.Mob.Domain.Services;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
 
 namespace XrnCourse.BucketList.Domain.Services.Api
 {

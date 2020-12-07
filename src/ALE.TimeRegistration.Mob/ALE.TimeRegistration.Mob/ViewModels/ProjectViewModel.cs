@@ -1,15 +1,12 @@
 ﻿
+using ALE.TimeRegistration.Mob.Domain;
 using ALE.TimeRegistration.Mob.Domain.Mocking;
 using ALE.TimeRegistration.Mob.Domain.Services;
 using FreshMvvm;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
-using System.Linq;
-using System.Reactive.Threading.Tasks;
-using ALE.TimeRegistration.Mob.Domain;
 
 namespace ALE.TimeRegistration.Mob.ViewModels
 {
@@ -74,7 +71,7 @@ namespace ALE.TimeRegistration.Mob.ViewModels
             {
                 projects = value;
                 RaisePropertyChanged(nameof(Projects));
-                
+
             }
         }
 
@@ -124,7 +121,7 @@ namespace ALE.TimeRegistration.Mob.ViewModels
                 {
                     //Errormessage choose Project
                 }
-                
+
             });
 
         private async void LoadProjectList()

@@ -3,10 +3,8 @@ using ALE.TimeRegistration.Core.Entities;
 using ALE.TimeRegistration.Core.Interfaces.Repositories;
 using ALE.TimeRegistration.Core.Interfaces.Services;
 using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Core.Services

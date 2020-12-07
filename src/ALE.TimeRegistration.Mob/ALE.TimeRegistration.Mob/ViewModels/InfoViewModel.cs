@@ -1,8 +1,5 @@
 ﻿using ALE.TimeRegistration.Mob.Domain;
 using FreshMvvm;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -25,8 +22,8 @@ namespace ALE.TimeRegistration.Mob.ViewModels
         public string TaskName
         {
             get { return taskName; }
-            set 
-            { 
+            set
+            {
                 taskName = value;
                 RaisePropertyChanged(nameof(TaskName));
             }
@@ -37,8 +34,8 @@ namespace ALE.TimeRegistration.Mob.ViewModels
         public string TaskInfo
         {
             get { return taskInfo; }
-            set 
-            { 
+            set
+            {
                 taskInfo = value;
                 RaisePropertyChanged(nameof(TaskInfo));
             }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ALE.TimeRegistration.Mob.Domain.Models
 {
@@ -17,5 +15,5 @@ namespace ALE.TimeRegistration.Mob.Domain.Models
         }
         public enum Languages { Nederlands = 0, Français = 1, English = 2 }
         private Languages language;
-    }  
+    }
 }

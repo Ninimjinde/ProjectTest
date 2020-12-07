@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ALE.TimeRegistration.Mob.Domain
+﻿namespace ALE.TimeRegistration.Mob.Domain
 {
     public class MessageResponseDto : DtoBase
     {

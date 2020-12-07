@@ -2,12 +2,8 @@
 using ALE.TimeRegistration.Core.Entities;
 using ALE.TimeRegistration.Core.Interfaces.Repositories;
 using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Core.Services

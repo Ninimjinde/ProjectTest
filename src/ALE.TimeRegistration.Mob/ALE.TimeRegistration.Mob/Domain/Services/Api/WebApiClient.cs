@@ -18,7 +18,8 @@ namespace XrnCourse.BucketList.Domain.Services.Api
             return httpClientHandler;
         }
 
-        private static JsonMediaTypeFormatter GetJsonFormatter() {
+        private static JsonMediaTypeFormatter GetJsonFormatter()
+        {
             var formatter = new JsonMediaTypeFormatter();
             //prevent self-referencing loops when saving Json (Bucket -> BucketItem -> Bucket -> ...)
             formatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;

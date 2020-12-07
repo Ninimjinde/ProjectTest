@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ALE.TimeRegistration.Web.Controllers
 {
-    public class ProjectsController : Controller
+    public class Projects : Controller
     {
         public IActionResult Index()
         {

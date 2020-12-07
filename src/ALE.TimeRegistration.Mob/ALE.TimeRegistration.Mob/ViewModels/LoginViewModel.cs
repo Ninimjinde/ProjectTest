@@ -2,8 +2,6 @@
 using ALE.TimeRegistration.Mob.Domain.Services;
 using FreshMvvm;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -87,7 +85,7 @@ namespace ALE.TimeRegistration.Mob.ViewModels
             {
                 UserIsNotOk = true;
             }
-            
+
 
         }
 

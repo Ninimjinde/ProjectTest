@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Infrastructure.Repositories
@@ -27,11 +26,11 @@ namespace ALE.TimeRegistration.Infrastructure.Repositories
                 .Include(p => p.Tasks);
         }
 
-/*        public IQueryable<Project> GetProjectsByUserAsync(Guid userId)
-        {
-            //var userTasks = _dbContext.UserTasks.Where(ut => ut.UserId.Equals(userId)).Select(ut => ut.Task);
-            return _dbContext.UserTasks.Where(ut => ut.UserId.Equals(userId)).Select(ut => ut.Task).Select(t => t.Project);
-        }*/
+        /*        public IQueryable<Project> GetProjectsByUserAsync(Guid userId)
+                {
+                    //var userTasks = _dbContext.UserTasks.Where(ut => ut.UserId.Equals(userId)).Select(ut => ut.Task);
+                    return _dbContext.UserTasks.Where(ut => ut.UserId.Equals(userId)).Select(ut => ut.Task).Select(t => t.Project);
+                }*/
 
 
         public async Task<List<Project>> GetProjectsByUserAsync(Guid userId)

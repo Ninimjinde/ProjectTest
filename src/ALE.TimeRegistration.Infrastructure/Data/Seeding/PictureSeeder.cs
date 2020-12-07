@@ -1,8 +1,6 @@
 ﻿using ALE.TimeRegistration.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ALE.TimeRegistration.Infrastructure.Data.Seeding
 {
@@ -16,7 +14,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data.Seeding
                 new Picture { Id = Guid.Parse("00000000-0000-0000-0000-000000000302"), TaskId = Guid.Parse("00000000-0000-0000-0000-000000000201") },
                 new Picture { Id = Guid.Parse("00000000-0000-0000-0000-000000000303"), TaskId = Guid.Parse("00000000-0000-0000-0000-000000000202") },
                 new Picture { Id = Guid.Parse("00000000-0000-0000-0000-000000000304"), TaskId = Guid.Parse("00000000-0000-0000-0000-000000000203") }
-                ) ;
+                );
         }
     }
 }

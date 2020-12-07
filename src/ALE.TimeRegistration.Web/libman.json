@@ -3,13 +3,6 @@
   "defaultProvider": "cdnjs",
   "libraries": [
     {
-      "library": "vue@2.6.12",
-      "destination": "wwwroot/lib/vue/",
-      "files": [
-        "vue.js"
-      ]
-    },
-    {
       "library": "axios@0.21.0",
       "destination": "wwwroot/lib/axios/",
       "files": [

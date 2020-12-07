@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ALE.TimeRegistration.Core.Dtos;
+﻿using ALE.TimeRegistration.Core.Dtos;
 using ALE.TimeRegistration.Core.Interfaces.Services;
 using ALE.TimeRegistration.Core.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Threading.Tasks;
 
 namespace ALE.TimeRegistration.Api.Controllers
 {

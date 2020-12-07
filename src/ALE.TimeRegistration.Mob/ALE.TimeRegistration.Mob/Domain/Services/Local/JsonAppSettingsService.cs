@@ -38,20 +38,20 @@ namespace XrnCourse.BucketList.Domain.Services.Local
             }
         }
 
-/*        public async Task<bool> SaveSettings(AppSettings settings)
-        {
-            try
-            {
-                string settingsJson = JsonConvert.SerializeObject(settings, Formatting.Indented, _serializerSettings);
-                File.WriteAllText(_filePath, settingsJson);
-                return await Task.FromResult(true);
-            }
-            catch
-            {
-                //todo: log error!
-                return await Task.FromResult(false);
-            }
-        }*/
+        /*        public async Task<bool> SaveSettings(AppSettings settings)
+                {
+                    try
+                    {
+                        string settingsJson = JsonConvert.SerializeObject(settings, Formatting.Indented, _serializerSettings);
+                        File.WriteAllText(_filePath, settingsJson);
+                        return await Task.FromResult(true);
+                    }
+                    catch
+                    {
+                        //todo: log error!
+                        return await Task.FromResult(false);
+                    }
+                }*/
 
         public async Task<bool> SaveSettings(AppSettings settings)
         {

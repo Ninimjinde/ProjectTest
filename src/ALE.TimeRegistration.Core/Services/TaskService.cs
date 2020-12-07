@@ -1,14 +1,11 @@
 ﻿using ALE.TimeRegistration.Core.Dtos;
 using ALE.TimeRegistration.Core.Interfaces.Repositories;
 using ALE.TimeRegistration.Core.Interfaces.Services;
-using ALE.TimeRegistration.Core.Entities;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using AppTask = ALE.TimeRegistration.Core.Entities.AppTask;
-using Microsoft.EntityFrameworkCore;
 
 namespace ALE.TimeRegistration.Core.Services
 {
