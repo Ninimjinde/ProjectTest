@@ -37,7 +37,7 @@ namespace ALE.TimeRegistration.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostTask(TaskRequestDto taskRequestDto)
+        public async Task<IActionResult> PostTask(AppTaskRequestDto taskRequestDto)
         {
             if (!ModelState.IsValid)
             {
@@ -48,7 +48,7 @@ namespace ALE.TimeRegistration.Api.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> PutTask(TaskRequestDto taskRequestDto)
+        public async Task<IActionResult> PutTask(AppTaskRequestDto taskRequestDto)
         {
             if (!ModelState.IsValid)
             {
@@ -60,7 +60,7 @@ namespace ALE.TimeRegistration.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+        public async Task<IActionResult> DeleteTask(Guid id)
         {
             if (!ModelState.IsValid)
             {

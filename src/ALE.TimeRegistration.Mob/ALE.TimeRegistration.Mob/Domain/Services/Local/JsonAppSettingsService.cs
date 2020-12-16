@@ -38,21 +38,6 @@ namespace XrnCourse.BucketList.Domain.Services.Local
             }
         }
 
-        /*        public async Task<bool> SaveSettings(AppSettings settings)
-                {
-                    try
-                    {
-                        string settingsJson = JsonConvert.SerializeObject(settings, Formatting.Indented, _serializerSettings);
-                        File.WriteAllText(_filePath, settingsJson);
-                        return await Task.FromResult(true);
-                    }
-                    catch
-                    {
-                        //todo: log error!
-                        return await Task.FromResult(false);
-                    }
-                }*/
-
         public async Task<bool> SaveSettings(AppSettings settings)
         {
             try
@@ -68,9 +53,9 @@ namespace XrnCourse.BucketList.Domain.Services.Local
             }
         }
 
-        Task<AppSettings> IAppSettingsService.GetSettings()
+            Task<AppSettings> IAppSettingsService.GetSettings()
         {
-            throw new NotImplementedException();
+                throw new NotImplementedException();
+            }
         }
     }
-}

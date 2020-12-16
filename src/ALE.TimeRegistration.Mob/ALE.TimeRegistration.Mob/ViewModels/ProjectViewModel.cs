@@ -90,10 +90,21 @@ namespace ALE.TimeRegistration.Mob.ViewModels
 
         #endregion
 
-        public override void Init(object initData)
+        protected async override void ViewIsAppearing(object sender, EventArgs e) // altijd oprgeroepen
+        {
+            base.ViewIsAppearing(sender, e);
+
+            LoadProjectList();
+
+            //await EnsureUserAndSettings();
+
+            //await RefreshBucketLists();
+        }
+
+        public override void Init(object initData) // enkel in voorwaartse beweging
         {
             base.Init(initData);
-            LoadProjectList();
+            
         }
 
         public ICommand OpenConfigPageCommand => new Command(
@@ -107,8 +118,7 @@ namespace ALE.TimeRegistration.Mob.ViewModels
             async () =>
             {
                 await CoreMethods.PushPageModel<InfoViewModel>(SelectedTask, false, true);
-            }
-            );
+            });
 
         public ICommand LoadTaskListCommand => new Command(
             async () =>

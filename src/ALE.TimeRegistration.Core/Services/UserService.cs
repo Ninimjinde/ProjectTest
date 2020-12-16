@@ -31,10 +31,10 @@ namespace ALE.TimeRegistration.Core.Services
             return dto;
         }
 
-        public async Task<IEnumerable<TaskResponseDto>> ListAllTasksAsync(Guid userId)
+        public async Task<IEnumerable<AppTaskResponseDto>> ListAllTasksAsync(Guid userId)
         {
             var result = await _userRepo.ListAllTasksAsync(userId);
-            var dto = _mapper.Map<IEnumerable<TaskResponseDto>>(result);
+            var dto = _mapper.Map<IEnumerable<AppTaskResponseDto>>(result);
             return dto;
         }
 

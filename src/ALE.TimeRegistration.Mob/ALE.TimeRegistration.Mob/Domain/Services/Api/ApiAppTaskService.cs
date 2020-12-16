@@ -12,7 +12,7 @@ namespace XrnCourse.BucketList.Domain.Services.Api
 
         public ApiAppTaskService()
         {
-            _baseUri = "https://enter-your-lan-ip-here:5001/";
+            _baseUri = "https://localhost:5001/";
         }
 
         public Task<AppTaskResponseDto> GetById(Guid id)
@@ -22,9 +22,8 @@ namespace XrnCourse.BucketList.Domain.Services.Api
 
         public async Task<ICollection<AppTaskResponseDto>> ListAllTasksFromProject(ProjectResponseDto project)
         {
-            throw new NotImplementedException();
-            /*return await WebApiClient
-                .GetApiResult<AppTaskResponseDto>($"{_baseUri}TasksController/GetTasks");*/
+            return await WebApiClient
+                .GetApiResult<ICollection<AppTaskResponseDto>>($"{_baseUri}TasksController/GetTasks");
         }
     }
 }

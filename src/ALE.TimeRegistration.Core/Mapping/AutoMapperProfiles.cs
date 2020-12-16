@@ -14,11 +14,11 @@ namespace ALE.TimeRegistration.Core.Mapping
                             opt => opt.MapFrom(src => src.WorkTime.TotalMinutes));
             /*            CreateMap<Task, UserTaskResponseDto>()
                             .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name));*/
-            CreateMap<AppTask, TaskResponseDto>()
+            CreateMap<AppTask, AppTaskResponseDto>()
                .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Project.Name))
                //.ForMember(dest => dest.ProjectId, opt => opt.MapFrom(src => src.ProjectId))
                .ForMember(dest => dest.TaskUsers, opt => opt.MapFrom(src => src.TaskUsers.Select(tu => tu.User.Name)));
-            CreateMap<TaskRequestDto, AppTask>()
+            CreateMap<AppTaskRequestDto, AppTask>()
                 .ForPath(dest => dest.Project.Name, opt => opt.MapFrom(src => src.ProjectName));
             //.ForMember(dest => dest.ProjectId, opt => opt.MapFrom(src => src.ProjectId));
 

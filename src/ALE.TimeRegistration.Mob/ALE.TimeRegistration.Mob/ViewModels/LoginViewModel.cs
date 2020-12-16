@@ -9,10 +9,10 @@ namespace ALE.TimeRegistration.Mob.ViewModels
 {
     public class LoginViewModel : FreshBasePageModel
     {
-        private readonly IMobUserService userService;
-        public LoginViewModel()
+        private readonly IMobUserService _userService;
+        public LoginViewModel(IMobUserService userService)
         {
-            userService = new MockUsersService();
+            _userService = userService;
         }
 
         private string email;
@@ -66,9 +66,9 @@ namespace ALE.TimeRegistration.Mob.ViewModels
         {
             try
             {
-                if (await userService.Login(Email, Password))
+                if (await _userService.Login(Email, Password))
                 {
-                    if (await userService.IsAdmin(Email, Password))
+                    if (await _userService.IsAdmin(Email, Password))
                     {
                         await CoreMethods.PushPageModel<AdminViewModel>();
                         userIsNotOK = false;

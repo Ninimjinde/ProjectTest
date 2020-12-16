@@ -14,10 +14,5 @@ namespace ALE.TimeRegistration.Mob.Pages
             InitializeComponent();
         }
 
-        private void Picker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var projectViewModel = BindingContext as ProjectViewModel;
-            projectViewModel.LoadTaskListCommand.Execute(e);
-        }
     }
 }

@@ -18,35 +18,35 @@ namespace ALE.TimeRegistration.Core.Services
             _mapper = mapper;
             _taskRepo = taskRepo;
         }
-        public async Task<TaskResponseDto> GetByIdAsync(Guid id)
+        public async Task<AppTaskResponseDto> GetByIdAsync(Guid id)
         {
             var result = await _taskRepo.GetByIdAsync(id);
-            var dto = _mapper.Map<TaskResponseDto>(result);
+            var dto = _mapper.Map<AppTaskResponseDto>(result);
             return dto;
         }
 
-        public async Task<IEnumerable<TaskResponseDto>> ListAllTasksAsync()
+        public async Task<IEnumerable<AppTaskResponseDto>> ListAllTasksAsync()
         {
             var result = await _taskRepo.ListAllAsync();
-            var dto = _mapper.Map<IEnumerable<TaskResponseDto>>(result);
+            var dto = _mapper.Map<IEnumerable<AppTaskResponseDto>>(result);
             return dto;
         }
 
-        public async Task<TaskResponseDto> AddAsync(TaskRequestDto taskRequestDto)
+        public async Task<AppTaskResponseDto> AddAsync(AppTaskRequestDto taskRequestDto)
         {
             var task = _mapper.Map<AppTask>(taskRequestDto);
             task.UploadDate = DateTime.UtcNow;
             var result = await _taskRepo.AddAsync(task);
-            var dto = _mapper.Map<TaskResponseDto>(result);
+            var dto = _mapper.Map<AppTaskResponseDto>(result);
             return dto;
 
         }
 
-        public async Task<TaskResponseDto> UpdateAsync(TaskRequestDto taskRequestDto)
+        public async Task<AppTaskResponseDto> UpdateAsync(AppTaskRequestDto taskRequestDto)
         {
             var task = _mapper.Map<AppTask>(taskRequestDto);
             var result = await _taskRepo.UpdateAsync(task);
-            var dto = _mapper.Map<TaskResponseDto>(result);
+            var dto = _mapper.Map<AppTaskResponseDto>(result);
             return dto;
         }
 

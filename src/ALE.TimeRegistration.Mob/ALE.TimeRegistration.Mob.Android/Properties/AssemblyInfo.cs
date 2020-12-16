@@ -14,7 +14,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
-
+#if DEBUG
+[assembly: Application(UsesCleartextTraffic = true)]
+#endif
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
