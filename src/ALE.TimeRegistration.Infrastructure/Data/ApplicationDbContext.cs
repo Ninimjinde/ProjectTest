@@ -1,10 +1,12 @@
 ﻿using ALE.TimeRegistration.Core.Entities;
 using ALE.TimeRegistration.Infrastructure.Data.Seeding;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ALE.TimeRegistration.Infrastructure.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<User>
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Project> Projects { get; set; }
@@ -71,6 +73,44 @@ namespace ALE.TimeRegistration.Infrastructure.Data
             UserTaskSeeder.Seed(modelBuilder);
             MessageSeeder.Seed(modelBuilder);
             PictureSeeder.Seed(modelBuilder);
+
+            const string AdminRoleId = "00000000-0000-0000-0000-000000000001";
+            const string AdminRoleName = "Admin";
+            const string AdminUserId = "00000000-0000-0000-0000-000000000001";
+            const string AdminUserName = "aboynamedsue@JCash.com";
+            const string AdminUserPassword = "TimeReg2020"; // For demo purposes only! Don't do this in real application!
+
+            IPasswordHasher<User> passwordHasher = new PasswordHasher<User>(); // Identity password hasher
+
+            User adminApplicationUser = new User
+            {
+                Id = AdminUserId,
+                UserName = AdminUserName,
+                NormalizedUserName = AdminUserName.ToUpper(),
+                Email = AdminUserName,
+                NormalizedEmail = AdminUserName.ToUpper(),
+                EmailConfirmed = true,
+                SecurityStamp = "VVPCRDAS3MJWQD5CSW2GWPRADBXEZINA", //Random string
+                ConcurrencyStamp = "c8554266-b401-4519-9aeb-a9283053fc58" //Random guid string
+                
+            };
+
+            adminApplicationUser.PasswordHash = passwordHasher.HashPassword(adminApplicationUser, AdminUserPassword);
+
+            modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
+            {
+                Id = AdminRoleId,
+                Name = AdminRoleName,
+                NormalizedName = AdminRoleName.ToUpper()
+            });
+
+            modelBuilder.Entity<User>().HasData(adminApplicationUser);
+
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                RoleId = AdminRoleId,
+                UserId = AdminUserId
+            });
 
         }
     }

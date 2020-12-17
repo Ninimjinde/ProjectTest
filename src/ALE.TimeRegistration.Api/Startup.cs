@@ -5,14 +5,18 @@ using ALE.TimeRegistration.Core.Services;
 using ALE.TimeRegistration.Infrastructure.Data;
 using ALE.TimeRegistration.Infrastructure.Repositories;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Text;
 
 namespace ALE.TimeRegistration.Api
 {
@@ -30,6 +34,29 @@ namespace ALE.TimeRegistration.Api
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                                                         options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
+
+            services.AddIdentity<User, IdentityRole>(options =>
+                {
+                    options.SignIn.RequireConfirmedEmail = true;
+                })
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(jwtOptions =>
+            {
+                jwtOptions.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateActor = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidIssuer = Configuration["JWTConfiguration:Issuer"],
+                    ValidAudience = Configuration["JWTConfiguration: Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWTConfiguration: SigninKey"]))
+                };
+            });
 
             services.AddControllers();
 
@@ -66,6 +93,7 @@ namespace ALE.TimeRegistration.Api
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseCors(builder => builder.AllowAnyOrigin()
             .AllowAnyHeader()
