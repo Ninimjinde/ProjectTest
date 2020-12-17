@@ -35,37 +35,38 @@ namespace ALE.TimeRegistration.Api
             services.AddDbContext<ApplicationDbContext>(options =>
                                                         options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
 
-            services.AddIdentity<User, IdentityRole>(options =>
-                {
-                    options.SignIn.RequireConfirmedEmail = true;
-                })
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            // Identity configuration
+            services.AddIdentity<User, IdentityRole>(options => // AddIdentity because UI package is not needed, if UI is needed then AddDefaultIdentity<ApplicationUser>
+             {
+                            options.SignIn.RequireConfirmedEmail = false;
+                        })
+             .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddAuthentication(options =>
+            services.AddAuthentication(option =>
             {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(jwtOptions =>
-            {
-                jwtOptions.TokenValidationParameters = new TokenValidationParameters
+                option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(jwtOptions =>
                 {
-                    ValidateActor = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidIssuer = Configuration["JWTConfiguration:Issuer"],
-                    ValidAudience = Configuration["JWTConfiguration: Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWTConfiguration: SigninKey"]))
+                    jwtOptions.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidateActor = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidIssuer = Configuration["JWTConfiguration:Issuer"],
+                        ValidAudience = Configuration["JWTConfiguration:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWTConfiguration: SigningKey"]))
                 };
-            });
+                });
+
 
             services.AddControllers();
 
-            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<ITaskRepository, TaskRepository>();
             services.AddScoped<IRepository<Message>, EfRepository<Message>>();
             services.AddScoped<IRepository<Picture>, EfRepository<Picture>>();
-            services.AddScoped<IUserService, UserService>();
             services.AddScoped<IProjectService, ProjectService>();
             services.AddScoped<ITaskService, TaskService>();
 

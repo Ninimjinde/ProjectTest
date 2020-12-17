@@ -1,6 +1,8 @@
 ﻿using ALE.TimeRegistration.Core.Dtos;
+using ALE.TimeRegistration.Core.Entities;
 using ALE.TimeRegistration.Core.Interfaces.Services;
 using ALE.TimeRegistration.Core.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -12,35 +14,36 @@ namespace ALE.TimeRegistration.Api.Controllers
     public class UsersController : ControllerBase
     {
         private readonly ITaskService _taskService;
-        private readonly IUserService _userService;
+        //private readonly IUserService _userService;
+        private readonly UserManager<UserRequestDto> _userManager;
 
-        public UsersController(ITaskService taskService, IUserService userService)
+        public UsersController(ITaskService taskService, UserManager<UserRequestDto> userManager)
         {
             _taskService = taskService;
-            _userService = userService;
+            _userManager = userManager;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllUsers()
+        public IActionResult GetAllUsers()
         {
-            var projects = await _userService.ListAllUsersAsync();
+            var projects = _userManager.Users;
             return Ok(projects);
         }
 
-        [HttpGet("{id}/tasks")]
+/*        [HttpGet("{id}/tasks")]
         public async Task<IActionResult> GetAllTasksUser(Guid userId)
         {
             var userTasks = await _userService.ListAllTasksAsync(userId);
             return Ok(userTasks);
-        }
+        }*/
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetUser(Guid id)
+        [HttpGet("{email}")]
+        public async Task<IActionResult> GetUser(string email)
         {
-            var user = await _userService.GetByIdAsync(id);
+            var user = await _userManager.FindByEmailAsync(email);
             if (user == null)
             {
-                return NotFound($"User with Id {id} does not exist.");
+                return NotFound($"User with E-mail {email} does not exist.");
             }
             return Ok(user);
         }
@@ -52,8 +55,8 @@ namespace ALE.TimeRegistration.Api.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var userResponseDto = await _userService.AddAsync(userRequestDto);
-            return CreatedAtAction(nameof(GetUser), new { id = userResponseDto.Id }, userResponseDto);
+            var userResponseDto = await _userManager.CreateAsync(userRequestDto);
+            return Ok(userResponseDto);
         }
 
         [HttpPut]
@@ -63,19 +66,19 @@ namespace ALE.TimeRegistration.Api.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var userResponseDto = await _userService.UpdateAsync(userRequestDto)
+            var userResponseDto = await _userManager.UpdateAsync(userRequestDto)
            ;
             return Ok(userResponseDto);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+        [HttpDelete]
+        public async Task<IActionResult> Delete([FromBody] UserRequestDto userRequestDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            await _userService.DeleteAsync(id);
+            await _userManager.DeleteAsync(userRequestDto);
             return Ok();
         }
 

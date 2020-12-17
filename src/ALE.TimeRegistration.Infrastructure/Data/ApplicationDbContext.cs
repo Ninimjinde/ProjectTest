@@ -8,7 +8,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
 {
     public class ApplicationDbContext : IdentityDbContext<User>
     {
-        public DbSet<User> Users { get; set; }
+        //public DbSet<User> Users { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Picture> Pictures { get; set; }
@@ -78,7 +78,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data
             const string AdminRoleName = "Admin";
             const string AdminUserId = "00000000-0000-0000-0000-000000000001";
             const string AdminUserName = "aboynamedsue@JCash.com";
-            const string AdminUserPassword = "TimeReg2020"; // For demo purposes only! Don't do this in real application!
+            const string AdminUserPassword = "TimeReg2020"; 
 
             IPasswordHasher<User> passwordHasher = new PasswordHasher<User>(); // Identity password hasher
 
