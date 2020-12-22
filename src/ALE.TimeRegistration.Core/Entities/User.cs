@@ -11,7 +11,6 @@ namespace ALE.TimeRegistration.Core.Entities
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Password { get; set; }
-        public Guid IdGuid { get; set; }
         public ICollection<Message> ReceivedMessages { get; set; }
         public ICollection<Message> SendMessages { get; set; }
         public ICollection<UserTask> UserTasks { get; set; }

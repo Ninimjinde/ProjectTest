@@ -1,0 +1,165 @@
+﻿<body class="BackgroundClock">
+    <div id="app">
+        <h1>Admin Page</h1>
+        <div class="d-flex" style="padding:20px">
+            <h4>Add User</h4>
+            <form class="col-md-6">
+                <div class="form-group row">
+                    <label for="Name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="LastName" class="col-sm-2 col-form-label">Lastname</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="lastName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Email" class="col-sm-2 col-form-label">E-mail</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Password" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">Is user admin?</div>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="isAdmin">
+                            <label class="form-check-label" for="IsAdmin">
+                                Is admin
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" style="width: 100px">Add user</button>
+                    </div>
+                </div>
+            </form>
+            <h4>Delete User</h4>
+            <form class="col-md-6">
+                <div class="form-group row">
+                    <label for="Email" class="col-sm-2 col-form-label">E-mail</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" style="width: 150px">Delete user</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="d-flex" style="padding:20px">
+            <h4>Add Project</h4>
+            <form class="col-md-6">
+                <div class="form-group row">
+                    <label for="Email" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="projectName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" style="width: 150px">Add Project</button>
+                    </div>
+                </div>
+            </form>
+            <h4>Add Task</h4>
+            <form class="col-md-6">
+                <div class="form-group row">
+                    <label for="Name" class="col-sm-2 col-form-label">Project</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="project">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="LastName" class="col-sm-2 col-form-label">Name task</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="taskName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Email" class="col-sm-2 col-form-label">Info</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="infoTask">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Password" class="col-sm-2 col-form-label">User</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="emailUserTask">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">For all users</div>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="allUsers">
+                            <label class="form-check-label" for="allUsers">
+                                Is for all users
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" style="width: 100px">Add user</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+@section scripts{
+    <script>
+        var apiUserURL = 'https://localhost:5001/api/AspNetUsers';
+        var apiProjectURL = 'https://localhost:5001/api/projects';
+        var app = new Vue({
+            el: '#app',
+            data: {
+                users: null,
+                projects: null
+            },
+            created: function () {
+                var self = this;
+                self.getUsers();
+                self.getProjects();
+            },
+            methods: {
+                getUsers: function () {
+                    var self = this;
+                    axios.get(`${apiUserURL}`)
+                        .then(function (response) {
+                            self.users = response.data;
+                        })
+                        .catch(function (error) {
+                            console.error(error);
+                        });
+                },
+
+                getProjects: function () {
+                    var self = this;
+                    axios.get(`${apiProjectURL}`)
+                        .then(function (response) {
+                            self.projects = response.data;
+                        })
+                        .catch(function (error) {
+                            console.error(error);
+                        });
+                }
+            }
+        });
+    </script>
+}

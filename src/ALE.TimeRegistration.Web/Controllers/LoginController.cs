@@ -6,9 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ALE.TimeRegistration.Web.Controllers
 {
-    public class Projects : Controller
+    public class LoginController : Controller
     {
         public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult Privacy()
         {
             return View();
         }

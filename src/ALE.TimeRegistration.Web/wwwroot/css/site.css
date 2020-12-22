@@ -2,26 +2,39 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    color: #feda4a;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #feda4a;
+}
+
+.yellow-text {
+    color: #feda4a !important;
+    font-size: 20px !important;
+    background-color: black !important;
+}
+
+.selectedTask {
+    background-color: #feda4a !important;
+    color: black !important;
+    font-size: 20px !important;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    background-color: black;
+    border-color: #feda4a;
+    color: #feda4a;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #feda4a;
+    background-color: #1b6ec2;
+    border-color: #feda4a;
 }
 
 /* Sticky footer styles
@@ -69,3 +82,60 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/*ALE Specific css*/
+.BackgroundClock {
+    background-image: url(../images/clockwallpaper.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #feda4a;
+}
+
+body {
+    background-color: #000;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    color: #feda4a;
+}
+
+h1 {
+    font-family: Federant;
+    font-size: 4em;
+}
+
+h2 {
+    font-family: Bilbo;
+    font-size: 4em;
+}
+
+h3 {
+    font-family: Federant;
+    font-size: 2em;
+}
+
+hr {
+    border-top: 1px solid #feda4a;
+}
+
+.master {
+    min-height: 100%;
+    position: relative;
+}
+
+main {
+    padding-bottom: 185px;
+}
+
+.list-group-item {
+    border-color: #feda4a;
+}
+

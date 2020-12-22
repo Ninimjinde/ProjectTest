@@ -42,6 +42,16 @@ namespace ALE.TimeRegistration.Api
                         })
              .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddControllers();
+
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<ITaskRepository, TaskRepository>();
+            services.AddScoped<IRepository<Message>, EfRepository<Message>>();
+            services.AddScoped<IRepository<Picture>, EfRepository<Picture>>();
+            services.AddScoped<IProjectService, ProjectService>();
+            services.AddScoped<ITaskService, TaskService>();
+
+
             services.AddAuthentication(option =>
             {
                 option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -56,19 +66,9 @@ namespace ALE.TimeRegistration.Api
                         ValidateLifetime = true,
                         ValidIssuer = Configuration["JWTConfiguration:Issuer"],
                         ValidAudience = Configuration["JWTConfiguration:Audience"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWTConfiguration: SigningKey"]))
-                };
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWTConfiguration:SigningKey"]))
+                    };
                 });
-
-
-            services.AddControllers();
-
-            services.AddScoped<IProjectRepository, ProjectRepository>();
-            services.AddScoped<ITaskRepository, TaskRepository>();
-            services.AddScoped<IRepository<Message>, EfRepository<Message>>();
-            services.AddScoped<IRepository<Picture>, EfRepository<Picture>>();
-            services.AddScoped<IProjectService, ProjectService>();
-            services.AddScoped<ITaskService, TaskService>();
 
             services.AddSwaggerGen(c =>
             {

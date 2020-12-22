@@ -26,8 +26,8 @@ namespace ALE.TimeRegistration.Api.Controllers
         [HttpGet]
         public IActionResult GetAllUsers()
         {
-            var projects = _userManager.Users;
-            return Ok(projects);
+            var users = _userManager.Users;
+            return Ok(users);
         }
 
 /*        [HttpGet("{id}/tasks")]

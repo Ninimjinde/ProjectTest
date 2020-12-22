@@ -1,32 +1,34 @@
-﻿<h1 class="m-5">ProjectPage</h1>
-
-<div id="app" class="row">
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Projects
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" v-for="project in projects" v-on:click="getProjectTasks(project)">{{project.name}}</a>
+﻿<body class="BackgroundClock">
+    <h1 class="m-5">ProjectPage</h1>
+    <div id="app" class="row">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle btn-lg yellow-text" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Projects
+            </button>
+            <div class="dropdown-menu yellow-text" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" v-for="project in projects" v-on:click="getProjectTasks(project)">{{project.name}}</a>
+            </div>
         </div>
-    </div>
-@*    <div class="col-md-6">
-        <h2>Projects</h2>
-        <ul class="list-group">
-            <li class="list-group-item" v-for="project in projects" v-on:click="getProjectTasks(project)" v-bind:class="getProjectCssClass(project)">
-                <a>{{project.name}}</a>
-            </li>
-        </ul>
-    </div>*@
-    <div v-if="currentProject" class="col-md-6">
-        <h2>{{currentProject.name}} : Tasks</h2>
-        <ul class="list-group">
-            <li class="list-group-item" v-for="task in tasks" v-on:click="getTask(task)" v-bind:class="getTaskCssClass(task)">
-                <a>{{task.taskName}}</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
+        <div v-if="currentProject" class="col-md-6">
+            <h3>{{currentProject.name}}</h3>
+            <h4>Tasks:</h4>
+            <ul class="list-group">
+                <li class="list-group-item yellow-text" v-for="task in tasks" v-on:click="getTask(task)" v-bind:class="getTaskCssClass(task)">
+                    <a>{{task.taskName}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card yellow-text float-right" style="width: 18rem; border-color: #feda4a" v-if="currentTask">
+            <div class="card-body">
+                <h5 class="card-title">Project: {{currentProject.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Task: {{currentTask.taskName}}</h6>
+                <p class="card-text">{{currentTask.info}}</p>
+                <button class="btn-primary" style="width: 100px">start</button>
+                <button class="btn-primary" style="width: 100px">stop</button>
+            </div>
+        </div>
+    </div>    
+</body>
 
 
 @section scripts{
@@ -70,7 +72,7 @@
                 getTaskCssClass: function (task) {
                     var self = this;
                     if (task == self.currentTask) {
-                        return "list-group-item-success";
+                        return "selectedTask";
                     }
                 }
             }
