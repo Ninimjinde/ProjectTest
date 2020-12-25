@@ -18,12 +18,21 @@ namespace ALE.TimeRegistration.Core.Services
             _mapper = mapper;
             _taskRepo = taskRepo;
         }
+
         public async Task<AppTaskResponseDto> GetByIdAsync(Guid id)
         {
             var result = await _taskRepo.GetByIdAsync(id);
             var dto = _mapper.Map<AppTaskResponseDto>(result);
             return dto;
         }
+
+        public async Task<List<AppTaskResponseDto>> GetUserTasks(Guid userId)
+        {
+            var result = await _taskRepo.GetByIdAsync(userId);
+            var dto = _mapper.Map<List<AppTaskResponseDto>>(result);
+            return dto;
+        }
+
 
         public async Task<IEnumerable<AppTaskResponseDto>> ListAllTasksAsync()
         {
@@ -50,10 +59,12 @@ namespace ALE.TimeRegistration.Core.Services
             return dto;
         }
 
-        public async System.Threading.Tasks.Task DeleteAsync(Guid id)
+
+        public async Task DeleteAsync(Guid id)
         {
             await _taskRepo.DeleteAsync(id);
 
         }
+
     }
 }

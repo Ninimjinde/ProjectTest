@@ -36,6 +36,18 @@ namespace ALE.TimeRegistration.Api.Controllers
             return Ok(task);
         }
 
+        [HttpGet("/user/{id}")]
+        public async Task<IActionResult> GetUserTasks(Guid id)
+        {
+            var task = await _taskService.GetUserTasks(id);
+            if (task == null)
+            {
+                return NotFound($"Task with Id {id} does not exist.");
+            }
+
+            return Ok(task);
+        }
+
         [HttpPost]
         public async Task<IActionResult> PostTask(AppTaskRequestDto taskRequestDto)
         {

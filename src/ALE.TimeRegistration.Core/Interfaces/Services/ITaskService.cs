@@ -8,6 +8,7 @@ namespace ALE.TimeRegistration.Core.Interfaces.Services
     public interface ITaskService
     {
         Task<IEnumerable<AppTaskResponseDto>> ListAllTasksAsync();
+        Task<List<AppTaskResponseDto>> GetUserTasks(Guid userId);
         Task<AppTaskResponseDto> GetByIdAsync(Guid id);
         Task<AppTaskResponseDto> AddAsync(AppTaskRequestDto taskRequestDto);
         Task<AppTaskResponseDto> UpdateAsync(AppTaskRequestDto taskRequestDto);

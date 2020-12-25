@@ -13,13 +13,10 @@ namespace ALE.TimeRegistration.Api.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly ITaskService _taskService;
-        //private readonly IUserService _userService;
         private readonly UserManager<UserRequestDto> _userManager;
 
-        public UsersController(ITaskService taskService, UserManager<UserRequestDto> userManager)
+        public UsersController(UserManager<UserRequestDto> userManager)
         {
-            _taskService = taskService;
             _userManager = userManager;
         }
 
@@ -29,13 +26,6 @@ namespace ALE.TimeRegistration.Api.Controllers
             var users = _userManager.Users;
             return Ok(users);
         }
-
-/*        [HttpGet("{id}/tasks")]
-        public async Task<IActionResult> GetAllTasksUser(Guid userId)
-        {
-            var userTasks = await _userService.ListAllTasksAsync(userId);
-            return Ok(userTasks);
-        }*/
 
         [HttpGet("{email}")]
         public async Task<IActionResult> GetUser(string email)
