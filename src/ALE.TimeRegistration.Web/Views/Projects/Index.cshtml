@@ -1,33 +1,69 @@
 ﻿<body class="BackgroundClock">
-    <h1 class="m-5">ProjectPage</h1>
-    <div id="app" class="row">
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle btn-lg yellow-text" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Projects
-            </button>
-            <div class="dropdown-menu yellow-text" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" v-for="project in projects" v-on:click="getProjectTasks(project)">{{project.name}}</a>
+    <div id="app">
+        <h1>ProjectPage</h1>
+        <div style="float:right">
+            <div>
+                <p>Running project: {{runningProject}}</p>
+                <p>Running task: {{runningTask}}</p>
+                <p style="font-size:30px">{{formattedElapsedTime}}</p>
+                <div class="row">
+                    <div v-if="currentTask">
+                        <button class="btn-primary" style="width: 100px" v-on:click="start">start</button>
+                    </div>
+                    <div v-if="runningTask">
+                        <button class="btn-primary" style="width: 100px" v-on:click="stop">stop</button>
+                        <button class="btn-primary" style="width: 100px" v-on:click="reset">reset</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card yellow-text" style="width: 18rem; border-color: #feda4a; margin-top: 20px" v-if="currentTask">
+                <div class="card-body">
+                    <h5 class="card-title">Project: {{currentProject.name}}</h5>
+                    <h6 class="card-subtitle mb-2">Task: {{currentTask.taskName}}</h6>
+                    <p class="card-text">{{currentTask.info}}</p>
+                </div>
             </div>
         </div>
-        <div v-if="currentProject" class="col-md-6">
-            <h3>{{currentProject.name}}</h3>
-            <h4>Tasks:</h4>
-            <ul class="list-group">
-                <li class="list-group-item yellow-text" v-for="task in tasks" v-on:click="getTask(task)" v-bind:class="getTaskCssClass(task)">
-                    <a>{{task.taskName}}</a>
-                </li>
-            </ul>
-        </div>
-        <div class="card yellow-text float-right" style="width: 18rem; border-color: #feda4a" v-if="currentTask">
-            <div class="card-body">
-                <h5 class="card-title">Project: {{currentProject.name}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Task: {{currentTask.taskName}}</h6>
-                <p class="card-text">{{currentTask.info}}</p>
-                <button class="btn-primary" style="width: 100px">start</button>
-                <button class="btn-primary" style="width: 100px">stop</button>
+        <div class="row">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle btn-lg yellow-text" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Projects
+                </button>
+                <div class="dropdown-menu yellow-text" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" v-for="project in projects" v-on:click="getProjectTasks(project)">{{project.name}}</a>
+                </div>
+            </div>
+            <div v-if="currentProject" class="col-md-6">
+                <h3>{{currentProject.name}}</h3>
+                <h4>Tasks:</h4>
+                <ul class="list-group">
+                    <li class="list-group-item yellow-text" v-for="task in tasks" v-on:click="getTask(task)" v-bind:class="getTaskCssClass(task)">
+                        <a>{{task.taskName}}</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>    
+        <!--set log-->
+        <table style="border: 1px solid; width: 100%; background-color: black">
+            <thead>
+                <tr>
+                    <th colspan="3">Log Tasks</th>
+                </tr>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+            </tbody>          
+        </table>
+    </div>
 </body>
 
 
@@ -40,11 +76,24 @@
                 projects: null,
                 currentProject: null,
                 tasks: null,
-                currentTask: null
+                currentTask: null,
+                elapsedTime: 0,
+                timer: undefined,
+                runningTask: null,
+                runningProject: null,
+                showStopwatch: false
             },
             created: function () {
                 var self = this;
                 self.getProjects();
+            },
+            computed: {
+                formattedElapsedTime() {
+                    const date = new Date(null);
+                    date.setSeconds(this.elapsedTime / 1000);
+                    const utc = date.toUTCString();
+                    return utc.substr(utc.indexOf(":") - 2, 8);
+                }
             },
             methods: {
                 getProjects: function () {
@@ -62,11 +111,13 @@
                     var self = this;
                     self.currentProject = project;
                     self.tasks = project.tasks;
+                    self.currentTask = null;
                 },
 
                 getTask: function (task) {
                     var self = this;
                     self.currentTask = task;
+                    self.showStopwatch = true;
                 },
 
                 getTaskCssClass: function (task) {
@@ -74,9 +125,27 @@
                     if (task == self.currentTask) {
                         return "selectedTask";
                     }
+                },
+                start: function () {
+                    var self = this;
+                    self.timer = setInterval(() => {
+                        self.elapsedTime += 1000;
+                    }, 1000);
+                    self.runningProject = self.currentProject.name;
+                    self.runningTask = self.currentTask.taskName;
+                    self.showStopwatch = true;  
+                },
+                stop: function () {
+                    var self = this;
+                    clearInterval(self.timer);
+                },
+                reset: function () {
+                    var self = this;
+                    self.elapsedTime = 0;
+                    self.runningProject = null;
+                    self.runningTask = null;
                 }
             }
-
         });
     </script>
 }

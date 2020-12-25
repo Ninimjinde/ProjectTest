@@ -139,3 +139,9 @@ main {
     border-color: #feda4a;
 }
 
+
+.logTable {
+    color: white !important;
+    border: solid;
+    border-width: thin;
+}
