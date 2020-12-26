@@ -9,7 +9,7 @@ namespace ALE.TimeRegistration.Core.Interfaces.Services
     public interface IUserTaskService
     {
         Task<UserTaskResponseDto> AddAsync(UserTaskRequestDto taskRequestDto);
-        Task<IEnumerable<UserTaskResponseDto>> GetUserTasks(Guid id);
+        Task<IEnumerable<UserTaskResponseDto>> GetUserTasks(string id);
         Task<IEnumerable<UserTaskResponseDto>> ListAllTasksAsync();
     }
 }

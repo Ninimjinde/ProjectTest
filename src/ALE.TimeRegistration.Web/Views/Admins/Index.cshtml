@@ -2,71 +2,60 @@
     <div id="app">
         <h1>Admin Page</h1>
         <div class="d-flex" style="padding:20px">
+            <!--Add User-->
             <h4>Add User</h4>
             <form class="col-md-6">
                 <div class="form-group row">
                     <label for="Name" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" v-model="newUser.name">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="LastName" class="col-sm-2 col-form-label">Lastname</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="lastName">
+                        <input type="text" class="form-control" id="lastName" v-model="newUser.lastName">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="Email" class="col-sm-2 col-form-label">E-mail</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" v-model="newUser.email">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="Password" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="password">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="Password" class="col-sm-2 col-form-label">Confirm Password</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="confirmPassword">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-2">Is user admin?</div>
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="isAdmin">
-                            <label class="form-check-label" for="IsAdmin">
-                                Is admin
-                            </label>
-                        </div>
+                        <input type="text" class="form-control" id="password" v-model="newUser.password">
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary" style="width: 100px">Add user</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100px" v-on:click="createUser()">Add user</button>
                     </div>
                 </div>
             </form>
+            <!--Delete User-->
             <h4>Delete User</h4>
             <form class="col-md-6">
                 <div class="form-group row">
                     <label for="Email" class="col-sm-2 col-form-label">E-mail</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email">
+                        @*<input type="email" class="form-control" id="email">*@
+                        <select>
+                            <option v-for="user in users">{{user.name}} {{user.lastName}} - {{user.email}}</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary" style="width: 150px">Delete user</button>
+                        <button type="submit" class="btn btn-primary" style="width: 150px" v-on:click="deleteUser()">Delete user</button>
                     </div>
                 </div>
             </form>
         </div>
         <div class="d-flex" style="padding:20px">
+            <!--Add project-->
             <h4>Add Project</h4>
             <form class="col-md-6">
                 <div class="form-group row">
@@ -81,12 +70,16 @@
                     </div>
                 </div>
             </form>
+            <!--Add Task-->
             <h4>Add Task</h4>
             <form class="col-md-6">
                 <div class="form-group row">
                     <label for="Name" class="col-sm-2 col-form-label">Project</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="project">
+                        @*<input type="text" class="form-control" id="project">*@
+                        <select>
+                            <option v-for="project in projects" v-bind:value="addTaskProject" v-bind>{{project.name}}</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -121,16 +114,22 @@
     <script>
         var apiUserURL = 'https://localhost:5001/api/accounts';
         var apiProjectURL = 'https://localhost:5001/api/projects';
+        var apiTaskURL = 'https://localhost:5001/api/tasks';
         var app = new Vue({
             el: '#app',
             data: {
                 users: null,
-                projects: null
+                projects: null,
+                tasks: null,
+                user: null,
+                addTaskProject: null,
+                newUser: { name: "", lastName: "", email: "", password: "", confirmPassword:""}
             },
             created: function () {
                 var self = this;
                 self.getUsers();
                 self.getProjects();
+                self.getTasks();
             },
             methods: {
                 getUsers: function () {
@@ -153,7 +152,41 @@
                         .catch(function (error) {
                             console.error(error);
                         });
+                },
+
+                getTasks: function () {
+                    var self = this;
+                    axios.get(`${apiTaskURL}`)
+                        .then(function (response) {
+                            self.tasks = response.data;
+                        })
+                        .catch(function (error) {
+                            console.error(error);
+                        });
+                },
+
+                createUser: function () {
+                    var self = this;
+                    axios.post(`${apiUserURL}/register`, self.newUser)
+                        .then(function (response) {
+                            console.log(response);
+                        })
+                        .catch(function (error) {
+                            console.error(error);
+                        });
+                },
+
+                deleteUser: function () {
+                    var self = this;
+                    axios.delete(`${apiUserURL}`, self.user)
+                        .then(function (response) {
+                            console.log(response);
+                        })
+                        .catch(function (error) {
+                            console.error(error);
+                        });
                 }
+
             }
         });
     </script>

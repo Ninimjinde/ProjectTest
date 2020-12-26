@@ -25,11 +25,14 @@ namespace ALE.TimeRegistration.Core.Mapping
             CreateMap<Project, ProjectResponseDto>();
             CreateMap<ProjectRequestDto, Project>();
 
-            CreateMap<UserTask, UserTaskResponseDto>();
+            CreateMap<UserTask, UserTaskResponseDto>()
+                .ForMember(dest => dest.ProjectName, opt => opt.MapFrom(src => src.Task.Project.Name))
+                .ForMember(dest => dest.TaskName, opt => opt.MapFrom(src => src.Task.TaskName));
             CreateMap<UserTaskRequestDto, UserTask>();
 
-
             CreateMap<IdentityUser, UserResponsDto>();
+
+
         }
     }
 }

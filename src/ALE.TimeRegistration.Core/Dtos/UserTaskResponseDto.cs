@@ -9,6 +9,8 @@ namespace ALE.TimeRegistration.Core.Dtos
     {
         public string UserId { get; set; }
         public Guid TaskId { get; set; }
+        public string ProjectName { get; set; }
+        public string TaskName { get; set; }
         public TimeSpan WorkTime { get; set; }
         public DateTime WorkDateTime { get; set; }
     }

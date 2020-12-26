@@ -9,6 +9,6 @@ namespace ALE.TimeRegistration.Core.Interfaces.Repositories
 {
     public interface IUserTaskRepository : IRepository<UserTask>
     {
-        Task<IEnumerable<UserTask>> GetUserTasks(Guid id);
+        Task<IEnumerable<UserTask>> GetUserTasks(string id);
     }
 }

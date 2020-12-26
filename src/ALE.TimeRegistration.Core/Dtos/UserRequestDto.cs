@@ -13,9 +13,5 @@ namespace ALE.TimeRegistration.Core.Dtos
         [DataType(DataType.Password)]
         [StringLength(100, MinimumLength = 7)]
         public string Password { get; set; }
-        [Required]
-        [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage ="Passwords do not match!")]
-        public string ConfirmPassword { get; set; }
     }
 }

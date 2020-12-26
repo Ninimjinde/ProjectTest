@@ -30,7 +30,7 @@ namespace ALE.TimeRegistration.Core.Services
             return dto;
         }
 
-        public async Task<IEnumerable<UserTaskResponseDto>> GetUserTasks(Guid userId)
+        public async Task<IEnumerable<UserTaskResponseDto>> GetUserTasks(string userId)
         {
             var result = await _userTaskRepo.GetUserTasks(userId);
             var dto = _mapper.Map<IEnumerable<UserTaskResponseDto>>(result);

@@ -7,222 +7,226 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropColumn(
+                name: "Password",
+                table: "AspNetUsers");
+
             migrationBuilder.UpdateData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000001",
                 column: "ConcurrencyStamp",
-                value: "083c2767-8832-40b8-a594-3484a4b07386");
+                value: "f22e228a-9bf7-4629-9c87-740938bea662");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000001",
-                columns: new[] { "Password", "PasswordHash" },
-                values: new object[] { null, "AQAAAAEAACcQAAAAED6tOY7ieTuIJrBF09V4kD1PAnL8bm8ygC9cOf5gxGKwL/kazNS/5h66vJh0C3geOw==" });
+                column: "PasswordHash",
+                value: "AQAAAAEAACcQAAAAEFvc5xFQS6xOKyVqrBpgp25tTeoLacW3L16EwQRx/A4oSF1MLTBGQ4NcoE1ZJ3BLKA==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000002",
-                columns: new[] { "Password", "PasswordHash" },
-                values: new object[] { null, "AQAAAAEAACcQAAAAEG11Wlae3IDWSk8AUlBgCJyK+JMkzvOTYqhtspbvpfZ0o9k+DQ7E8lvhDxjwutejhA==" });
+                column: "PasswordHash",
+                value: "AQAAAAEAACcQAAAAEK3hArgCjT1K7gdk5ObxTas8N8//g44hxHSVXTKmamT4kZvvBOrZYS85/ZvRnsMUqw==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000003",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEEWQGVNc0n3SKvdEAY06vomXeiRpL833LuKOaSSrEi5NNNkkJOxya3fviK60oun93w==");
+                value: "AQAAAAEAACcQAAAAEGb+EGH2/CZFB7psEOcHSDDuQlVt4NI6IBS2Ub/jNTL8OmbqyvSrNhmG90e+Xi6Vrg==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000004",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEDbmZ4kMpVLZ6YJ1bxHX6jtS4O5K0ryhKiSz4vfmcWrBJtZE/m1gqyRmB+mkP2ZLuA==");
+                value: "AQAAAAEAACcQAAAAEC74j5RY6PEzdWEvvSd3vn2E64ERwJcyNu6dcQoEeyNOcJhyBVYZHNqlrj7D1lIK1w==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000005",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAELWevp6Bs9r50BNj3gy9hvilN84xUJGNkuHlgq7qn5MB1rFLUPmoHEUoOLBFOMdMSA==");
+                value: "AQAAAAEAACcQAAAAEN+818QBa4a+J4nLNqcCxxCSp0BiVpdBEkkGwYE7kSJDd8U33B24Ny45z1o7FswJIg==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000006",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEHVWBd18B3PJI3At7485dyEyL28Cz7T7VPj+LT4wrtiP0+KoJPZfxGXgSW+B+Ecvdg==");
+                value: "AQAAAAEAACcQAAAAEHTqOdf4lyoadttvhHmNYFTKblRyDyqXFcJqd/5qYn4Q/2SlhhRbz51kKeD9/jRpuw==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000007",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEMuPI0U9MFGR2KyxqK5I0v8P9ARrgac4yZ/KpYZWfr8opBqUvX/xJScw1V/G2XxNew==");
+                value: "AQAAAAEAACcQAAAAEKkodsk+0nxFHiXCuFiEhzTw9DItc5RGIYgAhViup1blSOQw/dYMIX8AYm1TAyGnqQ==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000008",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEClCbvkwBsnPSk99aPx960A8n6dzSI3vgsRnbxVeZxs+dnglrOre6OSj+ah3aWRTDw==");
+                value: "AQAAAAEAACcQAAAAECCPJ0rCvHBu6TngER4d0r1D8qksSFVK38MMzidBERNK5KDHLXTWgyWcPjlKZWKrEA==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000009",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEN2cXoJZ1VQdrM2qKSTiR4RqMVTNW2nMUFUMeL8wpQyKpCQVUSCzB0IxscbNDTn7AQ==");
+                value: "AQAAAAEAACcQAAAAEJxqaoHVtwF9gMpsDfD13znV+lktKHSpTpKcivelsWdy8S/NHCKCJHtskp1gUpL1zA==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000010",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEOe8GqnKL4Aua6mwyx+wCgcl5f137ks6OXqx+ZJpMxHMECzBO7Ezjnhi7ls3oG25YQ==");
+                value: "AQAAAAEAACcQAAAAEGCJqf4c8Y0oeiYsrz9FEGb7Ya2kUS1MFubctwZ0bgwFeAUWrXQ3FFZP3+U2wlGpMw==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000011",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEMNm9quUuSlE7k8mWkMWgxVS2aeEtz1ERiVNGRItnlwCCQIAXgGW4VZRDcEFySmWWA==");
+                value: "AQAAAAEAACcQAAAAEKbbie0YuyWS7/8+Hrd+ZQQUwgYmz1j1F+oJn5Y7FFc+3ZBsDkEX0DK/kUJZ24G6Lw==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000012",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEMwCGgp9bD8Da+E/xlZ4I9tAt+o+JsznkyjGRiklY38qswZnAo4S2Q3Iwws7wv7eLw==");
+                value: "AQAAAAEAACcQAAAAEPdoJgzQx86B5OjbOIBu7sjljBPyW8PAtfaHVKOSCGB9n41rjG93YUnWuW2i94ZPcw==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000013",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEJeoJysfNAtAxsddCfvQj+HI51NpbDvicl9wys2ri7U2s76NYvwPdDRIsgZ3Lzg4Jg==");
+                value: "AQAAAAEAACcQAAAAEFtPFbXEjSst++fJlAT8LP6dgHghsDNlHkwyLPH8dyXNVJt/EMAHRLuRBnU6GuBg4w==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000014",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEOk+qCHPCRpkhgLYpuzktWRnZRfaLMYu/KnREpmehxZmTD3m+5dfDXAl+cEPySG+cQ==");
+                value: "AQAAAAEAACcQAAAAEKVdYXgZpGbBbHG5HywYh28/B935HxJFX6oglIyERPsB0R8VgUjMhkRMXg+Fc1CHNQ==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000015",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEJApqWammWE0j3nuCjgeMHpKcJ6rSye6YoLMkH32Lf4b1esDy+s0OEMe5u1Q/bXKYg==");
+                value: "AQAAAAEAACcQAAAAEI9vV8qeSoU2j/iJx2/RJkZUywrdWTrA1dgzCStkiegwqj0P6k6b2KG9UJUlRTQQzA==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000016",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEARSngz2HH2hasKsZQa47evmZOVbjxGZp3zCndgJL+MFtJJIXJuUKmr+MBI3hPIXAQ==");
+                value: "AQAAAAEAACcQAAAAEEj4sglvTzeTLfkJ3S9Z5ckiM1YDSzb0pxppoZKIQRRKj8t2g5pk797rRujDvedCwA==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000017",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEB3KTMxZ05LlDXdfuH4rCJmN+6ELP+g58llGrQoSXj47OGHTpqg0DEtCMWukQX6qYw==");
+                value: "AQAAAAEAACcQAAAAEEivJupEYf+xSDaXdSIuci3Xr9iRZZax9piXN/85KiVdWdTlPqtLKdh06onD+GlMew==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000018",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEMJT5/kRGHwivguLKGGZAZvU0g02kWapCV768VxGd3OTud3zIZYxIQ2PPHY+paPaeQ==");
+                value: "AQAAAAEAACcQAAAAEHhs/1GzhwM39J5IbDv2dkkvIfU3Jg/0eD2DGoYZnX7XW3YOG3fRTtNK7l9iOGTPsA==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000019",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEKs/rRqhN1eDre7uJ10AyKdlWpTrmCPBu5S/yNgDIFJbOBgt4whXuh0gmrxhNtAHyw==");
+                value: "AQAAAAEAACcQAAAAEESf8opq5Anz5OF0ZQpGYCgB6pRcgJu0jAeZw2KyPGcHyeObw6iOOnJZiujjQFkg9A==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000020",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAELriZaBkvsvTyxEuVFE93uw2yzXDKT8HX5tiJkADPI5HcxtDRLDzO1Q+zH4ClN59EA==");
+                value: "AQAAAAEAACcQAAAAEPgN36qfF8HjkG/RLfBsoj6lZWavb/c07G/kK0HL2ffbicVGcI1sDbgbAG2EAIbWVw==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000021",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEE3H8MxhIHGmVLH9dG7JjpbLSZ0cg4vQV2gmgluVlrhn2rn3zJ0mFSUqfMq8tuEgUA==");
+                value: "AQAAAAEAACcQAAAAEA08KTZ5ygCnL1fn/axnVjS2T+IGyryZyw9aDf2jFUFGapJuxCsGHdWhfaBILmmxZw==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000022",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEDxryCtm7U6h2BimQyjLbM900F/SGc1JAjTS/XTHfPStocBFHp6iAVq3Ecs2MXOV+g==");
+                value: "AQAAAAEAACcQAAAAEDKmU7ocP8JUUMDarB2DEK7ZTNcJMr3D/V+qo3IjOhpiayaYtDhvW2O45ts24rO0sg==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000023",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEFVSAvaYjMKruUblkFz5g6evdnPe4fswiZ6j2aJ50yAC/HyniEa3urrPO+a5hePm+g==");
+                value: "AQAAAAEAACcQAAAAECTRpBNcSdrzyGga0rmGjmw0JXPXvnDOAS1518hXz+RLDE5rmCg6a8wrxxtpbyvYuA==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000024",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAENBJehjbtwsZE+/Ol8q4At6JoroHQYy9CBIex7G3A9Y580scNejJYZBuitQh0EW6EQ==");
+                value: "AQAAAAEAACcQAAAAEKTLQFpJN5Ohsd3ztP5OEi31f2R59V8Q8wwvZX+73eF8Csl15siF7I92olnk5dOGKA==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000025",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEBTBFvgJD7yu4l5kc5ylErIY//3qrAHPRQ54KOKeewQYYb03tQ+BKWOXE+MBBkiyVw==");
+                value: "AQAAAAEAACcQAAAAEFJoPooJ7QRyav7Hi8V9rSICqhkQUChvsaoeIVZnLQX1jKRWc256WQwm5tNEPS+Ldg==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000026",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEHKoZRj04th3h1iJRArtBMuSG3z2t7BAAPos8Ty+qhhQEtzqcHemv3hL/3asoScS4g==");
+                value: "AQAAAAEAACcQAAAAEO4IMviQhGYKkvs2Up8KEpKFpz3bbQCni2koyyMcJxMwhvGVt5SmrD96Zc+bZfhC4Q==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000027",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAENIzLxlXkoui1eUvTt8aMLY+qEqU2QpCciY1ImOg2w6IiYlwncXvXG4b7J8OfKnZjw==");
+                value: "AQAAAAEAACcQAAAAEKDObV5V/8vaChv8gREbDKur79birWYqYJCbdvi0kFKxRQCUsnMWaaA9iH5qQejdTQ==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000028",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEIdt0t0WAAtRg8szOMbdSzZ5uevq/HamriNnveJrrdtgEPpMe5RVl2oqGqv+JU/S9A==");
+                value: "AQAAAAEAACcQAAAAEKOWcZwfZI1LhHPdj8dczmZxIblJlUGbA8ICl8TeAOvgSj/1xhsLsIQes7yFTx2zxQ==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000029",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEKzDLGfmznWnfUkEhdgkNQVpmjbdpLlVo/AQsn/k83HDLzeuNImxFZZPbc1ASKtMUg==");
+                value: "AQAAAAEAACcQAAAAEPWidicQ666FHZLeaBJJhBoWQh7u2gQy4AEi5Pni4C4uIJEOXk9Ps1gGck2BgXUlow==");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000030",
                 column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAENJtexRWwLjEfLnMjn9aa3SD3h7yuJyKvs00i3l85/AI1kX048tCK0SE9L0TYJbVng==");
+                value: "AQAAAAEAACcQAAAAEAWJNH8ZzrHaV2HkL1uvtA0mX/NrcGjFmG1srdWavNBHBBaOXT149zgDcrw0NVEQ6g==");
 
             migrationBuilder.InsertData(
                 table: "Messages",
@@ -500,6 +504,12 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                 keyColumn: "Id",
                 keyValue: new Guid("00000000-0000-0000-0000-000000000033"));
 
+            migrationBuilder.AddColumn<string>(
+                name: "Password",
+                table: "AspNetUsers",
+                type: "nvarchar(max)",
+                nullable: true);
+
             migrationBuilder.UpdateData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
@@ -525,197 +535,197 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000003",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEOonpqnOgfnjMQFuZ4CsqV1Uxgs52bgomtwdRbqDHrss1YnyOwNjBh6j6o2YVqOC5g==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEOonpqnOgfnjMQFuZ4CsqV1Uxgs52bgomtwdRbqDHrss1YnyOwNjBh6j6o2YVqOC5g==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000004",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEJBPqLbEbJNgqUzf1oYxtdGF+y+L2EyEw2weeqD1X4Tlk/MhHv35IySrV3fysUhqQA==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEJBPqLbEbJNgqUzf1oYxtdGF+y+L2EyEw2weeqD1X4Tlk/MhHv35IySrV3fysUhqQA==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000005",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEGVh3HfYzwXgTKOyrESqBaUjWP2CbVBDi1hU/7zfcHG9v7Jemu340CxKJgbbzPLceA==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEGVh3HfYzwXgTKOyrESqBaUjWP2CbVBDi1hU/7zfcHG9v7Jemu340CxKJgbbzPLceA==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000006",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEDuKXnpkqgjHcZD75OAvZg90v53G+Y0ceAOkx5IPMFu+CM9etKQg5OvsPNoMxhClIA==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEDuKXnpkqgjHcZD75OAvZg90v53G+Y0ceAOkx5IPMFu+CM9etKQg5OvsPNoMxhClIA==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000007",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEC5fgzKFAym9XZjOmNlD5EVPHShoHqjOAIDzhJChFDWrmuZUWNi07n71xbtUJbqG9Q==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEC5fgzKFAym9XZjOmNlD5EVPHShoHqjOAIDzhJChFDWrmuZUWNi07n71xbtUJbqG9Q==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000008",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAENJQOS8vjLu2o4ebetj5DssHHATVQcMc1vPnKWiNqdiqxiWrD5ypF5heT2Mr79mF0Q==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAENJQOS8vjLu2o4ebetj5DssHHATVQcMc1vPnKWiNqdiqxiWrD5ypF5heT2Mr79mF0Q==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000009",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEKxWI/Ol0adKJcbNjZumtSuyxxDndf6nBQqkll7N5xwJB2YN0jK5a+/mae91MGcHVw==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEKxWI/Ol0adKJcbNjZumtSuyxxDndf6nBQqkll7N5xwJB2YN0jK5a+/mae91MGcHVw==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000010",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEEDKJXiwQNCCgpF/C7CcgBebdXXMUhgxRz47HdcIOHN5GbLgK8yqX5jqF4DhnRiKwQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEEDKJXiwQNCCgpF/C7CcgBebdXXMUhgxRz47HdcIOHN5GbLgK8yqX5jqF4DhnRiKwQ==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000011",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEImsC6XJzQSjVbcZlfjSP4asvfZ+ckgH0sCKQ/YTgw/j4zmrMK0kzSTlTUXB0PVCnw==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEImsC6XJzQSjVbcZlfjSP4asvfZ+ckgH0sCKQ/YTgw/j4zmrMK0kzSTlTUXB0PVCnw==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000012",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEBSgU0T2fGpwki+jx3yyr/9qIJ5/XqzXMlOOjm+sXKJL7dSf4uRV1g0b06FYiLSu3w==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEBSgU0T2fGpwki+jx3yyr/9qIJ5/XqzXMlOOjm+sXKJL7dSf4uRV1g0b06FYiLSu3w==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000013",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEAweX5sweZ7Auu4o4KwGLIdzZjlolRpb/QaW7RMEn42K7Fk2NX1GecNqvl0PXhQIvg==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEAweX5sweZ7Auu4o4KwGLIdzZjlolRpb/QaW7RMEn42K7Fk2NX1GecNqvl0PXhQIvg==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000014",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEKmjEdGXTa7gbIrWxnHsTs8z2BMpNvkjexPo+lfXXHQMYuj8UIf2eHlEBsX5ZkKJNQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEKmjEdGXTa7gbIrWxnHsTs8z2BMpNvkjexPo+lfXXHQMYuj8UIf2eHlEBsX5ZkKJNQ==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000015",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEPZvO/Bdn67We0EtY0PEMnunizUVNYXVvc8k478D2YoaWhX35Q7pJNheHyVsiThiOQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEPZvO/Bdn67We0EtY0PEMnunizUVNYXVvc8k478D2YoaWhX35Q7pJNheHyVsiThiOQ==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000016",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEHVe2pRsJB+mjdzlGKf2UondhBKBrWhwuIJWo1eFQeDs9uuOY6v4uW3JmzpSS2TEbQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEHVe2pRsJB+mjdzlGKf2UondhBKBrWhwuIJWo1eFQeDs9uuOY6v4uW3JmzpSS2TEbQ==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000017",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAENGIr5oRpkpVGcrTtFjtDgkMCqjQuoqH5oZ5vFy/kaWNFzvC8yPBQmih9pfX5THenQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAENGIr5oRpkpVGcrTtFjtDgkMCqjQuoqH5oZ5vFy/kaWNFzvC8yPBQmih9pfX5THenQ==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000018",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEMcW+LEF8duL417fbliJBprqXZyRurMCl3Ix/AXhl5TQOqq0fb1Fe38rDazWIIIfBQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEMcW+LEF8duL417fbliJBprqXZyRurMCl3Ix/AXhl5TQOqq0fb1Fe38rDazWIIIfBQ==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000019",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEGCtqXXywYX8har0rjk2db7bOb1Fy0t4EJn2kmXLs2A5tHR1nGamrBsue0UTU2xLrQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEGCtqXXywYX8har0rjk2db7bOb1Fy0t4EJn2kmXLs2A5tHR1nGamrBsue0UTU2xLrQ==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000020",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEFjl8gH+6cSKWEF8hCNFyiCONXcbS2jGPibfKqhXrreO3s3XDq5tzlP+frqLhShs8A==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEFjl8gH+6cSKWEF8hCNFyiCONXcbS2jGPibfKqhXrreO3s3XDq5tzlP+frqLhShs8A==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000021",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEGPy1r17IzxARWhe/ex9AFy+hhF+USvYe83Yl1arqWrpy9C3lIIw5Qs+0O710hr5bw==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEGPy1r17IzxARWhe/ex9AFy+hhF+USvYe83Yl1arqWrpy9C3lIIw5Qs+0O710hr5bw==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000022",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEPAv5NwFsBG6pqVJIF1wYFgHliTrIOrNAaUAhNY4LNZxEmMcf9xEiFjh0dt/icaF1w==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEPAv5NwFsBG6pqVJIF1wYFgHliTrIOrNAaUAhNY4LNZxEmMcf9xEiFjh0dt/icaF1w==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000023",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEE4+0Z+np+QoSpgMI5MF0r9hnH1EH4JjS2+d8tLak35J++O8MScsbjZ8l3oIiS1Dyw==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEE4+0Z+np+QoSpgMI5MF0r9hnH1EH4JjS2+d8tLak35J++O8MScsbjZ8l3oIiS1Dyw==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000024",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEEEaA2FUScVG6gzyH16DH67i1q4aaDaq5yHL4M3lcOTgL2FOQm29vfcP/oIN+Fij5A==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEEEaA2FUScVG6gzyH16DH67i1q4aaDaq5yHL4M3lcOTgL2FOQm29vfcP/oIN+Fij5A==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000025",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEDQAEzQwaPsdodCGArszfjMGMW0lFpvm44OGxo3AE4mjKqysh16dwfqfWdnj3kGq7g==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEDQAEzQwaPsdodCGArszfjMGMW0lFpvm44OGxo3AE4mjKqysh16dwfqfWdnj3kGq7g==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000026",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEJCYvQnW/Z5t7z5A9cWVSVm9WQQ4sjdTlY6TVAofBTdcg21T9eh1s3gImzTzU3ZLSQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEJCYvQnW/Z5t7z5A9cWVSVm9WQQ4sjdTlY6TVAofBTdcg21T9eh1s3gImzTzU3ZLSQ==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000027",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAENCXY6jdS/twLJiIealPV6qVSAIyDDt+MGcuWtj+YQz5n3PQ/vArgNNkDacMFbBSZQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAENCXY6jdS/twLJiIealPV6qVSAIyDDt+MGcuWtj+YQz5n3PQ/vArgNNkDacMFbBSZQ==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000028",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEEh3MUdwSw80GF3Vlqa6Z9hbqXxJ5tCDl1ZYUhpsdjkJ/BkEVwHFxKs62xedtTJMNw==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEEh3MUdwSw80GF3Vlqa6Z9hbqXxJ5tCDl1ZYUhpsdjkJ/BkEVwHFxKs62xedtTJMNw==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000029",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAEApTaZNW4nB+wwfEApux5Tbt/sZRcbRDK1uDCn9/0zCRJy7hsHmCifLE/6mxUDmVgQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAEApTaZNW4nB+wwfEApux5Tbt/sZRcbRDK1uDCn9/0zCRJy7hsHmCifLE/6mxUDmVgQ==" });
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "00000000-0000-0000-0000-000000000030",
-                column: "PasswordHash",
-                value: "AQAAAAEAACcQAAAAED3oM4LBHL9FacQooSA6lLxV6nIl7340Yk2msOKBKxVxICMQ0hYbfpHWAN41vp1MrQ==");
+                columns: new[] { "Password", "PasswordHash" },
+                values: new object[] { "TimeReg2020", "AQAAAAEAACcQAAAAED3oM4LBHL9FacQooSA6lLxV6nIl7340Yk2msOKBKxVxICMQ0hYbfpHWAN41vp1MrQ==" });
         }
     }
 }

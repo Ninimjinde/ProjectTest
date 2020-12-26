@@ -18,17 +18,17 @@ namespace ALE.TimeRegistration.Infrastructure.Repositories
 
         }
 
-        public async Task<IEnumerable<UserTask>> GetUserTasks(Guid userId)
+        public async Task<IEnumerable<UserTask>> GetUserTasks(string userId)
         {
-            return await GetAllAsync().Where(ut => ut.UserId.Equals(userId)).ToListAsync();
+            return await GetAllAsync().Where(ut => (ut.UserId == userId)).ToListAsync();
         }
 
-        /*public override IQueryable<UserTask> GetAllAsync()
+        public override IQueryable<UserTask> GetAllAsync()
         {
             return _dbContext.UserTasks.AsNoTracking()
                 .Include(ut => ut.Task)
                     .ThenInclude(t => t.Project)
                 .Include(ut => ut.User);
-        }*/
+        }
     }
 }

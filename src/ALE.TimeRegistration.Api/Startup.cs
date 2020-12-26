@@ -74,6 +74,12 @@ namespace ALE.TimeRegistration.Api
                     };
                 });
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireAdmin",
+                     policy => policy.RequireRole("Admin"));
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TimeRegistration API", Version = "v1" });

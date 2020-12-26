@@ -11,7 +11,7 @@
             <div class="d-flex justify-content-center">
                 <div class="login">
                     <div class="d-flex justify-content-center form_container">
-                        <form v-on:submit="login(user)">
+                        <form>
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -27,7 +27,7 @@
                                 <span class="text-danger"></span>
                             </div>
                             <div class="d-flex justify-content-center mt-3 login_container">
-                                <button type="submit" name="button" class="btn login_btn">Login</button>
+                                <button type="submit" name="button" class="btn login_btn" v-on:click="login(user)">Login</button>
                             </div>
                         </form>
                     </div>
@@ -39,29 +39,26 @@
 
 @section scripts{
     <script>
-        var apiURL = 'https://localhost:5001/api/accounts/login';
+        var apiURL = 'https://localhost:5001/api';
         var app = new Vue({
             el: '#app',
             data: {
-                token: null,
-                user: {email:"", password:""}
-            },
-            created: function () {
-                var self = this;
+                user: { email: "", password: "" },
+                token: null
             },
             methods: {
                 login: function (user) {
                     var self = this;
-                    axios.post(`${apiURL}`, user)
-                        .then(function (response) {
+                    axios.post(`${apiURL}/accounts/login`, self.user)
+                        .then((response) => {
                             self.token = response.data;
+                            console.log(token);
                         })
-                        .catch(function (error) {
-                            console.error(error);
+                        .catch((error) => {
+                            console.log(error);
                         });
                 }
             }
-
         });
     </script>
 }

@@ -31,7 +31,7 @@ namespace ALE.TimeRegistration.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetUserTasks(Guid id)
+        public async Task<IActionResult> GetUserTasks(string id)
         {
             var usertasks = await _userTaskService.GetUserTasks(id);
 
