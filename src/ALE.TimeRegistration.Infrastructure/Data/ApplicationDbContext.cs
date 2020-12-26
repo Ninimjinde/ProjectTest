@@ -22,11 +22,9 @@ namespace ALE.TimeRegistration.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+    
             modelBuilder.Entity<UserTask>()
                 .ToTable("UserTasks")
-                .HasKey(ut => new { ut.UserId, ut.TaskId });
-            modelBuilder.Entity<UserTask>()
                  .HasOne(ut => ut.User)
                  .WithMany(u => u.UserTasks)
                  .HasForeignKey(ut => ut.UserId);
@@ -69,13 +67,14 @@ namespace ALE.TimeRegistration.Infrastructure.Data
 
 
             UserSeeder.Seed(modelBuilder);
+            IdentityRoleSeeder.Seed(modelBuilder);
+            IdentityUserRoleSeeder.Seed(modelBuilder);
             ProjectSeeder.Seed(modelBuilder);
             TaskSeeder.Seed(modelBuilder);
             UserTaskSeeder.Seed(modelBuilder);
             MessageSeeder.Seed(modelBuilder);
             PictureSeeder.Seed(modelBuilder);
-            IdentityRoleSeeder.Seed(modelBuilder);
-            IdentityUserRoleSeeder.Seed(modelBuilder);
+      
         }
     }
 }

@@ -4,14 +4,16 @@ using ALE.TimeRegistration.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ALE.TimeRegistration.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201225185306_AddUsers")]
+    partial class AddUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,305 +48,6 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasIndex("ProjectId");
 
                     b.ToTable("Tasks");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000200"),
-                            Info = "Create API Items",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
-                            TaskName = "Create API",
-                            UploadDate = new DateTime(2018, 10, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000201"),
-                            Info = "Fix issues Items API",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
-                            TaskName = "API issues",
-                            UploadDate = new DateTime(2018, 10, 15, 11, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000202"),
-                            Info = "Create new properties Item object",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
-                            TaskName = "Create properties",
-                            UploadDate = new DateTime(2018, 10, 18, 9, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000203"),
-                            Info = "Link Item to new API vendor",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
-                            TaskName = "API vendor link",
-                            UploadDate = new DateTime(2018, 10, 19, 8, 35, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000204"),
-                            Info = "Migrate objects to database",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
-                            TaskName = "migrate objects",
-                            UploadDate = new DateTime(2019, 8, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000205"),
-                            Info = "Create all API's for website",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
-                            TaskName = "create API's",
-                            UploadDate = new DateTime(2019, 8, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000206"),
-                            Info = "Create full working website",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
-                            TaskName = "Website",
-                            UploadDate = new DateTime(2019, 9, 20, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000207"),
-                            Info = "Finish website",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
-                            TaskName = "finish website",
-                            UploadDate = new DateTime(2019, 9, 23, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000208"),
-                            Info = "Automate pricing and promo",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
-                            TaskName = "automate",
-                            UploadDate = new DateTime(2019, 10, 2, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000209"),
-                            Info = "Upload data for demo",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000102"),
-                            TaskName = "demodata",
-                            UploadDate = new DateTime(2020, 2, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000210"),
-                            Info = "Migrate data Electrabel to database",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000102"),
-                            TaskName = "migrate data",
-                            UploadDate = new DateTime(2020, 2, 21, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000211"),
-                            Info = "Fix issues website selling page",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
-                            TaskName = "fix website issues",
-                            UploadDate = new DateTime(2020, 5, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000212"),
-                            Info = "Rebuild itempage website and link new products",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
-                            TaskName = "itempage",
-                            UploadDate = new DateTime(2020, 5, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000213"),
-                            Info = "Automate selling process and work with new API's",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
-                            TaskName = "automation",
-                            UploadDate = new DateTime(2020, 5, 17, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000214"),
-                            Info = "Finish all processes and link to website",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
-                            TaskName = "finish automation",
-                            UploadDate = new DateTime(2020, 5, 18, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000215"),
-                            Info = "Create new website and link to database",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
-                            TaskName = "create website",
-                            UploadDate = new DateTime(2018, 3, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000216"),
-                            Info = "Update al items in database",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
-                            TaskName = "update items",
-                            UploadDate = new DateTime(2018, 3, 25, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000217"),
-                            Info = "Automate promo's and guid for admin",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
-                            TaskName = "promo's",
-                            UploadDate = new DateTime(2018, 3, 26, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000218"),
-                            Info = "Upload data and create database",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000105"),
-                            TaskName = "upload data",
-                            UploadDate = new DateTime(2018, 8, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000219"),
-                            Info = "Upload data and create database",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000106"),
-                            TaskName = "upload data",
-                            UploadDate = new DateTime(2020, 7, 12, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000220"),
-                            Info = "Link API's to new database",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000106"),
-                            TaskName = "link API's",
-                            UploadDate = new DateTime(2020, 7, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000221"),
-                            Info = "Fix issues with order page on website",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
-                            TaskName = "order page",
-                            UploadDate = new DateTime(2020, 10, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000222"),
-                            Info = "Create link order page and new billing page customer and automate proces",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
-                            TaskName = "link order page",
-                            UploadDate = new DateTime(2020, 10, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000223"),
-                            Info = "Fix issue billing page",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
-                            TaskName = "issue billing",
-                            UploadDate = new DateTime(2020, 10, 16, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000224"),
-                            Info = "Create new order page for customers Europe",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000108"),
-                            TaskName = "order page",
-                            UploadDate = new DateTime(2019, 11, 5, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000225"),
-                            Info = "Create API for database to link with order page",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000108"),
-                            TaskName = "API orderpage",
-                            UploadDate = new DateTime(2019, 11, 6, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000226"),
-                            Info = "Create new page for customer portal",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000109"),
-                            TaskName = "customer portal",
-                            UploadDate = new DateTime(2019, 11, 8, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000227"),
-                            Info = "Fix issues customer portal",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000109"),
-                            TaskName = "issues customer portal",
-                            UploadDate = new DateTime(2019, 11, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000228"),
-                            Info = "Create API Items and link to database",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000110"),
-                            TaskName = "API items",
-                            UploadDate = new DateTime(2020, 2, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000229"),
-                            Info = "Fix app issues for customer login page",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000110"),
-                            TaskName = "app issues",
-                            UploadDate = new DateTime(2019, 4, 8, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000230"),
-                            Info = "Create full working website",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000111"),
-                            TaskName = "Website",
-                            UploadDate = new DateTime(2020, 6, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000231"),
-                            Info = "Create full working website",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000112"),
-                            TaskName = "Website",
-                            UploadDate = new DateTime(2019, 11, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000232"),
-                            Info = "Create full working website",
-                            ProjectId = new Guid("00000000-0000-0000-0000-000000000113"),
-                            TaskName = "Website",
-                            UploadDate = new DateTime(2018, 10, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
-                        });
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Message", b =>
@@ -377,40 +80,6 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasIndex("TaskId");
 
                     b.ToTable("Messages");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000400"),
-                            ReceiverId = "00000000-0000-0000-0000-000000000006",
-                            SenderId = "00000000-0000-0000-0000-000000000001",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200"),
-                            Text = "Please update your work asap."
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000401"),
-                            ReceiverId = "00000000-0000-0000-0000-000000000001",
-                            SenderId = "00000000-0000-0000-0000-000000000006",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201"),
-                            Text = "Can I get more info about the task please?"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000402"),
-                            ReceiverId = "00000000-0000-0000-0000-000000000007",
-                            SenderId = "00000000-0000-0000-0000-000000000001",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000202"),
-                            Text = "Please do this asap."
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000403"),
-                            ReceiverId = "00000000-0000-0000-0000-000000000001",
-                            SenderId = "00000000-0000-0000-0000-000000000006",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200"),
-                            Text = "What should I do when I finish?"
-                        });
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Picture", b =>
@@ -427,33 +96,6 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasIndex("TaskId");
 
                     b.ToTable("Pictures");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000300"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000301"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000302"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000303"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000202")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000304"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000203")
-                        });
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Project", b =>
@@ -469,83 +111,6 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Projects");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000100"),
-                            Name = "Toyota Motor"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000101"),
-                            Name = "Colruyt"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000102"),
-                            Name = "Engie Electrabel"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000103"),
-                            Name = "Janssen Pharmaceutica"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000104"),
-                            Name = "Total Belgium"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000105"),
-                            Name = "BASF Antwerpen"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000106"),
-                            Name = "Delhaize De Leeuw"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000107"),
-                            Name = "Volvo Car Belgium"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000108"),
-                            Name = "ArcelorMittal Belgium"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000109"),
-                            Name = "Mastercard Europe"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000110"),
-                            Name = "Proximus"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000111"),
-                            Name = "AXA Belgium"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000112"),
-                            Name = "Allianz Benelux"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000113"),
-                            Name = "Daikin Europe"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000114"),
-                            Name = "bpost"
-                        });
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.User", b =>
@@ -634,7 +199,8 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             Name = "Johnny",
                             NormalizedEmail = "ABOYNAMEDSUE@JCASH.COM",
                             NormalizedUserName = "ABOYNAMEDSUE@JCASH.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAED6tOY7ieTuIJrBF09V4kD1PAnL8bm8ygC9cOf5gxGKwL/kazNS/5h66vJh0C3geOw==",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE/zh8ThYTRv5brW0vvFJuiJumu06jkqM56nmlYyfiCCZlELXGLJRSUeipp5HQ3zlA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "VVPCRDAS3MJWQD5CSW2GWPRADBXEZINA",
                             TwoFactorEnabled = false,
@@ -652,7 +218,8 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             Name = "Elke",
                             NormalizedEmail = "ECHTELKEKANT@HOTMAIL.COM",
                             NormalizedUserName = "ECHTELKEKANT@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEG11Wlae3IDWSk8AUlBgCJyK+JMkzvOTYqhtspbvpfZ0o9k+DQ7E8lvhDxjwutejhA==",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEC4RqwbaUa2y11zbotKbN91j9INtaeYY2NYYJj/W3FySSya2wgyBIVH5UzSvnligXw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "LPRQIVUHQZ9B9VK0RQPN9LLR2JUDMOKX",
                             TwoFactorEnabled = false,
@@ -671,7 +238,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "IALWAYSWIN@GMAIL.COM",
                             NormalizedUserName = "IALWAYSWIN@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEEWQGVNc0n3SKvdEAY06vomXeiRpL833LuKOaSSrEi5NNNkkJOxya3fviK60oun93w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELtnhq0xAPjHlTVUK7gfNWBBeticpTfa0OIZIaY68qIYC+ia9n1SFIaBS+qcoaIE8w==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "CGZLWFPLDP93ZCFWTQ19E9LGZAH3EDV4",
                             TwoFactorEnabled = false,
@@ -690,7 +257,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ERNAVANVOREN@HOTMAIL.COM",
                             NormalizedUserName = "ERNAVANVOREN@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDbmZ4kMpVLZ6YJ1bxHX6jtS4O5K0ryhKiSz4vfmcWrBJtZE/m1gqyRmB+mkP2ZLuA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEN6bckEB+sr0+nk6sl9f6mRkkZH06VhtrUP5BccmBq/O+bjTGhEt/muUau0wmSNnXA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "KEVV7QQDZVPGXW0LIRHWRUBJDWV1BEOK",
                             TwoFactorEnabled = false,
@@ -709,7 +276,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ROGERDOENIEMEE@TELENET.BE",
                             NormalizedUserName = "ROGERDOENIEMEE@TELENET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAELWevp6Bs9r50BNj3gy9hvilN84xUJGNkuHlgq7qn5MB1rFLUPmoHEUoOLBFOMdMSA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECwpXgPz2azBfqeIRxDIVqkGDEtGx5Ygxk6+Ko5NaJo+HXVJsZ04CKPbj9HKeS8AYw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "DMQ1MNFMDVWEMHCWA4TOPXZUCR97WIGJ",
                             TwoFactorEnabled = false,
@@ -728,7 +295,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "CHARLESDURUE@HOTMAIL.COM",
                             NormalizedUserName = "CHARLESDURUE@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHVWBd18B3PJI3At7485dyEyL28Cz7T7VPj+LT4wrtiP0+KoJPZfxGXgSW+B+Ecvdg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKUbDlK7+IUmdoYo7SlhoZhEgAwYa6XUr5C0CF72kswsPunNa1IrGVtM43RjPC7zmw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "GOHAS6DGS3TEFB8CKVA1O0YY7L7QOJGY",
                             TwoFactorEnabled = false,
@@ -747,7 +314,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "KATRINGRING@SKYNET.BE",
                             NormalizedUserName = "KATRINGRING@SKYNET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMuPI0U9MFGR2KyxqK5I0v8P9ARrgac4yZ/KpYZWfr8opBqUvX/xJScw1V/G2XxNew==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPt1COmtB8aZqMqV571p1U+kSd+FgnWpuXAlv/9o2aK2XYzwf/wQ58Bnnq5XARR/4w==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "TX2YKCJILNPIIAS7Y4XDXNU7ATXAMEXW",
                             TwoFactorEnabled = false,
@@ -766,7 +333,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "SNELNEDDY@HOTMAIL.COM",
                             NormalizedUserName = "SNELNEDDY@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEClCbvkwBsnPSk99aPx960A8n6dzSI3vgsRnbxVeZxs+dnglrOre6OSj+ah3aWRTDw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPJWH5e5MpPdTcTG3jrPL1axo9K0nRNQZVGOnfTEyYQ8Wvp6elJ94SakSQIvATpKAg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "AY8SBXVKA6Z6MXJXBYIIE9JIAOQV2DJO",
                             TwoFactorEnabled = false,
@@ -785,7 +352,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ANDY123@GMAIL.COM",
                             NormalizedUserName = "ANDY123@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEN2cXoJZ1VQdrM2qKSTiR4RqMVTNW2nMUFUMeL8wpQyKpCQVUSCzB0IxscbNDTn7AQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELcRawJt6K49B4uA2nc+KesuiOsniRhgCVLBMT8U+/MGOlKXiwooWzigFNfmhJeTmg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "AERAYD2O3KEIAGCLLIP7O8QNVSXU8PUD",
                             TwoFactorEnabled = false,
@@ -804,7 +371,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ILOVEYOUTOMORROW@HOTMAIL.COM",
                             NormalizedUserName = "ILOVEYOUTOMORROW@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOe8GqnKL4Aua6mwyx+wCgcl5f137ks6OXqx+ZJpMxHMECzBO7Ezjnhi7ls3oG25YQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBI6SCpXg5ltphB5jLnhC+PYDFwOlXDMr7T+U/nEAhNHV8RVJ2ySjm9OAkkxyKgCXw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "OJUDGXCPUCPYDMIQTIWMSRTLXH4NMKDB",
                             TwoFactorEnabled = false,
@@ -823,7 +390,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "SATCHEL@STEELPANTHER.COM",
                             NormalizedUserName = "SATCHEL@STEELPANTHER.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMNm9quUuSlE7k8mWkMWgxVS2aeEtz1ERiVNGRItnlwCCQIAXgGW4VZRDcEFySmWWA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELRMgmw9FpYDw1qV4ige2gJ7/YbrdGqDf8B0s2F99CO4XLk3QHObivyiFFpF+FfZyw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "W7VNKA17XODMDCKG5JBXZQCLUQSRF32F",
                             TwoFactorEnabled = false,
@@ -842,7 +409,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "DEPIJPVANMAARTEN@GMAIL.COM",
                             NormalizedUserName = "DEPIJPVANMAARTEN@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMwCGgp9bD8Da+E/xlZ4I9tAt+o+JsznkyjGRiklY38qswZnAo4S2Q3Iwws7wv7eLw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEL43r5GkPyQcH54RZqNGI5IgeYK2gu//iO5nEQ5X80yTL360pE7OTRPT1MFv4jXLFw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "NZVCLM9FJXG84V7AAF3WNV9UX88PSSAD",
                             TwoFactorEnabled = false,
@@ -861,7 +428,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "EDWARDLECANARD@HOTMAIL.COM",
                             NormalizedUserName = "EDWARDLECANARD@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJeoJysfNAtAxsddCfvQj+HI51NpbDvicl9wys2ri7U2s76NYvwPdDRIsgZ3Lzg4Jg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMu1JDOu4oKrdGkRTX+FX+CDSNuknw/dZR312s3bPvRpN/cnfAdz9eRV8q9VOTIg1w==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "X50KHZXPUONAXCIOYAP1VN2KWJNQF8YF",
                             TwoFactorEnabled = false,
@@ -880,7 +447,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "DEYOERI@GMAIL.COM",
                             NormalizedUserName = "DEYOERI@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOk+qCHPCRpkhgLYpuzktWRnZRfaLMYu/KnREpmehxZmTD3m+5dfDXAl+cEPySG+cQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEN6PxONlTF9oF+iiz6L4W23jEr+twtnbZtDIt+Icsls3olG4ZOgd6fRk2/dG9gO+7A==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "E9HTNSBN303BXB434HYORNEMWKFR9F0K",
                             TwoFactorEnabled = false,
@@ -899,7 +466,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "CALMINGCAMILLE@TELENET.BE",
                             NormalizedUserName = "CALMINGCAMILLE@TELENET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJApqWammWE0j3nuCjgeMHpKcJ6rSye6YoLMkH32Lf4b1esDy+s0OEMe5u1Q/bXKYg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGNm2TLWsK3nnMmUpmDrI8e5svUqqJKs/Mi0QIpcGnHOScM/3OxUDfgsCwWHA9i3+g==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "NB8OXAMNMR8SWHOY6ACNDYQE4VAGFEEP",
                             TwoFactorEnabled = false,
@@ -918,7 +485,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "THEBESTGINGER@QOTSA.COM",
                             NormalizedUserName = "THEBESTGINGER@QOTSA.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEARSngz2HH2hasKsZQa47evmZOVbjxGZp3zCndgJL+MFtJJIXJuUKmr+MBI3hPIXAQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGKO2R1hpEbhAUk7CQRyrHs33r/BpZwoVbeDs2/sRKnmx4OUVOtYMheUQW5h+Ssy3g==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "ZUYKIDLJWUZXNXN6BK6Z6QCZO5WXOYNR",
                             TwoFactorEnabled = false,
@@ -937,7 +504,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ZWAFFELAERE@GMAIL.COM",
                             NormalizedUserName = "ZWAFFELAERE@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEB3KTMxZ05LlDXdfuH4rCJmN+6ELP+g58llGrQoSXj47OGHTpqg0DEtCMWukQX6qYw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDW9XgLVIgOO7WzkG6A7TgP0yWDQDtTcx12/31bVwbU2bIs4144E1WCLqEivvs5zXw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "HGIXXQPIK4FFBOOUNMFY7GN6GDHXEVV1",
                             TwoFactorEnabled = false,
@@ -956,7 +523,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "STERKEJAN33@PANDORA.BE",
                             NormalizedUserName = "STERKEJAN33@PANDORA.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMJT5/kRGHwivguLKGGZAZvU0g02kWapCV768VxGd3OTud3zIZYxIQ2PPHY+paPaeQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGhN/2QHCsaOt7GSsDKIDDw97g78I/nGbMlJMHQTm0PXBTygAnqp6MvjtOoZ19vTXg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "WGY5YWIB4XK6LUI2TBROBMXVLQKNNWOV",
                             TwoFactorEnabled = false,
@@ -975,7 +542,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "RIETJEGESSOF@HOTMAIL.COM",
                             NormalizedUserName = "RIETJEGESSOF@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKs/rRqhN1eDre7uJ10AyKdlWpTrmCPBu5S/yNgDIFJbOBgt4whXuh0gmrxhNtAHyw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDSuydX6YapKJk1/8WagypIt/xLOFZYYJdDKRnvA021IZzUctfLBcFqxl6CmfYmnBQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "9H2QG7IPOUORADDNMF2ISIRSOGZJNXGZ",
                             TwoFactorEnabled = false,
@@ -994,7 +561,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "WILLYWILLY@THESCABS.BE",
                             NormalizedUserName = "WILLYWILLY@THESCABS.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAELriZaBkvsvTyxEuVFE93uw2yzXDKT8HX5tiJkADPI5HcxtDRLDzO1Q+zH4ClN59EA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEO2h+/svyq64E6PaXqGZ+bPjyCftqHT7S4I7vnwegZClCUTALoTqJHfL/AxdoqMLXw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "7F7LSOHNMOKGFGQVMMGOX3SHM3PBNHQB",
                             TwoFactorEnabled = false,
@@ -1013,7 +580,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "PESCADOLOVER@SKYNET.BE",
                             NormalizedUserName = "PESCADOLOVER@SKYNET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEE3H8MxhIHGmVLH9dG7JjpbLSZ0cg4vQV2gmgluVlrhn2rn3zJ0mFSUqfMq8tuEgUA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFoQiv89L4IMGVAqUm3NCe30KCVyQz+mZWWc+3g0HI8b0PRRlIT6mw+6xecmI3iUQw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "WGLZXEZUI3NLP8ZWUYK5CFN8XWBT7ATX",
                             TwoFactorEnabled = false,
@@ -1032,7 +599,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "TOMVANMARCKE@GMAIL.COM",
                             NormalizedUserName = "TOMVANMARCKE@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDxryCtm7U6h2BimQyjLbM900F/SGc1JAjTS/XTHfPStocBFHp6iAVq3Ecs2MXOV+g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEUaZYCjqqvb87gaqZqG/6hvL+BinqCOF+cPKx/I+mvIEUXvMgzYILSKmPvjUsuM2Q==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "OIKDBFPAR5GJKJ91OUAOXNKR1CMLSTFC",
                             TwoFactorEnabled = false,
@@ -1051,7 +618,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "LOEWILOEWIE@HOTMAIL.COM",
                             NormalizedUserName = "LOEWILOEWIE@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFVSAvaYjMKruUblkFz5g6evdnPe4fswiZ6j2aJ50yAC/HyniEa3urrPO+a5hePm+g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKiyo1MTjIGA0VwvBi3kisKkJSsjZo0hZRb3N+t/VW9ikNh8PU6xZvyt67OAL//ilA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "F0SRUYTP4OF6TSFD3CNJBX5ECAJFPPFZ",
                             TwoFactorEnabled = false,
@@ -1070,7 +637,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "GIEZIJTEM@SKYNET.BE",
                             NormalizedUserName = "GIEZIJTEM@SKYNET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAENBJehjbtwsZE+/Ol8q4At6JoroHQYy9CBIex7G3A9Y580scNejJYZBuitQh0EW6EQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECH+m8I8KMFPi2IjxiSnyx8fZvDt0VNul+aoixdPiPhRPQ3Sc5p1ZWIeO0bWe0qNIg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "PHLIIUHLZLGB2UTDD2LHUFROZ7TDQAD7",
                             TwoFactorEnabled = false,
@@ -1089,7 +656,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "CONNIEBETER@GMAIL.COM",
                             NormalizedUserName = "CONNIEBETER@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBTBFvgJD7yu4l5kc5ylErIY//3qrAHPRQ54KOKeewQYYb03tQ+BKWOXE+MBBkiyVw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKZLKpoa0UOm3zOZNtoNiAlFLm/DfnSFLNwlVGKJ3T8EbKJswDBlISDGfaPj4YgIng==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "FWM36IDUG00055IF56RZWA2CR9OYCVB3",
                             TwoFactorEnabled = false,
@@ -1108,7 +675,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "GEZONDEPETER@TELENET.BE",
                             NormalizedUserName = "GEZONDEPETER@TELENET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHKoZRj04th3h1iJRArtBMuSG3z2t7BAAPos8Ty+qhhQEtzqcHemv3hL/3asoScS4g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENcIS7Bxp8FRjru7eYmge6e2kascpAx0MRr7Br6TUExuY/4qfBjP1srKBaa2sJhvdg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "TJLKW00301EENWVWL2MCPLTCU18IT7XY",
                             TwoFactorEnabled = false,
@@ -1127,7 +694,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "BENNERNIE@SKYNET.BE",
                             NormalizedUserName = "BENNERNIE@SKYNET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAENIzLxlXkoui1eUvTt8aMLY+qEqU2QpCciY1ImOg2w6IiYlwncXvXG4b7J8OfKnZjw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKkL6y4DvSrptMEd51RhUWWcN+a/Dw1w0AYgx3QM18h90l03ZWGYKeNuyQNqK0PJdg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "KXW8TS8VIEG0BL1OIA7U2PASSALDXMV3",
                             TwoFactorEnabled = false,
@@ -1146,7 +713,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "THEBESTBUSKER@LONDON.COM",
                             NormalizedUserName = "THEBESTBUSKER@LONDON.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIdt0t0WAAtRg8szOMbdSzZ5uevq/HamriNnveJrrdtgEPpMe5RVl2oqGqv+JU/S9A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENPIRKxyuNU2grH4C07Sd1Cw43Dvxd2pKFQbEKvMG/fKlHQgF5VYGMgdSEL/RQp7EA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "VRVLNRMUMHA6IADTQ7CO9VCIMVX4OMO5",
                             TwoFactorEnabled = false,
@@ -1165,7 +732,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "CORONATOPPER@GMAIL.COM",
                             NormalizedUserName = "CORONATOPPER@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKzDLGfmznWnfUkEhdgkNQVpmjbdpLlVo/AQsn/k83HDLzeuNImxFZZPbc1ASKtMUg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFfG1lX4Pbhpd3k8TukVQJSBSlzZLAjv0gFo7dMKnG529oCNjiDz6rZP1jfArdC3uQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "W7IEDSQT3GEVZWUOTXG8CL1PI3K6MXU7",
                             TwoFactorEnabled = false,
@@ -1184,7 +751,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "RAPGEWOON@HOTMAIL.COM",
                             NormalizedUserName = "RAPGEWOON@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAENJtexRWwLjEfLnMjn9aa3SD3h7yuJyKvs00i3l85/AI1kX048tCK0SE9L0TYJbVng==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMIU4gzVaGUlZ1J6tOHTGM4kCCDREbF7JbnQ3w1ZmZYQpzu5RHu3Nr+5ubYsIYj0dw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "JF6GSUYRRSWNWXY9Z1HUJLK1GUQREXOO",
                             TwoFactorEnabled = false,
@@ -1217,272 +784,6 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserTasks");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000001"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200"),
-                            UserId = "00000000-0000-0000-0000-000000000006",
-                            WorkDateTime = new DateTime(2018, 10, 14, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 18, 20, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000002"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201"),
-                            UserId = "00000000-0000-0000-0000-000000000006",
-                            WorkDateTime = new DateTime(2018, 10, 15, 12, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 19, 28, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000003"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000202"),
-                            UserId = "00000000-0000-0000-0000-000000000007",
-                            WorkDateTime = new DateTime(2018, 10, 18, 11, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 28, 30, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000004"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000203"),
-                            UserId = "00000000-0000-0000-0000-000000000008",
-                            WorkDateTime = new DateTime(2018, 10, 19, 11, 35, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 8, 40, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000005"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000204"),
-                            UserId = "00000000-0000-0000-0000-000000000008",
-                            WorkDateTime = new DateTime(2019, 8, 14, 11, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 35, 50, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000006"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000205"),
-                            UserId = "00000000-0000-0000-0000-000000000009",
-                            WorkDateTime = new DateTime(2019, 8, 15, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 4, 30, 20, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000007"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000206"),
-                            UserId = "00000000-0000-0000-0000-000000000010",
-                            WorkDateTime = new DateTime(2019, 9, 20, 15, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 21, 44, 30, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000008"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000206"),
-                            UserId = "00000000-0000-0000-0000-000000000010",
-                            WorkDateTime = new DateTime(2019, 9, 23, 15, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 18, 10, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000009"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000207"),
-                            UserId = "00000000-0000-0000-0000-000000000011",
-                            WorkDateTime = new DateTime(2019, 10, 4, 6, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 5, 5, 0, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000010"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000208"),
-                            UserId = "00000000-0000-0000-0000-000000000011",
-                            WorkDateTime = new DateTime(2020, 2, 20, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 31, 50, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000011"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000209"),
-                            UserId = "00000000-0000-0000-0000-000000000011",
-                            WorkDateTime = new DateTime(2020, 2, 21, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 8, 41, 30, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000012"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000210"),
-                            UserId = "00000000-0000-0000-0000-000000000015",
-                            WorkDateTime = new DateTime(2020, 5, 13, 16, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 15, 30, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000013"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000211"),
-                            UserId = "00000000-0000-0000-0000-000000000016",
-                            WorkDateTime = new DateTime(2020, 5, 15, 13, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 5, 7, 40, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000014"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000212"),
-                            UserId = "00000000-0000-0000-0000-000000000017",
-                            WorkDateTime = new DateTime(2020, 5, 17, 12, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 6, 39, 50, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000015"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000213"),
-                            UserId = "00000000-0000-0000-0000-000000000020",
-                            WorkDateTime = new DateTime(2020, 5, 18, 13, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 4, 55, 10, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000016"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000214"),
-                            UserId = "00000000-0000-0000-0000-000000000020",
-                            WorkDateTime = new DateTime(2018, 3, 20, 14, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 22, 10, 25, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000017"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000215"),
-                            UserId = "00000000-0000-0000-0000-000000000021",
-                            WorkDateTime = new DateTime(2018, 3, 25, 15, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 8, 41, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000018"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000216"),
-                            UserId = "00000000-0000-0000-0000-000000000021",
-                            WorkDateTime = new DateTime(2018, 3, 26, 16, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 1, 35, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000019"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000217"),
-                            UserId = "00000000-0000-0000-0000-000000000021",
-                            WorkDateTime = new DateTime(2018, 8, 14, 11, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 0, 12, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000020"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000218"),
-                            UserId = "00000000-0000-0000-0000-000000000022",
-                            WorkDateTime = new DateTime(2020, 7, 12, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 4, 47, 8, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000021"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000219"),
-                            UserId = "00000000-0000-0000-0000-000000000023",
-                            WorkDateTime = new DateTime(2020, 7, 13, 14, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 35, 38, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000022"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000220"),
-                            UserId = "00000000-0000-0000-0000-000000000024",
-                            WorkDateTime = new DateTime(2020, 10, 13, 15, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 26, 45, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000023"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000221"),
-                            UserId = "00000000-0000-0000-0000-000000000024",
-                            WorkDateTime = new DateTime(2020, 10, 15, 16, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 45, 10, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000024"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000223"),
-                            UserId = "00000000-0000-0000-0000-000000000025",
-                            WorkDateTime = new DateTime(2020, 10, 16, 17, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 51, 42, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000025"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000224"),
-                            UserId = "00000000-0000-0000-0000-000000000017",
-                            WorkDateTime = new DateTime(2019, 11, 5, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 8, 42, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000026"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000225"),
-                            UserId = "00000000-0000-0000-0000-000000000025",
-                            WorkDateTime = new DateTime(2019, 11, 6, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 6, 5, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000027"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000226"),
-                            UserId = "00000000-0000-0000-0000-000000000026",
-                            WorkDateTime = new DateTime(2019, 11, 8, 11, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 19, 8, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000028"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000227"),
-                            UserId = "00000000-0000-0000-0000-000000000027",
-                            WorkDateTime = new DateTime(2019, 11, 10, 13, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 20, 45, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000029"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000228"),
-                            UserId = "00000000-0000-0000-0000-000000000028",
-                            WorkDateTime = new DateTime(2020, 2, 10, 12, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 24, 6, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000030"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000229"),
-                            UserId = "00000000-0000-0000-0000-000000000029",
-                            WorkDateTime = new DateTime(2019, 4, 8, 11, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 35, 41, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000031"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000230"),
-                            UserId = "00000000-0000-0000-0000-000000000030",
-                            WorkDateTime = new DateTime(2020, 6, 20, 11, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 7, 41, 20, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000032"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000231"),
-                            UserId = "00000000-0000-0000-0000-000000000015",
-                            WorkDateTime = new DateTime(2019, 11, 15, 14, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 10, 35, 41, 0)
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000033"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000232"),
-                            UserId = "00000000-0000-0000-0000-000000000030",
-                            WorkDateTime = new DateTime(2018, 10, 10, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 11, 31, 50, 0)
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1515,7 +816,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         new
                         {
                             Id = "00000000-0000-0000-0000-000000000001",
-                            ConcurrencyStamp = "083c2767-8832-40b8-a594-3484a4b07386",
+                            ConcurrencyStamp = "211459f2-edec-4c10-b876-db6d89bca2f7",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

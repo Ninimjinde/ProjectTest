@@ -32,7 +32,24 @@ namespace ALE.TimeRegistration.Api.Controllers
             _configuration = configuration;
         }
 
-            
+        [HttpGet]
+        public IActionResult GetAllUsers()
+        {
+            var users = _userManager.Users;
+            return Ok(users);
+        }
+
+        [HttpGet("{email}")]
+        public async Task<IActionResult> GetUser(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                return NotFound($"User with E-mail {email} does not exist.");
+            }
+            return Ok(user);
+        }
+
         [AllowAnonymous]
         [HttpPost("login")]
         public async Task<ActionResult> Login([FromBody] LoginUserRequestDto login)
@@ -77,6 +94,62 @@ namespace ALE.TimeRegistration.Api.Controllers
            SecurityAlgorithms.HmacSha256)
             );
             return token;
+        }
+
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] UserRequestDto userRequestDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            User newUser = new User
+            {
+                Email = userRequestDto.Email,
+                Name = userRequestDto.Name,
+                LastName = userRequestDto.LastName,
+                UserName = userRequestDto.Email
+            };
+
+            IdentityResult result = await _userManager.CreateAsync(newUser, userRequestDto.Password);
+            
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.Code, error.Description);
+                }
+                return BadRequest(ModelState);
+            }
+
+            newUser = await _userManager.FindByEmailAsync(userRequestDto.Email);
+
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> PutUser(LoginUserRequestDto loginUserRequestDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var user = await _userManager.FindByEmailAsync(loginUserRequestDto.Email);
+            var userResponseDto = await _userManager.UpdateAsync(user)
+           ;
+            return Ok(userResponseDto);
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete([FromBody] LoginUserRequestDto loginUserRequestDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var user = await _userManager.FindByEmailAsync(loginUserRequestDto.Email);
+            await _userManager.DeleteAsync(user);
+            return Ok();
         }
 
     }

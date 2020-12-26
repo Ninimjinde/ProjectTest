@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ALE.TimeRegistration.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201219083549_AddAdminRoleNew")]
-    partial class AddAdminRoleNew
+    [Migration("20201226090256_AddPictures")]
+    partial class AddPictures
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -57,7 +57,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
                             TaskName = "Create API",
                             UploadDate = new DateTime(2018, 10, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 18, 20, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -66,7 +66,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
                             TaskName = "API issues",
                             UploadDate = new DateTime(2018, 10, 15, 11, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 19, 28, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -75,7 +75,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
                             TaskName = "Create properties",
                             UploadDate = new DateTime(2018, 10, 18, 9, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 28, 30, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -84,7 +84,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
                             TaskName = "API vendor link",
                             UploadDate = new DateTime(2018, 10, 19, 8, 35, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 8, 40, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -93,7 +93,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
                             TaskName = "migrate objects",
                             UploadDate = new DateTime(2019, 8, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 35, 50, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -102,7 +102,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
                             TaskName = "create API's",
                             UploadDate = new DateTime(2019, 8, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 4, 30, 20, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -111,7 +111,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
                             TaskName = "Website",
                             UploadDate = new DateTime(2019, 9, 20, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 21, 44, 30, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -120,7 +120,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
                             TaskName = "finish website",
                             UploadDate = new DateTime(2019, 9, 23, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 18, 10, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -129,7 +129,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
                             TaskName = "automate",
                             UploadDate = new DateTime(2019, 10, 2, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 5, 5, 0, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -138,7 +138,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000102"),
                             TaskName = "demodata",
                             UploadDate = new DateTime(2020, 2, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 31, 50, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -147,7 +147,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000102"),
                             TaskName = "migrate data",
                             UploadDate = new DateTime(2020, 2, 21, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 8, 41, 30, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -156,7 +156,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
                             TaskName = "fix website issues",
                             UploadDate = new DateTime(2020, 5, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 15, 30, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -165,7 +165,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
                             TaskName = "itempage",
                             UploadDate = new DateTime(2020, 5, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 5, 7, 40, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -174,7 +174,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
                             TaskName = "automation",
                             UploadDate = new DateTime(2020, 5, 17, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 6, 39, 50, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -183,7 +183,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
                             TaskName = "finish automation",
                             UploadDate = new DateTime(2020, 5, 18, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 4, 55, 10, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -192,7 +192,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
                             TaskName = "create website",
                             UploadDate = new DateTime(2018, 3, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 22, 10, 25, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -201,7 +201,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
                             TaskName = "update items",
                             UploadDate = new DateTime(2018, 3, 25, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 8, 41, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -210,7 +210,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
                             TaskName = "promo's",
                             UploadDate = new DateTime(2018, 3, 26, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 1, 35, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -219,7 +219,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000105"),
                             TaskName = "upload data",
                             UploadDate = new DateTime(2018, 8, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 0, 12, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -228,7 +228,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000106"),
                             TaskName = "upload data",
                             UploadDate = new DateTime(2020, 7, 12, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 4, 47, 8, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -237,7 +237,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000106"),
                             TaskName = "link API's",
                             UploadDate = new DateTime(2020, 7, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 35, 38, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -246,7 +246,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
                             TaskName = "order page",
                             UploadDate = new DateTime(2020, 10, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 26, 45, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -255,7 +255,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
                             TaskName = "link order page",
                             UploadDate = new DateTime(2020, 10, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 45, 10, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -264,7 +264,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
                             TaskName = "issue billing",
                             UploadDate = new DateTime(2020, 10, 16, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 51, 42, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -273,7 +273,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000108"),
                             TaskName = "order page",
                             UploadDate = new DateTime(2019, 11, 5, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 8, 42, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -282,7 +282,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000108"),
                             TaskName = "API orderpage",
                             UploadDate = new DateTime(2019, 11, 6, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 6, 5, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -291,7 +291,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000109"),
                             TaskName = "customer portal",
                             UploadDate = new DateTime(2019, 11, 8, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 19, 8, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -300,7 +300,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000109"),
                             TaskName = "issues customer portal",
                             UploadDate = new DateTime(2019, 11, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 20, 45, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -309,7 +309,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000110"),
                             TaskName = "API items",
                             UploadDate = new DateTime(2020, 2, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 24, 6, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -318,7 +318,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000110"),
                             TaskName = "app issues",
                             UploadDate = new DateTime(2019, 4, 8, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 35, 41, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -327,7 +327,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000111"),
                             TaskName = "Website",
                             UploadDate = new DateTime(2020, 6, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 7, 41, 20, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -336,7 +336,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000112"),
                             TaskName = "Website",
                             UploadDate = new DateTime(2019, 11, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 10, 35, 41, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -345,7 +345,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000113"),
                             TaskName = "Website",
                             UploadDate = new DateTime(2018, 10, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 11, 31, 50, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         });
                 });
 
@@ -401,7 +401,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000402"),
                             ReceiverId = "00000000-0000-0000-0000-000000000007",
-                            SenderId = "00000000-0000-0000-0000-000000000002",
+                            SenderId = "00000000-0000-0000-0000-000000000001",
                             TaskId = new Guid("00000000-0000-0000-0000-000000000202"),
                             Text = "Please do this asap."
                         },
@@ -626,631 +626,864 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "00000000-0000-0000-0000-000000000002",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "a7eaa428-d59b-49fc-bdeb-f2b37b4048c6",
-                            Email = "EchtElkeKant@hotmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Kant",
-                            LockoutEnabled = false,
-                            Name = "Elke",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "08997253-9e6d-4130-9e02-fabefe47872b",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000003",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "0daedb8a-803b-47d6-a0d6-c6dddd118527",
-                            Email = "Ialwayswin@gmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Pot",
-                            LockoutEnabled = false,
-                            Name = "Jack",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "c7b2dab7-eeec-428d-a052-6e1209931a45",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000004",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "60a067cc-7cf5-425a-9df5-c504f1d9f6de",
-                            Email = "ErnaVanvoren@hotmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Vanvoren",
-                            LockoutEnabled = false,
-                            Name = "Erna",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "7b535b76-f807-400c-8254-b0c6d6a786bb",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000005",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "46351018-442d-4bee-8abf-fd9df8aa0d6a",
-                            Email = "RogerDoeniemee@telenet.be",
-                            EmailConfirmed = false,
-                            LastName = "Vangenechte",
-                            LockoutEnabled = false,
-                            Name = "Roger",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "3b1057cc-7dc6-4df9-9ce2-e9090c8b412d",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000006",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "3b5eb76a-8a22-401d-a488-81ea902d0fd2",
-                            Email = "CharlesDurue@hotmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Verstraete",
-                            LockoutEnabled = false,
-                            Name = "Karel",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "dbecbb53-102e-4003-925f-a8f32d025c47",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000007",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "2b375dbb-11c3-47df-bea2-3472bb5332e2",
-                            Email = "Katringring@skynet.be",
-                            EmailConfirmed = false,
-                            LastName = "Vanbelleghem",
-                            LockoutEnabled = false,
-                            Name = "Katleen",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "d6049ed7-a29e-42a3-8825-0f6e7e38b65c",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000008",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "ce525691-fb58-49a0-8f12-a131ae80d046",
-                            Email = "SnelnEddy@hotmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Guapo",
-                            LockoutEnabled = false,
-                            Name = "Edwardo",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "c5728fc9-ae61-472c-9e5a-72e411bbe6c3",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000009",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "64fbc69b-0703-4ded-9f87-7d2cb727d9f9",
-                            Email = "Andy123@gmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Degught",
-                            LockoutEnabled = false,
-                            Name = "Andy",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "d25b2f58-cc29-4d48-bea1-fbbf77d9b6de",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000010",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "7d70a35e-3487-4f8e-8b93-b772a3657fea",
-                            Email = "IloveyouTomorrow@hotmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Demain",
-                            LockoutEnabled = false,
-                            Name = "Annie",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "3e872442-7bda-4d19-82e3-78980e27cc6b",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000011",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "a9c742f9-4c9b-46be-a656-299927616261",
-                            Email = "Satchel@steelpanther.com",
-                            EmailConfirmed = false,
-                            LastName = "Parrish",
-                            LockoutEnabled = false,
-                            Name = "Russ",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "46ae68dd-d884-4447-bc14-73678e44ecfe",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000012",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "06fa017b-eddb-41b9-ac41-22adbef7f2df",
-                            Email = "DePijpVanMaarten@gmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Pijpers",
-                            LockoutEnabled = false,
-                            Name = "Maarten",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "82b15a48-d56c-42e6-add3-356a34dcf916",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000013",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "040f32ed-a766-4644-a256-6f76b296cb85",
-                            Email = "EdwardLeCanard@hotmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Vaneende",
-                            LockoutEnabled = false,
-                            Name = "Edward",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "e6f918b1-c12d-4bc1-92b5-90ae6df0d7b2",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000014",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "5e866b04-1380-423e-ba0b-3b0c5b275d7d",
-                            Email = "DeYoeri@gmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Declerk",
-                            LockoutEnabled = false,
-                            Name = "Yoeri",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "2fbe2356-91aa-4832-b9af-45a9e44fb221",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000015",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "d71f1009-9636-4ead-a51d-421c611f550e",
-                            Email = "CalmingCamille@telenet.be",
-                            EmailConfirmed = false,
-                            LastName = "Thee",
-                            LockoutEnabled = false,
-                            Name = "Camille",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "a15d7c31-742b-4c22-842a-45ddf5062a0d",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000016",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "cbd0df08-eb4b-4627-ad6d-45068fb8c4c2",
-                            Email = "Thebestginger@qotsa.com",
-                            EmailConfirmed = false,
-                            LastName = "Homme",
-                            LockoutEnabled = false,
-                            Name = "Josh",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "b60ca086-73c2-41a5-8dd3-f826fd9eaddb",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000017",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "979d251d-b82d-4b2a-816a-3bf322e1895d",
-                            Email = "Zwaffelaere@gmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Uytebroeck",
-                            LockoutEnabled = false,
-                            Name = "Piet",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "014ef737-e148-4fb3-bb46-d874e5f477f8",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000018",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "12e710eb-7f22-485e-b014-5e5ba4445afe",
-                            Email = "SterkeJan33@pandora.be",
-                            EmailConfirmed = false,
-                            LastName = "Lefort",
-                            LockoutEnabled = false,
-                            Name = "Jan",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "f055c671-2f6e-424d-832e-0734517949cb",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000019",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "2e1681ee-84bf-4d6d-8d86-77db8990497d",
-                            Email = "RietjeGessof@hotmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Gessof",
-                            LockoutEnabled = false,
-                            Name = "Rita",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "b6f62a05-c9a0-4432-9b95-314426dcc119",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000020",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "f9a332d0-6acf-4a17-8bd5-a12346ec4bd5",
-                            Email = "willywilly@thescabs.be",
-                            EmailConfirmed = false,
-                            LastName = "Lambregt",
-                            LockoutEnabled = false,
-                            Name = "Willy",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "fe08bc31-36cc-4b13-a8fa-f02e583cf196",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000021",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "e28c898b-8b5c-4254-8d84-2584672e1fa8",
-                            Email = "PescadoLover@skynet.be",
-                            EmailConfirmed = false,
-                            LastName = "Vervis",
-                            LockoutEnabled = false,
-                            Name = "Kelly",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "f2b14b5a-4e93-45d0-a4ca-74688b01d6fd",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000022",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "1f94aa69-69c3-45b2-8635-e952e0a559cb",
-                            Email = "TomVanmarcke@gmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Vantomme",
-                            LockoutEnabled = false,
-                            Name = "Marc",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "0b9c410a-8a3a-4320-9538-a72733e06d6b",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000023",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "dd5a958c-7269-4d78-9960-8d82d3288cd5",
-                            Email = "Loewiloewie@hotmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Decruy",
-                            LockoutEnabled = false,
-                            Name = "Louis",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "0a6bf07d-a5be-4f12-b732-77983a2cab7d",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000024",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "a8d72bfa-12e2-4e7a-86d4-c29f198992b3",
-                            Email = "Giezijtem@skynet.be",
-                            EmailConfirmed = false,
-                            LastName = "Emnie",
-                            LockoutEnabled = false,
-                            Name = "Ben",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "fe4ccde3-da2e-4285-a2cd-ddfdbb985d37",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000025",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "da84a928-f085-4b43-9ab5-4f9bfc9295de",
-                            Email = "ConnieBeter@gmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Moeleker",
-                            LockoutEnabled = false,
-                            Name = "Connie",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "e9d3d5e2-0e5d-40b2-b5e9-db76e999e2a9",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000026",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "a872a1cf-c31e-4b08-aefd-fa37f083cc5e",
-                            Email = "GezondePeter@telenet.be",
-                            EmailConfirmed = false,
-                            LastName = "Celie",
-                            LockoutEnabled = false,
-                            Name = "Peter",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "e37d4e05-037c-4f94-b881-0d6e38fffd76",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000027",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "19ad1cc0-5321-43bc-a594-71267a89069b",
-                            Email = "Bennernie@skynet.be",
-                            EmailConfirmed = false,
-                            LastName = "Thuys",
-                            LockoutEnabled = false,
-                            Name = "Benny",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "45179a9f-52ea-4f37-b2cd-3ab9c2ecfc46",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000028",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "9ecc5683-1619-4ddc-a05b-569f0ce0d26d",
-                            Email = "Thebestbusker@london.com",
-                            EmailConfirmed = false,
-                            LastName = "Cole",
-                            LockoutEnabled = false,
-                            Name = "Cam",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "3286f182-fd6a-4f30-a6f5-bd158ec87c07",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000029",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "493d7269-00c4-47ab-a812-4a0e7ccf5efa",
-                            Email = "CoronaTopper@gmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Root",
-                            LockoutEnabled = false,
-                            Name = "Claude",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "a61ba6b0-570f-432c-b369-45565bba4f7f",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
-                            Id = "00000000-0000-0000-0000-000000000030",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "3f7a599f-0b7e-4c9a-9a30-4614972ae74f",
-                            Email = "rapgewoon@hotmail.com",
-                            EmailConfirmed = false,
-                            LastName = "Wenne",
-                            LockoutEnabled = false,
-                            Name = "Eve",
-                            Password = "TimeReg2020",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "aaec2e5d-f0df-4828-8ffd-b40d60b737c0",
-                            TwoFactorEnabled = false
-                        },
-                        new
-                        {
                             Id = "00000000-0000-0000-0000-000000000001",
                             AccessFailedCount = 0,
                             ConcurrencyStamp = "c8554266-b401-4519-9aeb-a9283053fc58",
                             Email = "aboynamedsue@JCash.com",
                             EmailConfirmed = true,
+                            LastName = "Cash",
                             LockoutEnabled = false,
+                            Name = "Johnny",
                             NormalizedEmail = "ABOYNAMEDSUE@JCASH.COM",
                             NormalizedUserName = "ABOYNAMEDSUE@JCASH.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAELDp6qhlaOUyZiTq++0WhNe/FynURZTVs6Qhejl/Jd0MShmlRkmE1SrCnq8JfKChNA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAED6tOY7ieTuIJrBF09V4kD1PAnL8bm8ygC9cOf5gxGKwL/kazNS/5h66vJh0C3geOw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "VVPCRDAS3MJWQD5CSW2GWPRADBXEZINA",
                             TwoFactorEnabled = false,
                             UserName = "aboynamedsue@JCash.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000002",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "ea936088-7c16-4dae-8679-ccb63b4b6529",
+                            Email = "EchtElkeKant@hotmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Kant",
+                            LockoutEnabled = false,
+                            Name = "Elke",
+                            NormalizedEmail = "ECHTELKEKANT@HOTMAIL.COM",
+                            NormalizedUserName = "ECHTELKEKANT@HOTMAIL.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEG11Wlae3IDWSk8AUlBgCJyK+JMkzvOTYqhtspbvpfZ0o9k+DQ7E8lvhDxjwutejhA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "LPRQIVUHQZ9B9VK0RQPN9LLR2JUDMOKX",
+                            TwoFactorEnabled = false,
+                            UserName = "EchtElkeKant@hotmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000003",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "87512ca8-3082-41c9-a799-125a1724dfdb",
+                            Email = "Ialwayswin@gmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Pot",
+                            LockoutEnabled = false,
+                            Name = "Jack",
+                            NormalizedEmail = "IALWAYSWIN@GMAIL.COM",
+                            NormalizedUserName = "IALWAYSWIN@GMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEWQGVNc0n3SKvdEAY06vomXeiRpL833LuKOaSSrEi5NNNkkJOxya3fviK60oun93w==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "CGZLWFPLDP93ZCFWTQ19E9LGZAH3EDV4",
+                            TwoFactorEnabled = false,
+                            UserName = "Ialwayswin@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000004",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "7a9bb722-0187-44d6-ab37-35bd39a46abd",
+                            Email = "ErnaVanvoren@hotmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Vanvoren",
+                            LockoutEnabled = false,
+                            Name = "Erna",
+                            NormalizedEmail = "ERNAVANVOREN@HOTMAIL.COM",
+                            NormalizedUserName = "ERNAVANVOREN@HOTMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDbmZ4kMpVLZ6YJ1bxHX6jtS4O5K0ryhKiSz4vfmcWrBJtZE/m1gqyRmB+mkP2ZLuA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "KEVV7QQDZVPGXW0LIRHWRUBJDWV1BEOK",
+                            TwoFactorEnabled = false,
+                            UserName = "ErnaVanvoren@hotmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000005",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "2fa68a7a-8187-440a-92d3-9332f602a90c",
+                            Email = "RogerDoeniemee@telenet.be",
+                            EmailConfirmed = true,
+                            LastName = "Vangenechte",
+                            LockoutEnabled = false,
+                            Name = "Roger",
+                            NormalizedEmail = "ROGERDOENIEMEE@TELENET.BE",
+                            NormalizedUserName = "ROGERDOENIEMEE@TELENET.BE",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAELWevp6Bs9r50BNj3gy9hvilN84xUJGNkuHlgq7qn5MB1rFLUPmoHEUoOLBFOMdMSA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "DMQ1MNFMDVWEMHCWA4TOPXZUCR97WIGJ",
+                            TwoFactorEnabled = false,
+                            UserName = "RogerDoeniemee@telenet.be"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000006",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "d6089fee-e038-4e51-a688-efd386d13801",
+                            Email = "CharlesDurue@hotmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Verstraete",
+                            LockoutEnabled = false,
+                            Name = "Karel",
+                            NormalizedEmail = "CHARLESDURUE@HOTMAIL.COM",
+                            NormalizedUserName = "CHARLESDURUE@HOTMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHVWBd18B3PJI3At7485dyEyL28Cz7T7VPj+LT4wrtiP0+KoJPZfxGXgSW+B+Ecvdg==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "GOHAS6DGS3TEFB8CKVA1O0YY7L7QOJGY",
+                            TwoFactorEnabled = false,
+                            UserName = "CharlesDurue@hotmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000007",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "b61bb5e0-6249-4017-8f66-c2e793cead19",
+                            Email = "katringring@skynet.be",
+                            EmailConfirmed = true,
+                            LastName = "Vanbelleghem",
+                            LockoutEnabled = false,
+                            Name = "Katleen",
+                            NormalizedEmail = "KATRINGRING@SKYNET.BE",
+                            NormalizedUserName = "KATRINGRING@SKYNET.BE",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMuPI0U9MFGR2KyxqK5I0v8P9ARrgac4yZ/KpYZWfr8opBqUvX/xJScw1V/G2XxNew==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "TX2YKCJILNPIIAS7Y4XDXNU7ATXAMEXW",
+                            TwoFactorEnabled = false,
+                            UserName = "katringring@skynet.be"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000008",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "71225b1c-93a9-4e98-9769-e2bac0cf8c81",
+                            Email = "SnelnEddy@hotmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Guapo",
+                            LockoutEnabled = false,
+                            Name = "Edwardo",
+                            NormalizedEmail = "SNELNEDDY@HOTMAIL.COM",
+                            NormalizedUserName = "SNELNEDDY@HOTMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEClCbvkwBsnPSk99aPx960A8n6dzSI3vgsRnbxVeZxs+dnglrOre6OSj+ah3aWRTDw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "AY8SBXVKA6Z6MXJXBYIIE9JIAOQV2DJO",
+                            TwoFactorEnabled = false,
+                            UserName = "SnelnEddy@hotmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000009",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "00b46ecb-768e-4d9e-8168-c947145342aa",
+                            Email = "Andy123@gmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Degught",
+                            LockoutEnabled = false,
+                            Name = "Andy",
+                            NormalizedEmail = "ANDY123@GMAIL.COM",
+                            NormalizedUserName = "ANDY123@GMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEN2cXoJZ1VQdrM2qKSTiR4RqMVTNW2nMUFUMeL8wpQyKpCQVUSCzB0IxscbNDTn7AQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "AERAYD2O3KEIAGCLLIP7O8QNVSXU8PUD",
+                            TwoFactorEnabled = false,
+                            UserName = "Andy123@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000010",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "c6d41496-5440-4fb4-b12b-b36a66bd271c",
+                            Email = "IloveyouTomorrow@hotmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Demain",
+                            LockoutEnabled = false,
+                            Name = "Annie",
+                            NormalizedEmail = "ILOVEYOUTOMORROW@HOTMAIL.COM",
+                            NormalizedUserName = "ILOVEYOUTOMORROW@HOTMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOe8GqnKL4Aua6mwyx+wCgcl5f137ks6OXqx+ZJpMxHMECzBO7Ezjnhi7ls3oG25YQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "OJUDGXCPUCPYDMIQTIWMSRTLXH4NMKDB",
+                            TwoFactorEnabled = false,
+                            UserName = "IloveyouTomorrow@hotmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000011",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "a01d31d2-66ce-40a5-9a38-f5a02d65cdae",
+                            Email = "Satchel@steelpanther.com",
+                            EmailConfirmed = true,
+                            LastName = "Parrish",
+                            LockoutEnabled = false,
+                            Name = "Russ",
+                            NormalizedEmail = "SATCHEL@STEELPANTHER.COM",
+                            NormalizedUserName = "SATCHEL@STEELPANTHER.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMNm9quUuSlE7k8mWkMWgxVS2aeEtz1ERiVNGRItnlwCCQIAXgGW4VZRDcEFySmWWA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "W7VNKA17XODMDCKG5JBXZQCLUQSRF32F",
+                            TwoFactorEnabled = false,
+                            UserName = "Satchel@steelpanther.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000012",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "727ea679-d671-4406-97cf-3a00468fd7e6",
+                            Email = "DePijpVanMaarten@gmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Pijpers",
+                            LockoutEnabled = false,
+                            Name = "Maarten",
+                            NormalizedEmail = "DEPIJPVANMAARTEN@GMAIL.COM",
+                            NormalizedUserName = "DEPIJPVANMAARTEN@GMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMwCGgp9bD8Da+E/xlZ4I9tAt+o+JsznkyjGRiklY38qswZnAo4S2Q3Iwws7wv7eLw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "NZVCLM9FJXG84V7AAF3WNV9UX88PSSAD",
+                            TwoFactorEnabled = false,
+                            UserName = "DePijpVanMaarten@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000013",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "979b7fae-dee1-443f-89cd-cd5d7e075296",
+                            Email = "EdwardLeCanard@hotmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Vaneende",
+                            LockoutEnabled = false,
+                            Name = "Edward",
+                            NormalizedEmail = "EDWARDLECANARD@HOTMAIL.COM",
+                            NormalizedUserName = "EDWARDLECANARD@HOTMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJeoJysfNAtAxsddCfvQj+HI51NpbDvicl9wys2ri7U2s76NYvwPdDRIsgZ3Lzg4Jg==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "X50KHZXPUONAXCIOYAP1VN2KWJNQF8YF",
+                            TwoFactorEnabled = false,
+                            UserName = "EdwardLeCanard@hotmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000014",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "3205df9b-0609-478c-953a-3ebc1cbd3894",
+                            Email = "DeYoeri@gmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Declerk",
+                            LockoutEnabled = false,
+                            Name = "Yoeri",
+                            NormalizedEmail = "DEYOERI@GMAIL.COM",
+                            NormalizedUserName = "DEYOERI@GMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOk+qCHPCRpkhgLYpuzktWRnZRfaLMYu/KnREpmehxZmTD3m+5dfDXAl+cEPySG+cQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "E9HTNSBN303BXB434HYORNEMWKFR9F0K",
+                            TwoFactorEnabled = false,
+                            UserName = "DeYoeri@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000015",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "b7d20267-f0ca-40b8-b5a9-82c6e1bbf7b6",
+                            Email = "CalmingCamille@telenet.be",
+                            EmailConfirmed = true,
+                            LastName = "Thee",
+                            LockoutEnabled = false,
+                            Name = "Camille",
+                            NormalizedEmail = "CALMINGCAMILLE@TELENET.BE",
+                            NormalizedUserName = "CALMINGCAMILLE@TELENET.BE",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJApqWammWE0j3nuCjgeMHpKcJ6rSye6YoLMkH32Lf4b1esDy+s0OEMe5u1Q/bXKYg==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "NB8OXAMNMR8SWHOY6ACNDYQE4VAGFEEP",
+                            TwoFactorEnabled = false,
+                            UserName = "CalmingCamille@telenet.be"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000016",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "59cfeb05-2937-4806-8f27-accbc1ccfe91",
+                            Email = "Thebestginger@qotsa.com",
+                            EmailConfirmed = true,
+                            LastName = "Homme",
+                            LockoutEnabled = false,
+                            Name = "Josh",
+                            NormalizedEmail = "THEBESTGINGER@QOTSA.COM",
+                            NormalizedUserName = "THEBESTGINGER@QOTSA.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEARSngz2HH2hasKsZQa47evmZOVbjxGZp3zCndgJL+MFtJJIXJuUKmr+MBI3hPIXAQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "ZUYKIDLJWUZXNXN6BK6Z6QCZO5WXOYNR",
+                            TwoFactorEnabled = false,
+                            UserName = "Thebestginger@qotsa.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000017",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "68e80c7b-4679-4fc7-8f8a-7dfcf165d726",
+                            Email = "Zwaffelaere@gmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Uytebroeck",
+                            LockoutEnabled = false,
+                            Name = "Piet",
+                            NormalizedEmail = "ZWAFFELAERE@GMAIL.COM",
+                            NormalizedUserName = "ZWAFFELAERE@GMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEB3KTMxZ05LlDXdfuH4rCJmN+6ELP+g58llGrQoSXj47OGHTpqg0DEtCMWukQX6qYw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "HGIXXQPIK4FFBOOUNMFY7GN6GDHXEVV1",
+                            TwoFactorEnabled = false,
+                            UserName = "Zwaffelaere@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000018",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "a1000963-395c-4507-83df-8f4b9e784db1",
+                            Email = "SterkeJan33@pandora.be",
+                            EmailConfirmed = true,
+                            LastName = "Lefort",
+                            LockoutEnabled = false,
+                            Name = "Jan",
+                            NormalizedEmail = "STERKEJAN33@PANDORA.BE",
+                            NormalizedUserName = "STERKEJAN33@PANDORA.BE",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMJT5/kRGHwivguLKGGZAZvU0g02kWapCV768VxGd3OTud3zIZYxIQ2PPHY+paPaeQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "WGY5YWIB4XK6LUI2TBROBMXVLQKNNWOV",
+                            TwoFactorEnabled = false,
+                            UserName = "SterkeJan33@pandora.be"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000019",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "b9e1dbac-e651-482a-98a4-8e24583f29c0",
+                            Email = "RietjeGessof@hotmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Gessof",
+                            LockoutEnabled = false,
+                            Name = "Rita",
+                            NormalizedEmail = "RIETJEGESSOF@HOTMAIL.COM",
+                            NormalizedUserName = "RIETJEGESSOF@HOTMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKs/rRqhN1eDre7uJ10AyKdlWpTrmCPBu5S/yNgDIFJbOBgt4whXuh0gmrxhNtAHyw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "9H2QG7IPOUORADDNMF2ISIRSOGZJNXGZ",
+                            TwoFactorEnabled = false,
+                            UserName = "RietjeGessof@hotmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000020",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "86d42357-8dbc-48c9-886d-3a1b957f2075",
+                            Email = "willywilly@thescabs.be",
+                            EmailConfirmed = true,
+                            LastName = "Lambregt",
+                            LockoutEnabled = false,
+                            Name = "Willy",
+                            NormalizedEmail = "WILLYWILLY@THESCABS.BE",
+                            NormalizedUserName = "WILLYWILLY@THESCABS.BE",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAELriZaBkvsvTyxEuVFE93uw2yzXDKT8HX5tiJkADPI5HcxtDRLDzO1Q+zH4ClN59EA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "7F7LSOHNMOKGFGQVMMGOX3SHM3PBNHQB",
+                            TwoFactorEnabled = false,
+                            UserName = "willywilly@thescabs.be"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000021",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "d7280862-2341-462a-8fb5-1380edea1422",
+                            Email = "PescadoLover@skynet.be",
+                            EmailConfirmed = true,
+                            LastName = "Vervis",
+                            LockoutEnabled = false,
+                            Name = "Kelly",
+                            NormalizedEmail = "PESCADOLOVER@SKYNET.BE",
+                            NormalizedUserName = "PESCADOLOVER@SKYNET.BE",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE3H8MxhIHGmVLH9dG7JjpbLSZ0cg4vQV2gmgluVlrhn2rn3zJ0mFSUqfMq8tuEgUA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "WGLZXEZUI3NLP8ZWUYK5CFN8XWBT7ATX",
+                            TwoFactorEnabled = false,
+                            UserName = "PescadoLover@skynet.be"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000022",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "0fc3e5d4-f6ce-4160-aa94-d2acc0be114d",
+                            Email = "TomVanmarcke@gmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Vantomme",
+                            LockoutEnabled = false,
+                            Name = "Marc",
+                            NormalizedEmail = "TOMVANMARCKE@GMAIL.COM",
+                            NormalizedUserName = "TOMVANMARCKE@GMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDxryCtm7U6h2BimQyjLbM900F/SGc1JAjTS/XTHfPStocBFHp6iAVq3Ecs2MXOV+g==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "OIKDBFPAR5GJKJ91OUAOXNKR1CMLSTFC",
+                            TwoFactorEnabled = false,
+                            UserName = "TomVanmarcke@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000023",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "8f42511c-f74f-442c-a8f2-28b10d2bc114",
+                            Email = "Loewiloewie@hotmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Decruy",
+                            LockoutEnabled = false,
+                            Name = "Louis",
+                            NormalizedEmail = "LOEWILOEWIE@HOTMAIL.COM",
+                            NormalizedUserName = "LOEWILOEWIE@HOTMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFVSAvaYjMKruUblkFz5g6evdnPe4fswiZ6j2aJ50yAC/HyniEa3urrPO+a5hePm+g==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "F0SRUYTP4OF6TSFD3CNJBX5ECAJFPPFZ",
+                            TwoFactorEnabled = false,
+                            UserName = "Loewiloewie@hotmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000024",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "b52a849c-4b01-4dda-ac2f-30f6b08fe075",
+                            Email = "Giezijtem@skynet.be",
+                            EmailConfirmed = true,
+                            LastName = "Emnie",
+                            LockoutEnabled = false,
+                            Name = "Ben",
+                            NormalizedEmail = "GIEZIJTEM@SKYNET.BE",
+                            NormalizedUserName = "GIEZIJTEM@SKYNET.BE",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAENBJehjbtwsZE+/Ol8q4At6JoroHQYy9CBIex7G3A9Y580scNejJYZBuitQh0EW6EQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "PHLIIUHLZLGB2UTDD2LHUFROZ7TDQAD7",
+                            TwoFactorEnabled = false,
+                            UserName = "Giezijtem@skynet.be"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000025",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "018aba24-a96f-44e9-a058-a047d0bd0b53",
+                            Email = "ConnieBeter@gmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Moeleker",
+                            LockoutEnabled = false,
+                            Name = "Connie",
+                            NormalizedEmail = "CONNIEBETER@GMAIL.COM",
+                            NormalizedUserName = "CONNIEBETER@GMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBTBFvgJD7yu4l5kc5ylErIY//3qrAHPRQ54KOKeewQYYb03tQ+BKWOXE+MBBkiyVw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "FWM36IDUG00055IF56RZWA2CR9OYCVB3",
+                            TwoFactorEnabled = false,
+                            UserName = "ConnieBeter@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000026",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "bc117b43-d867-4f86-8ac4-8d4efc2820c4",
+                            Email = "GezondePeter@telenet.be",
+                            EmailConfirmed = true,
+                            LastName = "Celie",
+                            LockoutEnabled = false,
+                            Name = "Peter",
+                            NormalizedEmail = "GEZONDEPETER@TELENET.BE",
+                            NormalizedUserName = "GEZONDEPETER@TELENET.BE",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHKoZRj04th3h1iJRArtBMuSG3z2t7BAAPos8Ty+qhhQEtzqcHemv3hL/3asoScS4g==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "TJLKW00301EENWVWL2MCPLTCU18IT7XY",
+                            TwoFactorEnabled = false,
+                            UserName = "GezondePeter@telenet.be"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000027",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "1993d307-e257-4e29-8487-b230037199aa",
+                            Email = "Bennernie@skynet.be",
+                            EmailConfirmed = true,
+                            LastName = "Thuys",
+                            LockoutEnabled = false,
+                            Name = "Benny",
+                            NormalizedEmail = "BENNERNIE@SKYNET.BE",
+                            NormalizedUserName = "BENNERNIE@SKYNET.BE",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAENIzLxlXkoui1eUvTt8aMLY+qEqU2QpCciY1ImOg2w6IiYlwncXvXG4b7J8OfKnZjw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "KXW8TS8VIEG0BL1OIA7U2PASSALDXMV3",
+                            TwoFactorEnabled = false,
+                            UserName = "Bennernie@skynet.be"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000028",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "b017e971-0a03-4aa0-86e5-b3d1c603d64b",
+                            Email = "Thebestbusker@london.com",
+                            EmailConfirmed = true,
+                            LastName = "Cole",
+                            LockoutEnabled = false,
+                            Name = "Cam",
+                            NormalizedEmail = "THEBESTBUSKER@LONDON.COM",
+                            NormalizedUserName = "THEBESTBUSKER@LONDON.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIdt0t0WAAtRg8szOMbdSzZ5uevq/HamriNnveJrrdtgEPpMe5RVl2oqGqv+JU/S9A==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "VRVLNRMUMHA6IADTQ7CO9VCIMVX4OMO5",
+                            TwoFactorEnabled = false,
+                            UserName = "Thebestbusker@london.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000029",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "50d8c368-d7f1-4e3f-8216-6ba5c5e3e76a",
+                            Email = "CoronaTopper@gmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Root",
+                            LockoutEnabled = false,
+                            Name = "Claude",
+                            NormalizedEmail = "CORONATOPPER@GMAIL.COM",
+                            NormalizedUserName = "CORONATOPPER@GMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKzDLGfmznWnfUkEhdgkNQVpmjbdpLlVo/AQsn/k83HDLzeuNImxFZZPbc1ASKtMUg==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "W7IEDSQT3GEVZWUOTXG8CL1PI3K6MXU7",
+                            TwoFactorEnabled = false,
+                            UserName = "CoronaTopper@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000030",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "55690745-3bfd-43ad-abbe-af37f549182c",
+                            Email = "rapgewoon@hotmail.com",
+                            EmailConfirmed = true,
+                            LastName = "Wenne",
+                            LockoutEnabled = false,
+                            Name = "Eve",
+                            NormalizedEmail = "RAPGEWOON@HOTMAIL.COM",
+                            NormalizedUserName = "RAPGEWOON@HOTMAIL.COM",
+                            Password = "TimeReg2020",
+                            PasswordHash = "AQAAAAEAACcQAAAAENJtexRWwLjEfLnMjn9aa3SD3h7yuJyKvs00i3l85/AI1kX048tCK0SE9L0TYJbVng==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "JF6GSUYRRSWNWXY9Z1HUJLK1GUQREXOO",
+                            TwoFactorEnabled = false,
+                            UserName = "rapgewoon@hotmail.com"
                         });
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.UserTask", b =>
                 {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("TaskId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("UserId", "TaskId");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("WorkDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan>("WorkTime")
+                        .HasColumnType("time");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("TaskId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("UserTasks");
 
                     b.HasData(
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000001"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000200"),
                             UserId = "00000000-0000-0000-0000-000000000006",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200")
+                            WorkDateTime = new DateTime(2018, 10, 14, 10, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 1, 18, 20, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000002"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000201"),
                             UserId = "00000000-0000-0000-0000-000000000006",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201")
+                            WorkDateTime = new DateTime(2018, 10, 15, 12, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 19, 28, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000003"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000202"),
                             UserId = "00000000-0000-0000-0000-000000000007",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000202")
+                            WorkDateTime = new DateTime(2018, 10, 18, 11, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 28, 30, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000004"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000203"),
                             UserId = "00000000-0000-0000-0000-000000000008",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000203")
+                            WorkDateTime = new DateTime(2018, 10, 19, 11, 35, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 8, 40, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000005"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000204"),
                             UserId = "00000000-0000-0000-0000-000000000008",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000204")
+                            WorkDateTime = new DateTime(2019, 8, 14, 11, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 35, 50, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000006"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000205"),
                             UserId = "00000000-0000-0000-0000-000000000009",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000205")
+                            WorkDateTime = new DateTime(2019, 8, 15, 10, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 4, 30, 20, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000007"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000206"),
                             UserId = "00000000-0000-0000-0000-000000000010",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000206")
+                            WorkDateTime = new DateTime(2019, 9, 20, 15, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 21, 44, 30, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000008"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000206"),
+                            UserId = "00000000-0000-0000-0000-000000000010",
+                            WorkDateTime = new DateTime(2019, 9, 23, 15, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 3, 18, 10, 0)
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000009"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000207"),
                             UserId = "00000000-0000-0000-0000-000000000011",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000207")
+                            WorkDateTime = new DateTime(2019, 10, 4, 6, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 5, 5, 0, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000010"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000208"),
                             UserId = "00000000-0000-0000-0000-000000000011",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000208")
+                            WorkDateTime = new DateTime(2020, 2, 20, 10, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 31, 50, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000011"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000209"),
                             UserId = "00000000-0000-0000-0000-000000000011",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000209")
+                            WorkDateTime = new DateTime(2020, 2, 21, 10, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 8, 41, 30, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000012"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000210"),
                             UserId = "00000000-0000-0000-0000-000000000015",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000210")
+                            WorkDateTime = new DateTime(2020, 5, 13, 16, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 15, 30, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000013"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000211"),
                             UserId = "00000000-0000-0000-0000-000000000016",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000211")
+                            WorkDateTime = new DateTime(2020, 5, 15, 13, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 5, 7, 40, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000014"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000212"),
                             UserId = "00000000-0000-0000-0000-000000000017",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000212")
+                            WorkDateTime = new DateTime(2020, 5, 17, 12, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 6, 39, 50, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000015"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000213"),
                             UserId = "00000000-0000-0000-0000-000000000020",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000213")
+                            WorkDateTime = new DateTime(2020, 5, 18, 13, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 4, 55, 10, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000016"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000214"),
                             UserId = "00000000-0000-0000-0000-000000000020",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000214")
+                            WorkDateTime = new DateTime(2018, 3, 20, 14, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 22, 10, 25, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000017"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000215"),
                             UserId = "00000000-0000-0000-0000-000000000021",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000215")
+                            WorkDateTime = new DateTime(2018, 3, 25, 15, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 1, 8, 41, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000018"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000216"),
                             UserId = "00000000-0000-0000-0000-000000000021",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000216")
+                            WorkDateTime = new DateTime(2018, 3, 26, 16, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 1, 35, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000019"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000217"),
                             UserId = "00000000-0000-0000-0000-000000000021",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000217")
+                            WorkDateTime = new DateTime(2018, 8, 14, 11, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 3, 0, 12, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000020"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000218"),
                             UserId = "00000000-0000-0000-0000-000000000022",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000218")
+                            WorkDateTime = new DateTime(2020, 7, 12, 10, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 4, 47, 8, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000021"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000219"),
                             UserId = "00000000-0000-0000-0000-000000000023",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000219")
+                            WorkDateTime = new DateTime(2020, 7, 13, 14, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 35, 38, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000022"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000220"),
                             UserId = "00000000-0000-0000-0000-000000000024",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000220")
+                            WorkDateTime = new DateTime(2020, 10, 13, 15, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 1, 26, 45, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000023"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000221"),
                             UserId = "00000000-0000-0000-0000-000000000024",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000221")
+                            WorkDateTime = new DateTime(2020, 10, 15, 16, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 45, 10, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000024"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000223"),
                             UserId = "00000000-0000-0000-0000-000000000025",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000223")
+                            WorkDateTime = new DateTime(2020, 10, 16, 17, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 51, 42, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000025"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000224"),
                             UserId = "00000000-0000-0000-0000-000000000017",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000224")
+                            WorkDateTime = new DateTime(2019, 11, 5, 10, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 1, 8, 42, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000026"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000225"),
                             UserId = "00000000-0000-0000-0000-000000000025",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000225")
+                            WorkDateTime = new DateTime(2019, 11, 6, 10, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 3, 6, 5, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000027"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000226"),
                             UserId = "00000000-0000-0000-0000-000000000026",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000226")
+                            WorkDateTime = new DateTime(2019, 11, 8, 11, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 19, 8, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000028"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000227"),
                             UserId = "00000000-0000-0000-0000-000000000027",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000227")
+                            WorkDateTime = new DateTime(2019, 11, 10, 13, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 0, 20, 45, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000029"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000228"),
                             UserId = "00000000-0000-0000-0000-000000000028",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000228")
+                            WorkDateTime = new DateTime(2020, 2, 10, 12, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 3, 24, 6, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000030"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000229"),
                             UserId = "00000000-0000-0000-0000-000000000029",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000229")
+                            WorkDateTime = new DateTime(2019, 4, 8, 11, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 2, 35, 41, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000031"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000230"),
                             UserId = "00000000-0000-0000-0000-000000000030",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000230")
+                            WorkDateTime = new DateTime(2020, 6, 20, 11, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 7, 41, 20, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000032"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000231"),
                             UserId = "00000000-0000-0000-0000-000000000015",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000231")
+                            WorkDateTime = new DateTime(2019, 11, 15, 14, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 10, 35, 41, 0)
                         },
                         new
                         {
+                            Id = new Guid("00000000-0000-0000-0000-000000000033"),
+                            TaskId = new Guid("00000000-0000-0000-0000-000000000232"),
                             UserId = "00000000-0000-0000-0000-000000000030",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000232")
+                            WorkDateTime = new DateTime(2018, 10, 10, 10, 30, 12, 0, DateTimeKind.Unspecified),
+                            WorkTime = new TimeSpan(0, 11, 31, 50, 0)
                         });
                 });
 
@@ -1284,7 +1517,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         new
                         {
                             Id = "00000000-0000-0000-0000-000000000001",
-                            ConcurrencyStamp = "6617ed95-a00f-484d-905c-19522d37aeac",
+                            ConcurrencyStamp = "083c2767-8832-40b8-a594-3484a4b07386",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -1450,9 +1683,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
 
                     b.HasOne("ALE.TimeRegistration.Core.Entities.User", "User")
                         .WithMany("UserTasks")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

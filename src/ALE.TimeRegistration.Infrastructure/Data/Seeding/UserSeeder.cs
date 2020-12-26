@@ -26,8 +26,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data.Seeding
                     SecurityStamp = "VVPCRDAS3MJWQD5CSW2GWPRADBXEZINA", //Random string
                     ConcurrencyStamp = "c8554266-b401-4519-9aeb-a9283053fc58", //Random guid string
                     Name = "Johnny",
-                    LastName = "Cash",
-                    Password = UserPassword
+                    LastName = "Cash"
                 },
                 new User
                 {
@@ -40,8 +39,7 @@ namespace ALE.TimeRegistration.Infrastructure.Data.Seeding
                     SecurityStamp = "LPRQIVUHQZ9B9VK0RQPN9LLR2JUDMOKX", //Random string
                     ConcurrencyStamp = "ea936088-7c16-4dae-8679-ccb63b4b6529", //Random guid string
                     Name = "Elke",
-                    LastName = "Kant",
-                    Password = UserPassword
+                    LastName = "Kant"
                 },
                 new User
                 {

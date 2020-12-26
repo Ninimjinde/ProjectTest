@@ -33,7 +33,6 @@ namespace ALE.TimeRegistration.Core.Services
             return dto;
         }
 
-
         public async Task<IEnumerable<AppTaskResponseDto>> ListAllTasksAsync()
         {
             var result = await _taskRepo.ListAllAsync();

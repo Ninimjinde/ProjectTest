@@ -38,18 +38,22 @@ namespace ALE.TimeRegistration.Api
             // Identity configuration
             services.AddIdentity<User, IdentityRole>(options => // AddIdentity because UI package is not needed, if UI is needed then AddDefaultIdentity<ApplicationUser>
              {
-                            options.SignIn.RequireConfirmedEmail = false;
-                        })
+                 options.SignIn.RequireConfirmedEmail = false;
+                 options.User.AllowedUserNameCharacters = "";
+             })
              .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddControllers();
 
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<ITaskRepository, TaskRepository>();
+            services.AddScoped<IUserTaskRepository, UserTaskRepository>();
             services.AddScoped<IRepository<Message>, EfRepository<Message>>();
             services.AddScoped<IRepository<Picture>, EfRepository<Picture>>();
             services.AddScoped<IProjectService, ProjectService>();
             services.AddScoped<ITaskService, TaskService>();
+            services.AddScoped<IUserTaskService, UserTaskService>();
+
 
 
             services.AddAuthentication(option =>

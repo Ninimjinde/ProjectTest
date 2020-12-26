@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ALE.TimeRegistration.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201223141038_ChangeUsersToIdentity")]
-    partial class ChangeUsersToIdentity
+    [Migration("20201225185519_AddMessage")]
+    partial class AddMessage
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -57,7 +57,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
                             TaskName = "Create API",
                             UploadDate = new DateTime(2018, 10, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 18, 20, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -66,7 +66,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
                             TaskName = "API issues",
                             UploadDate = new DateTime(2018, 10, 15, 11, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 19, 28, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -75,7 +75,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
                             TaskName = "Create properties",
                             UploadDate = new DateTime(2018, 10, 18, 9, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 28, 30, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -84,7 +84,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000100"),
                             TaskName = "API vendor link",
                             UploadDate = new DateTime(2018, 10, 19, 8, 35, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 8, 40, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -93,7 +93,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
                             TaskName = "migrate objects",
                             UploadDate = new DateTime(2019, 8, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 35, 50, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -102,7 +102,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
                             TaskName = "create API's",
                             UploadDate = new DateTime(2019, 8, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 4, 30, 20, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -111,7 +111,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
                             TaskName = "Website",
                             UploadDate = new DateTime(2019, 9, 20, 10, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 21, 44, 30, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -120,7 +120,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
                             TaskName = "finish website",
                             UploadDate = new DateTime(2019, 9, 23, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 18, 10, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -129,7 +129,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000101"),
                             TaskName = "automate",
                             UploadDate = new DateTime(2019, 10, 2, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 5, 5, 0, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -138,7 +138,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000102"),
                             TaskName = "demodata",
                             UploadDate = new DateTime(2020, 2, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 31, 50, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -147,7 +147,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000102"),
                             TaskName = "migrate data",
                             UploadDate = new DateTime(2020, 2, 21, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 8, 41, 30, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -156,7 +156,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
                             TaskName = "fix website issues",
                             UploadDate = new DateTime(2020, 5, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 15, 30, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -165,7 +165,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
                             TaskName = "itempage",
                             UploadDate = new DateTime(2020, 5, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 5, 7, 40, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -174,7 +174,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
                             TaskName = "automation",
                             UploadDate = new DateTime(2020, 5, 17, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 6, 39, 50, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -183,7 +183,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000103"),
                             TaskName = "finish automation",
                             UploadDate = new DateTime(2020, 5, 18, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 4, 55, 10, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -192,7 +192,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
                             TaskName = "create website",
                             UploadDate = new DateTime(2018, 3, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 22, 10, 25, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -201,7 +201,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
                             TaskName = "update items",
                             UploadDate = new DateTime(2018, 3, 25, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 8, 41, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -210,7 +210,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000104"),
                             TaskName = "promo's",
                             UploadDate = new DateTime(2018, 3, 26, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 1, 35, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -219,7 +219,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000105"),
                             TaskName = "upload data",
                             UploadDate = new DateTime(2018, 8, 14, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 0, 12, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -228,7 +228,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000106"),
                             TaskName = "upload data",
                             UploadDate = new DateTime(2020, 7, 12, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 4, 47, 8, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -237,7 +237,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000106"),
                             TaskName = "link API's",
                             UploadDate = new DateTime(2020, 7, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 35, 38, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -246,7 +246,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
                             TaskName = "order page",
                             UploadDate = new DateTime(2020, 10, 13, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 26, 45, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -255,7 +255,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
                             TaskName = "link order page",
                             UploadDate = new DateTime(2020, 10, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 45, 10, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -264,7 +264,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000107"),
                             TaskName = "issue billing",
                             UploadDate = new DateTime(2020, 10, 16, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 51, 42, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -273,7 +273,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000108"),
                             TaskName = "order page",
                             UploadDate = new DateTime(2019, 11, 5, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 1, 8, 42, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -282,7 +282,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000108"),
                             TaskName = "API orderpage",
                             UploadDate = new DateTime(2019, 11, 6, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 6, 5, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -291,7 +291,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000109"),
                             TaskName = "customer portal",
                             UploadDate = new DateTime(2019, 11, 8, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 19, 8, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -300,7 +300,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000109"),
                             TaskName = "issues customer portal",
                             UploadDate = new DateTime(2019, 11, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 0, 20, 45, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -309,7 +309,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000110"),
                             TaskName = "API items",
                             UploadDate = new DateTime(2020, 2, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 3, 24, 6, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -318,7 +318,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000110"),
                             TaskName = "app issues",
                             UploadDate = new DateTime(2019, 4, 8, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 2, 35, 41, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -327,7 +327,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000111"),
                             TaskName = "Website",
                             UploadDate = new DateTime(2020, 6, 20, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 7, 41, 20, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -336,7 +336,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000112"),
                             TaskName = "Website",
                             UploadDate = new DateTime(2019, 11, 15, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 10, 35, 41, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         },
                         new
                         {
@@ -345,7 +345,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             ProjectId = new Guid("00000000-0000-0000-0000-000000000113"),
                             TaskName = "Website",
                             UploadDate = new DateTime(2018, 10, 10, 8, 30, 12, 0, DateTimeKind.Unspecified),
-                            WorkTime = new TimeSpan(0, 11, 31, 50, 0)
+                            WorkTime = new TimeSpan(0, 0, 0, 0, 0)
                         });
                 });
 
@@ -379,40 +379,6 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasIndex("TaskId");
 
                     b.ToTable("Messages");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000400"),
-                            ReceiverId = "00000000-0000-0000-0000-000000000006",
-                            SenderId = "00000000-0000-0000-0000-000000000001",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200"),
-                            Text = "Please update your work asap."
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000401"),
-                            ReceiverId = "00000000-0000-0000-0000-000000000001",
-                            SenderId = "00000000-0000-0000-0000-000000000006",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201"),
-                            Text = "Can I get more info about the task please?"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000402"),
-                            ReceiverId = "00000000-0000-0000-0000-000000000007",
-                            SenderId = "00000000-0000-0000-0000-000000000001",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000202"),
-                            Text = "Please do this asap."
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000403"),
-                            ReceiverId = "00000000-0000-0000-0000-000000000001",
-                            SenderId = "00000000-0000-0000-0000-000000000006",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200"),
-                            Text = "What should I do when I finish?"
-                        });
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Picture", b =>
@@ -429,33 +395,6 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                     b.HasIndex("TaskId");
 
                     b.ToTable("Pictures");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000300"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000301"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000302"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000303"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000202")
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000304"),
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000203")
-                        });
                 });
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.Project", b =>
@@ -637,7 +576,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ABOYNAMEDSUE@JCASH.COM",
                             NormalizedUserName = "ABOYNAMEDSUE@JCASH.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHdLbyLmQvSDZefO8y7B9gB3ZQQYpb2WTFgdXig+7iooyfxtbKLeBs9tcydQ8NZ/kA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFSPq8g25KCoiMB35sdk5sn64lGlSmnErUW7AJobL10WZpvE7xL4w6HBeoWS7jzYZQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "VVPCRDAS3MJWQD5CSW2GWPRADBXEZINA",
                             TwoFactorEnabled = false,
@@ -656,7 +595,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ECHTELKEKANT@HOTMAIL.COM",
                             NormalizedUserName = "ECHTELKEKANT@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBKBXyepvdjo52oXiBH8qbvIuMrnQ9JWUa7+G6V22CI/8kgQQDH6Na8BReZrS4UUhw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECvj/7TkuNOfulVcGJpt4pZuhz0XX+3KV3jhq4mBFzF6x8iF/Ey4d57jXRVAJeu/HA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "LPRQIVUHQZ9B9VK0RQPN9LLR2JUDMOKX",
                             TwoFactorEnabled = false,
@@ -675,7 +614,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "IALWAYSWIN@GMAIL.COM",
                             NormalizedUserName = "IALWAYSWIN@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFhI6snjG0Q6jCZR51M42jHY5phTaiaD5bN0BTGInCdrKLqqeaDh2agmWifHqB3DNA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOonpqnOgfnjMQFuZ4CsqV1Uxgs52bgomtwdRbqDHrss1YnyOwNjBh6j6o2YVqOC5g==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "CGZLWFPLDP93ZCFWTQ19E9LGZAH3EDV4",
                             TwoFactorEnabled = false,
@@ -694,7 +633,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ERNAVANVOREN@HOTMAIL.COM",
                             NormalizedUserName = "ERNAVANVOREN@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHn5FuSBKRm3V13eUOxLDLbyAlUPROSj1cM/NQRk1v5dRPaI+NZ8LY1SSo/GBu2AxQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJBPqLbEbJNgqUzf1oYxtdGF+y+L2EyEw2weeqD1X4Tlk/MhHv35IySrV3fysUhqQA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "KEVV7QQDZVPGXW0LIRHWRUBJDWV1BEOK",
                             TwoFactorEnabled = false,
@@ -713,7 +652,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ROGERDOENIEMEE@TELENET.BE",
                             NormalizedUserName = "ROGERDOENIEMEE@TELENET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDq57cpVbZ4rWD4Zf+klvMUvnSkuvfTJOQvL66a6z7sGgZ8SdA0aTgv92wBRqXP4EQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGVh3HfYzwXgTKOyrESqBaUjWP2CbVBDi1hU/7zfcHG9v7Jemu340CxKJgbbzPLceA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "DMQ1MNFMDVWEMHCWA4TOPXZUCR97WIGJ",
                             TwoFactorEnabled = false,
@@ -732,7 +671,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "CHARLESDURUE@HOTMAIL.COM",
                             NormalizedUserName = "CHARLESDURUE@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOya+nViZ/tb5e3KZMr9r7oIeD921D85F21hluLkasQxdxHzDn/aQifk9F2PpjNSJQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDuKXnpkqgjHcZD75OAvZg90v53G+Y0ceAOkx5IPMFu+CM9etKQg5OvsPNoMxhClIA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "GOHAS6DGS3TEFB8CKVA1O0YY7L7QOJGY",
                             TwoFactorEnabled = false,
@@ -751,7 +690,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "KATRINGRING@SKYNET.BE",
                             NormalizedUserName = "KATRINGRING@SKYNET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJcPApRpq28W1Yo2FZC3IWlbhvyaA00gNEpZe9CagPCDJxYfRLcxm6Ucw6qLFKd83g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEC5fgzKFAym9XZjOmNlD5EVPHShoHqjOAIDzhJChFDWrmuZUWNi07n71xbtUJbqG9Q==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "TX2YKCJILNPIIAS7Y4XDXNU7ATXAMEXW",
                             TwoFactorEnabled = false,
@@ -770,7 +709,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "SNELNEDDY@HOTMAIL.COM",
                             NormalizedUserName = "SNELNEDDY@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAENblPw1sCIWIfyfqLAkOFKwTSLmzs2XJXnCNXP9EUWyvxovivKCZHUV9dT9dGJgdJQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENJQOS8vjLu2o4ebetj5DssHHATVQcMc1vPnKWiNqdiqxiWrD5ypF5heT2Mr79mF0Q==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "AY8SBXVKA6Z6MXJXBYIIE9JIAOQV2DJO",
                             TwoFactorEnabled = false,
@@ -789,7 +728,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ANDY123@GMAIL.COM",
                             NormalizedUserName = "ANDY123@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJj4jSqJ444fd5QvPNMTtuQcKZ2HaKxhtaz18KIeYfrBLyDtM90iznILUEzc3ZAYxQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKxWI/Ol0adKJcbNjZumtSuyxxDndf6nBQqkll7N5xwJB2YN0jK5a+/mae91MGcHVw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "AERAYD2O3KEIAGCLLIP7O8QNVSXU8PUD",
                             TwoFactorEnabled = false,
@@ -808,7 +747,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ILOVEYOUTOMORROW@HOTMAIL.COM",
                             NormalizedUserName = "ILOVEYOUTOMORROW@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJ/JR7HSH70SUV2RzaX+hg5rfcA6slCWppCmNFkCP7jKPxdEgZwy5rdHgTruracQRQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEDKJXiwQNCCgpF/C7CcgBebdXXMUhgxRz47HdcIOHN5GbLgK8yqX5jqF4DhnRiKwQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "OJUDGXCPUCPYDMIQTIWMSRTLXH4NMKDB",
                             TwoFactorEnabled = false,
@@ -827,7 +766,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "SATCHEL@STEELPANTHER.COM",
                             NormalizedUserName = "SATCHEL@STEELPANTHER.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAECUyFOtJfbOEVL9lPr2wf/4m+J37bm7tYBipUsnP3pJG4ej1W0qoCNbCWxJq7uHfmA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEImsC6XJzQSjVbcZlfjSP4asvfZ+ckgH0sCKQ/YTgw/j4zmrMK0kzSTlTUXB0PVCnw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "W7VNKA17XODMDCKG5JBXZQCLUQSRF32F",
                             TwoFactorEnabled = false,
@@ -846,7 +785,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "DEPIJPVANMAARTEN@GMAIL.COM",
                             NormalizedUserName = "DEPIJPVANMAARTEN@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBZWejCZ1ErENPDgNu0sLkNBpSct4n9B1pBaSTo888pPRThGKkNTBzjHv/08ybqRXQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBSgU0T2fGpwki+jx3yyr/9qIJ5/XqzXMlOOjm+sXKJL7dSf4uRV1g0b06FYiLSu3w==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "NZVCLM9FJXG84V7AAF3WNV9UX88PSSAD",
                             TwoFactorEnabled = false,
@@ -865,7 +804,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "EDWARDLECANARD@HOTMAIL.COM",
                             NormalizedUserName = "EDWARDLECANARD@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEH4kQWqqvAPvE17aZY0jpST+QsuxPXH4zAX2lczN4NYluxDW7X/rQYivBqmVMhymGA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAweX5sweZ7Auu4o4KwGLIdzZjlolRpb/QaW7RMEn42K7Fk2NX1GecNqvl0PXhQIvg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "X50KHZXPUONAXCIOYAP1VN2KWJNQF8YF",
                             TwoFactorEnabled = false,
@@ -884,7 +823,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "DEYOERI@GMAIL.COM",
                             NormalizedUserName = "DEYOERI@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKtlQ3MFD4y1iORjMipS6uWEGU3YhttDVI9g3JSVLip+R/PYZXqNBlcSTrctOKoYLw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKmjEdGXTa7gbIrWxnHsTs8z2BMpNvkjexPo+lfXXHQMYuj8UIf2eHlEBsX5ZkKJNQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "E9HTNSBN303BXB434HYORNEMWKFR9F0K",
                             TwoFactorEnabled = false,
@@ -903,7 +842,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "CALMINGCAMILLE@TELENET.BE",
                             NormalizedUserName = "CALMINGCAMILLE@TELENET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAECbW8bH6dYJ78UufY+vXtt+GSWff7i1MFaO+zP4DExsxnYM52C07b1zV07G1xxOBUQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPZvO/Bdn67We0EtY0PEMnunizUVNYXVvc8k478D2YoaWhX35Q7pJNheHyVsiThiOQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "NB8OXAMNMR8SWHOY6ACNDYQE4VAGFEEP",
                             TwoFactorEnabled = false,
@@ -922,7 +861,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "THEBESTGINGER@QOTSA.COM",
                             NormalizedUserName = "THEBESTGINGER@QOTSA.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGVBg4d/qpVNwilT6UQU51znkgSg8ux8jTOWy7dEKraIyMMoR+RgjkNbyCxefmQQnQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHVe2pRsJB+mjdzlGKf2UondhBKBrWhwuIJWo1eFQeDs9uuOY6v4uW3JmzpSS2TEbQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "ZUYKIDLJWUZXNXN6BK6Z6QCZO5WXOYNR",
                             TwoFactorEnabled = false,
@@ -941,7 +880,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "ZWAFFELAERE@GMAIL.COM",
                             NormalizedUserName = "ZWAFFELAERE@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIPaJs0VgCIUg+Rt0Vcdg99Pxi7WOx3ioCUEiDSDQ8vcRcAF098+0TdnuFSX9byNwQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENGIr5oRpkpVGcrTtFjtDgkMCqjQuoqH5oZ5vFy/kaWNFzvC8yPBQmih9pfX5THenQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "HGIXXQPIK4FFBOOUNMFY7GN6GDHXEVV1",
                             TwoFactorEnabled = false,
@@ -960,7 +899,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "STERKEJAN33@PANDORA.BE",
                             NormalizedUserName = "STERKEJAN33@PANDORA.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKA9K3EQuCJmvkSNYjn8ZbAa5nymZHCT9oijP3V47v6wHFU+w3QsJ/1ezwucKICUpw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMcW+LEF8duL417fbliJBprqXZyRurMCl3Ix/AXhl5TQOqq0fb1Fe38rDazWIIIfBQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "WGY5YWIB4XK6LUI2TBROBMXVLQKNNWOV",
                             TwoFactorEnabled = false,
@@ -979,7 +918,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "RIETJEGESSOF@HOTMAIL.COM",
                             NormalizedUserName = "RIETJEGESSOF@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAED5KvLqwcjIrFWxCPl3YbJGaTIQimiB3D65qKP6U1NiPmTfDXdND+sqGwoV/NtbblA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGCtqXXywYX8har0rjk2db7bOb1Fy0t4EJn2kmXLs2A5tHR1nGamrBsue0UTU2xLrQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "9H2QG7IPOUORADDNMF2ISIRSOGZJNXGZ",
                             TwoFactorEnabled = false,
@@ -998,7 +937,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "WILLYWILLY@THESCABS.BE",
                             NormalizedUserName = "WILLYWILLY@THESCABS.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFUn35T5nhYEieFi5tIFKnVP+1WTMhnnYGnbcuINo7TSO5/lEGddF/4i5rY88iY8ig==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFjl8gH+6cSKWEF8hCNFyiCONXcbS2jGPibfKqhXrreO3s3XDq5tzlP+frqLhShs8A==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "7F7LSOHNMOKGFGQVMMGOX3SHM3PBNHQB",
                             TwoFactorEnabled = false,
@@ -1017,7 +956,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "PESCADOLOVER@SKYNET.BE",
                             NormalizedUserName = "PESCADOLOVER@SKYNET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJTsGCUrYHS0FLfxw0NgzNlJlmyI4umTE4ljIT1wjt8G0F5QamwWJYffIbymnoLchg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGPy1r17IzxARWhe/ex9AFy+hhF+USvYe83Yl1arqWrpy9C3lIIw5Qs+0O710hr5bw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "WGLZXEZUI3NLP8ZWUYK5CFN8XWBT7ATX",
                             TwoFactorEnabled = false,
@@ -1036,7 +975,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "TOMVANMARCKE@GMAIL.COM",
                             NormalizedUserName = "TOMVANMARCKE@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKJsGALGC5glhXtCo4Wsrs8DU0Jt8rSZkAVd74BFTpbI3FfpulgYTyp+ZhFGkz34dw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPAv5NwFsBG6pqVJIF1wYFgHliTrIOrNAaUAhNY4LNZxEmMcf9xEiFjh0dt/icaF1w==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "OIKDBFPAR5GJKJ91OUAOXNKR1CMLSTFC",
                             TwoFactorEnabled = false,
@@ -1055,7 +994,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "LOEWILOEWIE@HOTMAIL.COM",
                             NormalizedUserName = "LOEWILOEWIE@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEN9NYpNPuV1sRe1S28XmCnqyc9ODwnhjHChH0Uv/jf056taO34AFoNb1jgqQKTD2Gw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE4+0Z+np+QoSpgMI5MF0r9hnH1EH4JjS2+d8tLak35J++O8MScsbjZ8l3oIiS1Dyw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "F0SRUYTP4OF6TSFD3CNJBX5ECAJFPPFZ",
                             TwoFactorEnabled = false,
@@ -1074,7 +1013,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "GIEZIJTEM@SKYNET.BE",
                             NormalizedUserName = "GIEZIJTEM@SKYNET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIsV7jfV1pT602PLqJtXXxuMe0auojIGzzP0aVZBO/PvuglJnXjTx0NmGm0umFNktA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEEaA2FUScVG6gzyH16DH67i1q4aaDaq5yHL4M3lcOTgL2FOQm29vfcP/oIN+Fij5A==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "PHLIIUHLZLGB2UTDD2LHUFROZ7TDQAD7",
                             TwoFactorEnabled = false,
@@ -1093,7 +1032,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "CONNIEBETER@GMAIL.COM",
                             NormalizedUserName = "CONNIEBETER@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAENY6iNEdUnTbwooujwsJ/mMoTkhc3ILbnRaVsnkDSawC5vrN7et6ZJVZ3nvSbcp7HA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDQAEzQwaPsdodCGArszfjMGMW0lFpvm44OGxo3AE4mjKqysh16dwfqfWdnj3kGq7g==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "FWM36IDUG00055IF56RZWA2CR9OYCVB3",
                             TwoFactorEnabled = false,
@@ -1112,7 +1051,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "GEZONDEPETER@TELENET.BE",
                             NormalizedUserName = "GEZONDEPETER@TELENET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOl3ryDXP9p7PIU88RnpuGg8c3xHzPyU3lm7QUZJeK0SJpEFENiBTwlhovsRP+rzEQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJCYvQnW/Z5t7z5A9cWVSVm9WQQ4sjdTlY6TVAofBTdcg21T9eh1s3gImzTzU3ZLSQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "TJLKW00301EENWVWL2MCPLTCU18IT7XY",
                             TwoFactorEnabled = false,
@@ -1131,7 +1070,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "BENNERNIE@SKYNET.BE",
                             NormalizedUserName = "BENNERNIE@SKYNET.BE",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPeQUAEsOLkDP8fUwjypvUVDxX5fCe9QBnf7nYkR5TZVauzWqMFjQpDLmOf03uAUPA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENCXY6jdS/twLJiIealPV6qVSAIyDDt+MGcuWtj+YQz5n3PQ/vArgNNkDacMFbBSZQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "KXW8TS8VIEG0BL1OIA7U2PASSALDXMV3",
                             TwoFactorEnabled = false,
@@ -1150,7 +1089,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "THEBESTBUSKER@LONDON.COM",
                             NormalizedUserName = "THEBESTBUSKER@LONDON.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEH0Hag0S9uel3BgivMgrCCk1mDSA0ed75v5Uw+nIPCJqyjYe8bJgudDMEqaSikjF2w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEh3MUdwSw80GF3Vlqa6Z9hbqXxJ5tCDl1ZYUhpsdjkJ/BkEVwHFxKs62xedtTJMNw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "VRVLNRMUMHA6IADTQ7CO9VCIMVX4OMO5",
                             TwoFactorEnabled = false,
@@ -1169,7 +1108,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "CORONATOPPER@GMAIL.COM",
                             NormalizedUserName = "CORONATOPPER@GMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMKd/gZ816PPnFVO652f2+RsUqQALcisKsuIXem9ufa1ek26T1rj6/m7AA5FaGrDEg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEApTaZNW4nB+wwfEApux5Tbt/sZRcbRDK1uDCn9/0zCRJy7hsHmCifLE/6mxUDmVgQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "W7IEDSQT3GEVZWUOTXG8CL1PI3K6MXU7",
                             TwoFactorEnabled = false,
@@ -1188,7 +1127,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                             NormalizedEmail = "RAPGEWOON@HOTMAIL.COM",
                             NormalizedUserName = "RAPGEWOON@HOTMAIL.COM",
                             Password = "TimeReg2020",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDQL5UoijyoiB442J/iy3i28FXg3jdJgrGG8zjXEQP2tSco89kn74MOzUxKDyiUnbg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAED3oM4LBHL9FacQooSA6lLxV6nIl7340Yk2msOKBKxVxICMQ0hYbfpHWAN41vp1MrQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "JF6GSUYRRSWNWXY9Z1HUJLK1GUQREXOO",
                             TwoFactorEnabled = false,
@@ -1198,179 +1137,29 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
 
             modelBuilder.Entity("ALE.TimeRegistration.Core.Entities.UserTask", b =>
                 {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("TaskId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("UserId", "TaskId");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("WorkDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan>("WorkTime")
+                        .HasColumnType("time");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("TaskId");
 
-                    b.ToTable("UserTasks");
+                    b.HasIndex("UserId");
 
-                    b.HasData(
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000006",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000200")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000006",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000201")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000007",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000202")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000008",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000203")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000008",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000204")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000009",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000205")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000010",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000206")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000011",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000207")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000011",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000208")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000011",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000209")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000015",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000210")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000016",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000211")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000017",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000212")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000020",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000213")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000020",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000214")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000021",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000215")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000021",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000216")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000021",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000217")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000022",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000218")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000023",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000219")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000024",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000220")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000024",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000221")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000025",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000223")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000017",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000224")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000025",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000225")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000026",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000226")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000027",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000227")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000028",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000228")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000029",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000229")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000030",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000230")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000015",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000231")
-                        },
-                        new
-                        {
-                            UserId = "00000000-0000-0000-0000-000000000030",
-                            TaskId = new Guid("00000000-0000-0000-0000-000000000232")
-                        });
+                    b.ToTable("UserTasks");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1403,7 +1192,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
                         new
                         {
                             Id = "00000000-0000-0000-0000-000000000001",
-                            ConcurrencyStamp = "2b4dcc89-66f9-43be-8800-6a68ec1cdb9f",
+                            ConcurrencyStamp = "35f36485-8c55-4e63-93c6-74d17e82e4c3",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -1569,9 +1358,7 @@ namespace ALE.TimeRegistration.Infrastructure.Migrations
 
                     b.HasOne("ALE.TimeRegistration.Core.Entities.User", "User")
                         .WithMany("UserTasks")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
