@@ -148,13 +148,13 @@ namespace ALE.TimeRegistration.Api.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete([FromBody] DeleteUserRequestDto deleteUserRequestDto)
+        public async Task<IActionResult> Delete([FromBody] string emailUserToDelete)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var user = await _userManager.FindByEmailAsync(deleteUserRequestDto.Email);
+            var user = await _userManager.FindByEmailAsync(emailUserToDelete);
             await _userManager.DeleteAsync(user);
             return Ok();
         }

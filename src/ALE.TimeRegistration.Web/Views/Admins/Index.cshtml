@@ -4,6 +4,7 @@
         <div class="d-flex" style="padding:20px">
             <!--Add User-->
             <h4>Add User</h4>
+            <div v-if="feedback" class="col-md-12" role="alert">{{feedback}}</div>
             <form class="col-md-6">
                 <div class="form-group row">
                     <label for="Name" class="col-sm-2 col-form-label">Name</label>
@@ -43,7 +44,7 @@
                     <div class="col-sm-10">
                         @*<input type="email" class="form-control" id="email">*@
                         <select>
-                            <option v-for="user in users">{{user.name}} {{user.lastName}} - {{user.email}}</option>
+                            <option v-for="userToDelete in users">{{userToDelete.name}} {{userToDelete.lastName}} - {{userToDelete.email}}</option>
                         </select>
                     </div>
                 </div>
@@ -78,7 +79,7 @@
                     <div class="col-sm-10">
                         @*<input type="text" class="form-control" id="project">*@
                         <select>
-                            <option v-for="project in projects" v-bind:value="addTaskProject" v-bind>{{project.name}}</option>
+                            <option v-for="project in projects" v-bind:value="addTaskProject">{{project.name}}</option>
                         </select>
                     </div>
                 </div>
@@ -121,8 +122,8 @@
                 users: null,
                 projects: null,
                 tasks: null,
-                user: null,
                 addTaskProject: null,
+                feedback: '',
                 newUser: { name: "", lastName: "", email: "", password: "", confirmPassword:""}
             },
             created: function () {
@@ -170,6 +171,10 @@
                     axios.post(`${apiUserURL}/register`, self.newUser)
                         .then(function (response) {
                             console.log(response);
+                            self.feedback = `User ${self.newUser.name} has been created.`;
+                            setTimeout(function () {
+                                self.feedback = '';
+                            }, 3000);
                         })
                         .catch(function (error) {
                             console.error(error);
@@ -178,7 +183,7 @@
 
                 deleteUser: function () {
                     var self = this;
-                    axios.delete(`${apiUserURL}`, self.user)
+                    axios.delete(`${apiUserURL}`, self.userToDelete.email)
                         .then(function (response) {
                             console.log(response);
                         })
